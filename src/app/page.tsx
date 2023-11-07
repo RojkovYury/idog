@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
+
+import { useState, useEffect } from "react";
+import { Box, Container } from "@mui/material";
+import { createTheme, ThemeProvider  } from '@mui/material/styles';
+import { Amatic_SC } from 'next/font/google'
+import { clr } from "./colors";
+import Head from "./components/head";
+import Main from "./components/main";
+import MainCenter from "./components/mainCenter";
+import Waves from "./components/waves";
+import Services from "./components/services";
+
+const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
+const theme = createTheme({
+  typography: {
+    fontFamily: amatic_SC.style.fontFamily,
+    fontSize: 32,
+  },
+});
 
 export default function Home() {
+
+  const [yPos, setYPos] = useState(0); 
+  const handleScroll = () => {
+    setYPos(window.scrollY / 100);
+    console.log(window.scrollY / 100);
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll); 
+    return () => { window.removeEventListener('scroll', handleScroll); };
+  }, []);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <ThemeProvider theme={theme}>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Box sx={{ height: '700px', backgroundColor: clr.light, zIndex: 20 }}>
+        <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
+          <Head color='secondary4'/>
+          <Main />
+        </Container>
+      </Box>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <MainCenter yPos={yPos}/>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+      <Box sx={{ position: 'relative'}}>
+        <Waves yPos={yPos}/>
+      </Box>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+      <Box sx={{ height: '1000px', backgroundColor: clr.secondary4, zIndex: 10 }}>
+        <Container maxWidth='lg' sx={{ overflow: 'hidden' }}>
+          <Head color='secondary4'/>
+          <Services />
+        </Container>
+      </Box>       
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </ThemeProvider>
   )
 }
+
+/*
+overflowX: 'hidden', overflowY: 'visible'
+transition: 'all 1s'
+*/
