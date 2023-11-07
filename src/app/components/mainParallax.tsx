@@ -29,7 +29,7 @@ export default function MainParallax({ yPos }: MainParallaxProps) {
           overflow: 'hidden' 
         }}
       >
-        <Image src="/images/layoutMain.png" alt="layoutMain" width={650} height={450} />
+        <Image src="/images/main/layoutMain.png" alt="layoutMain" width={650} height={450} />
       </Box>
       
       <Box 
@@ -44,7 +44,7 @@ export default function MainParallax({ yPos }: MainParallaxProps) {
           overflow: 'hidden' 
         }}
       >
-        <Image src="/images/mainBull2.png" alt="main1" width={432} height={476} />
+        <Image src="/images/main/mainBull.png" alt="main1" width={432} height={476} />
       </Box>
 
       

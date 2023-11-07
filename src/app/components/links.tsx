@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Link from 'next/link';
 import CallIcon from '@mui/icons-material/Call';
 import HomeIcon from '@mui/icons-material/Home';
@@ -15,7 +15,7 @@ export default function Links() {
           display: 'flex',
           justifyContent: 'center', 
           alignItems: 'center', 
-          my: 1, 
+          my: [0, 0, 1, 1],
           backgroundColor: 'inherit',
           color: clr.dark,
           transition: 'all 0.3s',
@@ -26,8 +26,14 @@ export default function Links() {
           }
         }}
       >
-        <CallIcon sx={{ fontSize: '38px', mr: 1 }}/>
-        <Typography fontWeight={700} sx={{ fontSize: '38px' }}> 
+        <CallIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1 }}/>
+        <Typography 
+          fontWeight={700} 
+          sx={{ 
+            fontSize: ['24px', '24px', '38px', '38px'], 
+            textShadow: '2px 2px 1px white' 
+            }}
+          > 
           +7 (961) 147 03 03 
         </Typography>
       </Box>
@@ -41,7 +47,7 @@ export default function Links() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',  
-          my: 1, 
+          my: [0, 0, 1, 1],
           backgroundColor: 'inherit',
           color: clr.dark,
           transition: 'all 0.3s',
@@ -52,8 +58,14 @@ export default function Links() {
           }
         }}
       >
-        <HomeIcon sx={{ fontSize: '38px', mr: 1 }}/>
-        <Typography fontWeight={700} sx={{ fontSize: '38px' }}> 
+        <HomeIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1 }}/>
+        <Typography
+          fontWeight={700}
+          sx={{
+            fontSize: ['24px', '24px', '38px', '38px'],
+            textShadow: '2px 2px 1px white',
+            }}
+          > 
           Мориса Тореза 14В 
         </Typography>
       </Box>
@@ -66,7 +78,7 @@ export default function Links() {
           justifyContent: 'center',
           alignItems: 'center',
           flexDirection: 'row', 
-          my: 1,
+          my: [0, 0, 1, 1],
           backgroundColor: 'inherit',
           color: clr.dark,
           transition: 'all 0.3s',
@@ -87,9 +99,9 @@ export default function Links() {
             mr: 1 
           }}
         >
-         <Image src="/images/vkicon.png" alt="vkicon" width={38} height={38} />
+         <Image src="/images/main/vkicon.png" alt="vkicon" width={38} height={38} />
         </Box>
-        <Typography fontWeight={700} sx={{ fontSize: '38px' }}>
+        <Typography fontWeight={700} sx={{ fontSize: ['24px', '24px', '38px', '38px'], textShadow: '2px 2px 1px white' }}>
           vk.com/idogtula
         </Typography>
       </Box>
