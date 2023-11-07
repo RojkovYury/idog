@@ -40,7 +40,7 @@ export default function MainParallax({ yPos }: MainParallaxProps) {
           pointerEvents: 'none', 
           display: 'flex', 
           justifyContent: 'center', 
-          top: `${100 + yPos * 25}px`, 
+          top: `${100 + yPos * 20}px`, 
           overflow: 'hidden' 
         }}
       >
