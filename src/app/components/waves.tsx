@@ -41,7 +41,6 @@ export default function Waves({ yPos }: WavesProps) {
         }} 
       />
 
-
       <Box 
         sx={{ 
           ...waveBaseSXProps, 
@@ -65,7 +64,6 @@ export default function Waves({ yPos }: WavesProps) {
         }} 
       />
 
-
       <Box 
         sx={{ 
           ...waveBaseSXProps, 
@@ -88,7 +86,6 @@ export default function Waves({ yPos }: WavesProps) {
           opacity: 0.75
         }} 
       />
-
 
       <Box 
         sx={{ 

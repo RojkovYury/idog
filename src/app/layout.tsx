@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode}) {
   return (
     <html lang="ru">
-      <body className={amatic_SC.className} style={{ height: '4000px' }}>
+      <body className={amatic_SC.className}>
         {children}
       </body>
     </html>

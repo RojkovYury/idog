@@ -7,7 +7,8 @@ import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
 import Head from "./components/head";
 import Main from "./components/main";
-import MainCenter from "./components/mainCenter";
+import MainParallax from "./components/mainParallax";
+import MountansParallax from "./components/mountansParallax";
 import Waves from "./components/waves";
 import Services from "./components/services";
 
@@ -34,20 +35,16 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
 
-      <Box sx={{ height: '700px', backgroundColor: clr.light, zIndex: 20 }}>
+      <Box sx={{ backgroundColor: clr.light, position: 'relative', zIndex: 10 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head color='secondary4'/>
           <Main />
         </Container>
+        <MainParallax yPos={yPos}/> 
+        <MountansParallax yPos={yPos}/>
       </Box>
 
-      <MainCenter yPos={yPos}/>
-
-      <Box sx={{ position: 'relative'}}>
-        <Waves yPos={yPos}/>
-      </Box>
-
-      <Box sx={{ height: '1000px', backgroundColor: clr.secondary4, zIndex: 10 }}>
+      <Box sx={{ backgroundColor: clr.secondary4, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ overflow: 'hidden' }}>
           <Head color='secondary4'/>
           <Services />
@@ -61,4 +58,9 @@ export default function Home() {
 /*
 overflowX: 'hidden', overflowY: 'visible'
 transition: 'all 1s'
+
+      <Box sx={{ position: 'relative'}}>
+        <Waves yPos={yPos}/>
+      </Box>
+
 */

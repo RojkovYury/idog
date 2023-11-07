@@ -1,21 +1,29 @@
-import { Box } from "@mui/material";
 import Image from 'next/image';
+import { Box } from "@mui/material";
 import { clr } from "../colors";
 
-interface MainCenterProps {
+interface MainParallaxProps {
   yPos: number; 
 }
 
-export default function MainCenter({ yPos }: MainCenterProps) {
+export default function MainParallax({ yPos }: MainParallaxProps) {
   return(
     <>
+    <Box
+        sx={{
+          position: 'relative',
+          height: `${350 - yPos * 35}px`,
+          width: '100%', 
+          backgroundColor: clr.light, 
+        }}
+      />
+    <Box>
       <Box 
         sx={{ 
-          zIndex: 2, 
-          height: '700px', 
+          zIndex: 1,
           width: '100%', 
           position: 'absolute', 
-          top: `${150 + yPos * 25}px`, 
+          top: `${150 + yPos * 45}px`, 
           display: 'flex', 
           justifyContent: 'center', 
           overflow: 'hidden' 
@@ -32,22 +40,15 @@ export default function MainCenter({ yPos }: MainCenterProps) {
           pointerEvents: 'none', 
           display: 'flex', 
           justifyContent: 'center', 
-          top: `${100 + yPos * 15}px`, 
+          top: `${100 + yPos * 25}px`, 
           overflow: 'hidden' 
         }}
       >
         <Image src="/images/mainBull2.png" alt="main1" width={432} height={476} />
       </Box>
 
-      <Box
-        sx={{ 
-          height: `${350 - yPos * 35}px`,
-          width: '100%', 
-          backgroundColor: clr.light, 
-          zIndex: 1 
-        }}
-      />
-
+      
+    </Box>
     </>
   )
 }
