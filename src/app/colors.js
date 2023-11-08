@@ -9,4 +9,4 @@ export const clr = {
   secondary3: '#F6B856',
   secondary4: '#8A7968',
 }
-// ba5a31
+// ba5a31 
