@@ -1,13 +1,109 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Card from "./services/card";
+import { clr } from "../colors";
 
 export default function Services() {
   return(
+    <>
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          top: '-50px',
+        }}
+      >
+        <Typography 
+          sx={{
+            fontSize: '80px', 
+            fontWeight: '700',
+          }}  
+        >
+          Наши услуги
+        </Typography>
+      </Box>
+  
+
+      <Box 
+        sx={{ 
+          position: 'relative',
+         }}
+      >
+        <Box
+          sx={{
+            position: 'absolute',
+            left: '150px',
+            height: '120px',
+            width: '120px',
+            border: '1px solid black',
+            borderRadius: '50%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }} 
+        >
+          AVATAR
+        </Box>
+
+        <Box
+          sx={{
+            position: 'absolute',
+            left: '150px',
+            height: '120px',
+            width: '400px',
+            border: '1px solid black',
+            borderTopLeftRadius: '60px',
+            borderBottomLeftRadius: '60px',
+            transition: 'all 1s',
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'center',
+            "&:hover": { 
+              width: '800px',
+            },
+          }} 
+        >
+          <Box 
+            sx={{
+              position: 'relative',
+              border: '1px solid red',
+              height: '100px',
+              width: '740px',
+              borderTopRightRadius: '50px',
+              borderBottomRightRadius: '50px',
+              display: 'flex',
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              flexDirection: 'row',
+            }}
+          >
+            <Typography sx={{ mr: 4, fontSize: '30px', fontWeight: '700' }}>
+              Груминг
+            </Typography>
+          </Box>
+        </Box>
+
+      </Box>
+
+
+    </>
+  )
+}  
+
+
+
+
+
+
+
+/*
+
     <Box 
       sx={{ 
         position: 'relative', 
         width: '100%', 
-        height: '1000px',
         display: 'flex',
         flexDirection: 'column',
       }}
@@ -109,5 +205,5 @@ export default function Services() {
       </Box>
 
     </Box>
-  )
-}  
+
+*/

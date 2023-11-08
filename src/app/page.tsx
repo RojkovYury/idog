@@ -73,4 +73,6 @@ transition: 'all 1s'
         <Waves yPos={yPos}/>
       </Box>
 
+      <Services />
+
 */

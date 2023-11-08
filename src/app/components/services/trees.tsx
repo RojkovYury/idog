@@ -21,9 +21,11 @@ export default function Trees({ yPos }: TreesProps) {
           </Box>
         </Box>
 
+        {/*
         <Rope top={'0px'}/>
         <Rope top={'290px'}/>
         <Rope top={'580px'}/>
+        */}
 
         <Box sx={{ position: 'absolute', width: '100%', opacity: '0.4', pointerEvents: 'none' }}>
           <Box 
