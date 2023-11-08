@@ -1,8 +1,13 @@
-import { Box, Typography } from "@mui/material";
+'use client'
+
+import { Box, Typography, Button } from "@mui/material";
 import Card from "./services/card";
 import { clr } from "../colors";
+import { useState } from "react";
+
 
 export default function Services() {
+  const [open, setOpen] = useState(false);
   return(
     <>
       <Box 
@@ -24,64 +29,127 @@ export default function Services() {
           Наши услуги
         </Typography>
       </Box>
-  
 
       <Box 
+        
         sx={{ 
           position: 'relative',
+          top: '-50px',
          }}
       >
         <Box
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
           sx={{
+            backgroundColor: 'lightyellow',
             position: 'absolute',
             left: '150px',
             height: '120px',
             width: '120px',
-            border: '1px solid black',
             borderRadius: '50%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            zIndex: 10,
+            scale: open ? '1.2' : '1',
+            transition: 'all 1s',
           }} 
         >
           AVATAR
         </Box>
 
         <Box
+          onMouseEnter={() => setOpen(true)}
+          onMouseLeave={() => setOpen(false)}
           sx={{
             position: 'absolute',
             left: '150px',
             height: '120px',
-            width: '400px',
-            border: '1px solid black',
-            borderTopLeftRadius: '60px',
-            borderBottomLeftRadius: '60px',
+            width: open ? '800px' : '400px',
+            borderRadius: '60px',
             transition: 'all 1s',
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'center',
-            "&:hover": { 
-              width: '800px',
-            },
           }} 
         >
           <Box 
             sx={{
+              backgroundColor: 'grey',
               position: 'relative',
-              border: '1px solid red',
               height: '100px',
               width: '740px',
-              borderTopRightRadius: '50px',
-              borderBottomRightRadius: '50px',
+              borderRadius: '50px',
               display: 'flex',
-              justifyContent: 'flex-end',
+              // justifyContent: open ? 'space-between' : 'flex-end',
+              // justifyContent: open ? 'space-between' : 'space-between',
+              justifyContent: 'space-between',
               alignItems: 'center',
               flexDirection: 'row',
             }}
           >
-            <Typography sx={{ mr: 4, fontSize: '30px', fontWeight: '700' }}>
-              Груминг
+
+            <Box 
+              sx={{ 
+                display: 'flex', 
+                width: '1px' 
+              }}
+            >
+              X
+            </Box>
+            
+            {open }
+            <Box 
+              sx={{
+                display: open ? 'flex' : 'none', 
+                opacity: open ? '1' : '0', 
+                flexDirection: 'column',
+                transition: 'all 1s',
+                // ml: 10,
+              }}
+            >
+              <Typography 
+                sx={{ 
+                  mr: 4,
+                  lineHeight: '1',  
+                  fontSize: '28px', 
+                  fontWeight: '700' 
+                }}
+              >
+                Каждой собаке необходимы физические нагрузки,
+              </Typography>
+
+              <Typography 
+                sx={{ 
+                  mr: 4,
+                  lineHeight: '1',  
+                  fontSize: '28px', 
+                  fontWeight: '700' 
+                }}
+              >
+                чтобы она была здоровой, активной и послушной.
+              </Typography>
+
+              <Button
+                variant='contained'
+                sx={{
+                  height: '20px'
+                }}
+              >
+                узнать больше
+              </Button>
+            </Box>
+
+            <Typography 
+              sx={{ 
+                mr: 4, 
+                fontSize: '42px',             
+                fontWeight: '700',
+              }}
+            >
+              Фитнесс
             </Typography>
+
           </Box>
         </Box>
 
