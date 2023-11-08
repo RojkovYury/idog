@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { clr } from "../colors";
+import { clr } from "../../colors";
 
 interface MountansParallaxProps {
   yPos: number; 

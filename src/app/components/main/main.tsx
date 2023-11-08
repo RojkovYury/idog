@@ -1,12 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
-import { clr } from "../colors";
+import { clr } from "../../colors";
 import Links from "./links";
 
 export default function Main() {
   return(
     <Box 
       sx={{ 
-        // border: '2px solid black',
         position: 'relative', 
         width: '100%',
         display: 'flex', 
@@ -20,7 +19,6 @@ export default function Main() {
 
       <Box
         sx={{  
-          // border: '1px solid black',
           zIndex: '20', 
           mx: 2,
           mb: 1, 
@@ -108,7 +106,6 @@ export default function Main() {
 
       <Box
         sx={{  
-          // border: '1px solid black',
           display: ['flex', 'flex', 'flex', 'flex'],
           zIndex: '20', 
           mx: [0, 0, 3, 6],
@@ -125,8 +122,3 @@ export default function Main() {
     </Box>
   )
 }
-
-
-/*
-
-*/

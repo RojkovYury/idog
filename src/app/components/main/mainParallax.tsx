@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Box } from "@mui/material";
-import { clr } from "../colors";
+import { clr } from "../../colors";
 
 interface MainParallaxProps {
   yPos: number; 

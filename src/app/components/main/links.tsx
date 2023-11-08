@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Link from 'next/link';
 import CallIcon from '@mui/icons-material/Call';
 import HomeIcon from '@mui/icons-material/Home';
-import { clr } from "../colors";
+import { clr } from "../../colors";
 import Image from 'next/image';
 
 export default function Links() {
