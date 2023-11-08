@@ -1,5 +1,13 @@
 'use client'
 
+/*
+TODO
+
+крепление веревок
+цвет кнопок ховер 2 стр
+
+*/
+
 import { useState, useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';

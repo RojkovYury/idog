@@ -2,52 +2,88 @@ import { Box, Typography } from "@mui/material";
 import Image from 'next/image';
 import { clr } from "@/app/colors";
 
-export default function Card() {
+interface CardProps {
+    name: string; 
+    src: string; 
+    left?: number;
+    top?: number;
+    rotate?: number;
+  }
+
+export default function Card({ name, src, left, top, rotate }: CardProps) {
   return(
-    <>
+    <Box 
+      sx={{ 
+        position: 'relative', 
+        left: `${left}px`,  
+        top: `${top}px`,
+        transition: 'top 0.3s',
+        zIndex: '1',
+        "&:hover": {  
+          zIndex: '20',
+          top: '0px',
+          // top: '70px',
+          // left: '0px',
+        },
+      }}
+    >
       <Box
         sx={{
-          width: '240px',
-          height: '256px',
+          width: '180px',
+          height: '192px', //256
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: 'lightgrey',
-          p: 2,
-          opacity: 0.8,
+          opacity: 0.7,
           transition: 'all 0.3s',
+          backgroundImage: 'url("/images/services/static/card_layout.jpg")',
+          backgroundSize: 'cover',
+          p: 2,
+          transform: `rotate(${rotate}deg)`,
           "&:hover": {  
             color: clr.primary,
             opacity: 1,
-            scale: '1.1',
+            scale: '2',
+            transform: 'rotate(0deg)',
           },
-          backgroundImage: 'url("/images/services/card_layout.jpg")',
-          backgroundSize: 'cover',
-          // backgroundPosition: 'center',
         }}
       >
         <Box
           sx={{
-            width: '240px',
-            height: '200px',
+            width: '180px',
+            height: '150px',
             backgroundColor: 'grey',
           }}
         >
-          <Image src="/images/services/card_fitness.jpg" alt="card_fitness" width={240} height={200} />
+          <Image 
+            src={src} 
+            alt="card_fitness" 
+            width={240} 
+            height={200}
+            style={{ width: '180px', height: '150px' }}
+          />
         </Box>
 
         <Typography 
           sx={{
-            width: '240px',
+            width: '180px',
             height: '56px',
             textAlign: 'center',
           }}
         >
-          Фитнес
+          {name}
         </Typography>
-        
+
       </Box>
-    </>
+    </Box>
   )
 }  
+
+/*
+
+240 = 160 = 180
+200 = 130 = 150
+ // backgroundPosition: 'center',
+*/
