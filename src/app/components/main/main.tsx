@@ -15,7 +15,7 @@ export default function Main() {
       }}
     >
 
-      <Box sx={{ border: '1px solid black', height: ['100px', '100px', '0', '0' ], display: ['flex', 'flex', 'none', 'none'] }}/>
+      <Box sx={{ border: '1px solid black', height: ['100px', '100px', '0', '0' ], opacity: 0, display: ['flex', 'flex', 'none', 'none'] }}/>
 
       <Box
         sx={{  

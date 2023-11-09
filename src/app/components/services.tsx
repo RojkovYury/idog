@@ -11,11 +11,20 @@ export default function Services() {
       <TitleServices />
 
       <ServiceLeft top={-50}/>
+      <ServiceRight top={70}/>
 
+      <ServiceLeft top={190}/>
+      <ServiceRight top={310}/>
+
+      <ServiceLeft top={430}/>
+      <ServiceRight top={550}/>
+
+      <ServiceLeft top={670}/>
+      <ServiceRight top={790}/>
     </>
   )
 } 
 
 /*
-    <ServiceRight top={100}/>
+    
 */

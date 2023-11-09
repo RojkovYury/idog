@@ -9,7 +9,7 @@ interface ServiceRightProps {
 }
 
 export default function ServiceRight({ top }: ServiceRightProps) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return(
     <Box 
       sx={{ 
@@ -20,26 +20,26 @@ export default function ServiceRight({ top }: ServiceRightProps) {
       }}
     >
 
-      <Box
+      <Box // скрывающая заслонка
         sx={{
           // border: '1px solid green',
           position: 'absolute',
-          zIndex: 2,
+          zIndex: 3,
           backgroundColor: clr.secondary4,
           top: '0px',
-          left: '-600px', //половина аватара + смешение 
+          left: '200px', //половина аватара + смешение (-600) 
           height: '120px',
           width: '800px',
         }}
       />
 
-      <Box
+      <Box // Круг
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
         sx={{
           backgroundColor: clr.primary,
           position: 'absolute',
-          left: '150px',
+          left: '150px', // !
           height: '120px',
           width: '120px',
           borderRadius: '50%',
@@ -49,9 +49,10 @@ export default function ServiceRight({ top }: ServiceRightProps) {
           zIndex: 10,
           scale: open ? '1.5' : '1',
           transition: 'all 1s',
+          // opacity: 0.2
         }} 
       >
-        <Box
+        <Box // Фото в кругу
           sx={{
             position: 'relative',
             height: '110px',
@@ -63,22 +64,23 @@ export default function ServiceRight({ top }: ServiceRightProps) {
         />
       </Box>
 
-      <Box
+      <Box // Слой для ховера
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
         sx={{
+          // border: '1px solid black',
           position: 'absolute',
-          left: '150px',
+          left: open ? '-540px' : '-150px',
           height: '120px',
           width: open ? '800px' : '400px',
           borderRadius: '60px',
           transition: 'all 1s',
           display: 'flex',
-          justifyContent: 'flex-end',
+          justifyContent: 'flex-start',
           alignItems: 'center',
         }} 
       >
-        <Box 
+        <Box // Палка
           sx={{
             backgroundColor: clr.light,
             position: 'relative',
@@ -89,16 +91,20 @@ export default function ServiceRight({ top }: ServiceRightProps) {
             justifyContent: 'space-between',
             alignItems: 'center',
             flexDirection: 'row',
-            opacity: '0.8',
+            opacity: open ? '1' : '0.7',
+            transition: 'all 1s',
           }}
         >
 
-          <Box 
+          <Typography 
             sx={{ 
-              display: 'flex', 
-              width: '1px' 
+              fontSize: '42px',             
+              fontWeight: '700',
+              ml: 4, 
             }}
-          />
+          >
+            Фитнесс
+          </Typography>
             
           <Box 
             sx={{
@@ -148,15 +154,14 @@ export default function ServiceRight({ top }: ServiceRightProps) {
             </Button>
           </Box>
 
-          <Typography 
+
+          <Box 
             sx={{ 
-              fontSize: '42px',             
-              fontWeight: '700',
-              mr: 4, 
+              display: 'flex', 
+              width: '1px'
             }}
-          >
-            Фитнесс
-          </Typography>
+          />
+
         </Box>
       </Box>
     </Box>

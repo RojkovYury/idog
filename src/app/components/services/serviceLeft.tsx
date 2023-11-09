@@ -16,6 +16,7 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
         // border: '1px solid red',
         position: 'relative',
         top: `${top}px`,
+        left: '0%'
       }}
     >
 
@@ -48,6 +49,7 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
           zIndex: 10,
           scale: open ? '1.5' : '1',
           transition: 'all 1s',
+          // opacity: 0.2
         }} 
       >
         <Box
@@ -88,7 +90,8 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
             justifyContent: 'space-between',
             alignItems: 'center',
             flexDirection: 'row',
-            opacity: '0.8',
+            opacity: open ? '1' : '0.7',
+            transition: 'all 1s',
           }}
         >
 
