@@ -1,4 +1,3 @@
-'use client'
 
 import { Box, Typography, Button } from "@mui/material";
 import Card from "./services/card";
@@ -7,7 +6,7 @@ import { useState } from "react";
 
 
 export default function Services() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return(
     <>
       <Box 
@@ -17,10 +16,10 @@ export default function Services() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          top: '-50px',
+          top: '-45px',
         }}
       >
-        <Typography 
+        <Typography
           sx={{
             fontSize: '80px', 
             fontWeight: '700',
@@ -31,17 +30,31 @@ export default function Services() {
       </Box>
 
       <Box 
-        
         sx={{ 
           position: 'relative',
+          // border: '1px solid red',
           top: '-50px',
          }}
       >
+
+         <Box
+           sx={{
+            position: 'absolute',
+            // border: '1px solid green',
+            zIndex: 2,
+            backgroundColor: clr.secondary4,
+            top: '0px',
+            left: '-600px', //половина аватара + смешение 
+            height: '120px',
+            width: '800px',
+           }}
+         />
+
         <Box
           onMouseEnter={() => setOpen(true)}
           onMouseLeave={() => setOpen(false)}
           sx={{
-            backgroundColor: 'lightyellow',
+            backgroundColor: clr.primary,
             position: 'absolute',
             left: '150px',
             height: '120px',
@@ -51,11 +64,21 @@ export default function Services() {
             justifyContent: 'center',
             alignItems: 'center',
             zIndex: 10,
-            scale: open ? '1.2' : '1',
+            scale: open ? '1.5' : '1',
             transition: 'all 1s',
           }} 
         >
-          AVATAR
+          <Box
+            sx={{
+              position: 'relative',
+              height: '110px',
+              width: '110px',
+              borderRadius: '50%',
+              backgroundImage: 'url("/images/services/fitnes.png")',
+              backgroundSize: 'cover',
+            }}
+          >
+          </Box>
         </Box>
 
         <Box
@@ -75,17 +98,16 @@ export default function Services() {
         >
           <Box 
             sx={{
-              backgroundColor: 'grey',
+              backgroundColor: clr.light,
               position: 'relative',
               height: '100px',
               width: '740px',
               borderRadius: '50px',
               display: 'flex',
-              // justifyContent: open ? 'space-between' : 'flex-end',
-              // justifyContent: open ? 'space-between' : 'space-between',
               justifyContent: 'space-between',
               alignItems: 'center',
               flexDirection: 'row',
+              opacity: '0.8'
             }}
           >
 
@@ -98,33 +120,33 @@ export default function Services() {
               X
             </Box>
             
-            {open }
             <Box 
               sx={{
                 display: open ? 'flex' : 'none', 
-                opacity: open ? '1' : '0', 
                 flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
                 transition: 'all 1s',
-                // ml: 10,
+                overflow: 'hidden',
               }}
             >
               <Typography 
+                noWrap
                 sx={{ 
-                  mr: 4,
                   lineHeight: '1',  
                   fontSize: '28px', 
-                  fontWeight: '700' 
+                  fontWeight: '700',
                 }}
               >
                 Каждой собаке необходимы физические нагрузки,
               </Typography>
 
               <Typography 
+                noWrap
                 sx={{ 
-                  mr: 4,
                   lineHeight: '1',  
                   fontSize: '28px', 
-                  fontWeight: '700' 
+                  fontWeight: '700',
                 }}
               >
                 чтобы она была здоровой, активной и послушной.
@@ -133,7 +155,13 @@ export default function Services() {
               <Button
                 variant='contained'
                 sx={{
-                  height: '20px'
+                  height: '36px',
+                  borderRadius: '15px',
+                  backgroundColor: clr.primary,
+                  color: clr.light,
+                  "&:hover": {  
+                    backgroundColor: clr.secondary1,
+                  },
                 }}
               >
                 узнать больше
@@ -142,9 +170,9 @@ export default function Services() {
 
             <Typography 
               sx={{ 
-                mr: 4, 
                 fontSize: '42px',             
                 fontWeight: '700',
+                mr: 4, 
               }}
             >
               Фитнесс
@@ -158,120 +186,4 @@ export default function Services() {
 
     </>
   )
-}  
-
-
-
-
-
-
-
-/*
-
-    <Box 
-      sx={{ 
-        position: 'relative', 
-        width: '100%', 
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-
-      <Box
-        sx={{ 
-          top: '0px',
-          position: 'absolute', 
-          width: '100%', 
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          gap: 3,
-        }}
-      >
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {-30}
-          top={8}
-          rotate={12}
-        />
-        <Card 
-          name={'Груминг'}
-          src={'/images/services/card_grooming.jpg'}
-          left= {-8}
-          top={-13}
-          rotate={-9}
-        />
-        <Card 
-          name={'Хендлинг'}
-          src={'/images/services/card_handling.jpg'}
-          left= {20}
-          top={6}
-          rotate={4}
-        />
-      </Box>
-
-      <Box
-        sx={{ 
-          top: '290px',
-          position: 'absolute', 
-          width: '100%', 
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          gap: 3,
-        }}
-      >
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {-18}
-          top={15}
-          rotate={-7}
-        />
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {-12}
-          top={10}
-          rotate={3}
-        />
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {5}
-          top={-26}
-          rotate={-1}
-        />
-      </Box>
-
-      <Box
-        sx={{ 
-          top: '580px',
-          position: 'absolute', 
-          width: '100%', 
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          gap: 3,
-        }}
-      >
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {-15}
-          top={16}
-          rotate={2}
-        />
-        <Card 
-          name={'Фитнес'}
-          src={'/images/services/card_fitness.jpg'}
-          left= {40}
-          top={-5}
-          rotate={-6}
-        />
-      </Box>
-
-    </Box>
-
-*/
+} 
