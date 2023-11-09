@@ -7,9 +7,17 @@ import ServiceRight from "./services/serviceRight";
 
 export default function Services() {
   return(
-    <>
+    <Box 
+      sx={{ 
+        position: 'relative', 
+        height: '1000px',
+        width: '100%',
+      }}
+    >
+
       <TitleServices />
 
+      {/*
       <ServiceLeft 
         top={-50}  
         pright={10}
@@ -80,20 +88,8 @@ export default function Services() {
         lineTwo={''}
         image={''}
       /> 
-    </>
+      */}
+
+    </Box>
   )
 } 
-
-/*
-        <ServiceLeft top={-50}/>
-      <ServiceRight top={70}/>
-
-      <ServiceLeft top={190}/>
-      <ServiceRight top={310}/>
-
-      <ServiceLeft top={430}/>
-      <ServiceRight top={550}/>
-
-      <ServiceLeft top={670}/>
-      <ServiceRight top={790}/>  
-*/

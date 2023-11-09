@@ -7,6 +7,14 @@ export const clr = {
   secondary1: '#f4a62c', 
   secondary2: '#F5AF41', 
   secondary3: '#F6B856',
-  secondary4: '#8A7968',
+  forest: '#8A7968',
+  grass: '#C8CC92'
+
 }
-// ba5a31 
+/* 
+A1BA89
+8FBB99
+C8CC92
+
+#DAB49D 
+*/

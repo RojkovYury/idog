@@ -25,7 +25,7 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
           // border: '1px solid green',
           position: 'absolute',
           zIndex: 2,
-          backgroundColor: clr.secondary4,
+          backgroundColor: clr.forest,
           top: '0px',
           left: '-600px', //половина аватара + смешение 
           height: '120px',

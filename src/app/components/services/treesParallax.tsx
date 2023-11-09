@@ -6,7 +6,7 @@ import Rope from "./rope";
 import useScroll from "@/hooks/useScroll";
 
 
-export default function Trees() {
+export default function TreesParallax() {
   const [yPos] = useScroll();
 
   return(

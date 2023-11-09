@@ -25,7 +25,7 @@ export default function ServiceRight({ top }: ServiceRightProps) {
           // border: '1px solid green',
           position: 'absolute',
           zIndex: 3,
-          backgroundColor: clr.secondary4,
+          backgroundColor: clr.forest,
           top: '0px',
           left: '200px', //половина аватара + смешение (-600) 
           height: '120px',

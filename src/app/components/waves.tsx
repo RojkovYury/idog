@@ -36,7 +36,7 @@ export default function Waves({ yPos }: WavesProps) {
           width: '100%', 
           height: `${ 400 - ((yPos / 7) * 400) }px`, 
           zIndex: '6',
-          backgroundColor: clr.secondary4, 
+          backgroundColor: clr.forest, 
           opacity: 0.25 
         }} 
       />
@@ -59,7 +59,7 @@ export default function Waves({ yPos }: WavesProps) {
           width: '100%', 
           height: `${ 325 - ((yPos / 7) * 325) }px`, 
           zIndex: '7',
-          backgroundColor: clr.secondary4, 
+          backgroundColor: clr.forest, 
           opacity: 0.5
         }} 
       />
@@ -82,7 +82,7 @@ export default function Waves({ yPos }: WavesProps) {
           width: '100%', 
           height: `${ 175 - ((yPos / 7) * 175) }px`,  
           zIndex: '8',
-          backgroundColor: clr.secondary4, 
+          backgroundColor: clr.forest, 
           opacity: 0.75
         }} 
       />
