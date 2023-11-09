@@ -1,12 +1,13 @@
+'use client'
+
 import { Box } from "@mui/material";
 import { clr } from "../../colors";
+import useScroll from "@/hooks/useScroll";
 
-interface MountansParallaxProps {
-  yPos: number; 
-}
 
-export default function MountansParallax({ yPos }: MountansParallaxProps) {
- 
+export default function MountansParallax() {
+  const [yPos] = useScroll();
+
   return (
     <>
       <Box 

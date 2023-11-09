@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Typography, Button } from "@mui/material";
 import { clr } from "@/app/colors";
 import { useState } from "react";

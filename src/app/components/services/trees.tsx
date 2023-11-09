@@ -1,12 +1,14 @@
+'use client';
+
 import { Box } from "@mui/material";
 import Image from 'next/image';
 import Rope from "./rope";
+import useScroll from "@/hooks/useScroll";
 
-interface TreesProps {
-    yPos: number; 
-  }
 
-export default function Trees({ yPos }: TreesProps) {
+export default function Trees() {
+  const [yPos] = useScroll();
+
   return(
       <>
         <Box sx={{ position: 'absolute', width: '100%', zIndex: '10', pointerEvents: 'none' }}>
