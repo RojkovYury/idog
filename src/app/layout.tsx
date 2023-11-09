@@ -1,22 +1,20 @@
-'use server';
-
-import type { Metadata } from 'next';
+import type { Metadata } from 'next'
 import { ReactNode } from 'react';
-import Theme from '@/theme';
+import { Amatic_SC } from 'next/font/google'
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'title meta layout',
-    description: 'description meta layout',
-  }
+const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
+
+export const metadata: Metadata = {
+  title: 'title meta layout',
+  description: 'description meta layout',
 }
 
-export default async function RootLayout({ children }: { children: ReactNode}) {
+export default function RootLayout({ children }: { children: ReactNode}) {
   return (
     <html lang="ru">
-      <Theme>
-          {children}
-      </Theme>
+      <body className={amatic_SC.className} style={{ margin: '0' }}>
+        {children}
+      </body>
     </html>
   )
 }

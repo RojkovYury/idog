@@ -2,7 +2,7 @@
 import { Box, Tooltip, Typography, Button, Divider, IconButton  } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
 import NextLink from 'next/link';
-import { clr } from "../colors";
+import { clr } from "../app/colors";
 
 import DryCleaningIcon from '@mui/icons-material/DryCleaning';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
