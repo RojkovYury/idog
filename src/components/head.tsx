@@ -2,22 +2,23 @@
 import { Box, Tooltip, Typography, Button, Divider, IconButton  } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
 import NextLink from 'next/link';
-import { clr } from "../app/colors";
 
 import DryCleaningIcon from '@mui/icons-material/DryCleaning';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
 import InfoIcon from '@mui/icons-material/Info';
 
 interface HeadProps {
-  color: string;
+  TextColor: string;
+  HoverColor: string;
+  TextColorOnHover: string;
 }
 
-export default function Head({ color }: HeadProps) {
+export default function Head({ TextColor, HoverColor, TextColorOnHover }: HeadProps) {
 
   const dividerProps = {
     my: 3, 
     border: 'none', 
-    borderTop: `1px solid ${clr.dark}`,
+    borderTop: `1px solid ${TextColor}`,
     width: ['160px', '200px', '320px', '420px'],
     // transition: 'width 2.5s linear'
   }
@@ -30,27 +31,27 @@ export default function Head({ color }: HeadProps) {
     borderRadius: '25px', 
     boxShadow: 'none', 
     height: '40px', 
-    color: clr.dark, 
+    color: TextColor, 
     "&:hover": { 
-      backgroundColor: clr.primary, 
-      color: clr.light, 
+      backgroundColor: HoverColor, 
+      color: TextColorOnHover, 
     },
     display: ['none', 'none', 'flex', 'flex']
   }
 
   const iconButtonProps = {
     mr: 0,
-    color: clr.dark,
+    color: TextColor,
     display: ['flex', 'flex', 'none', 'none'], 
-    "&:hover": { backgroundColor: clr.primary, color: clr.light }
+    "&:hover": { backgroundColor: HoverColor, color: TextColorOnHover }
   }
 
   return (  
     <Box sx={{ px:1, py: 3, position: 'relative', display: 'flex',  justifyContent: 'space-between' }}>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
-        <Box component={NextLink} href="/" sx={{ position: 'relative', height: '66px', display: 'flex', color: 'inherit', textDecoration: 'none', alignItems: 'center' }}>
-          <PetsIcon fontSize='small' sx={{ mx: 2, "&:hover": { color: clr.primary } }}/>
+        <Box component={NextLink} href="/" sx={{ position: 'relative', height: '66px', display: 'flex', color: TextColor, textDecoration: 'none', alignItems: 'center' }}>
+          <PetsIcon fontSize='small' sx={{ mx: 2, "&:hover": { color: HoverColor } }}/>
           <Typography noWrap sx={{ fontSize: ['3rem', '3rem', '3.5rem', '3.5rem'], fontWeight: '700' }}>
             iDog
           </Typography>

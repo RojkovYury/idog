@@ -1,13 +1,69 @@
 
 import { Box,Typography } from "@mui/material";
-import TitleServices from "./services/titleServices";
 import { clr } from "../colors";
-import Image from 'next/image';
-import ServiceLeft from "./services/serviceLeft";
-import ServiceRight from "./services/serviceRight";
-
+import styled from '@emotion/styled'
 
 export default function Services() {
+
+  const TitleText = styled(Typography)({
+    fontSize: '80px', 
+    fontWeight: '700',
+    textShadow: `2px 2px 1px ${clr.dark}`, 
+    textAlign: 'center',
+  })
+
+  const TopText = styled(Typography)({
+    display: 'flex', 
+    justifyContent: 'center', 
+    fontWeight: '700', 
+    fontSize: '42px', 
+    lineHeight: '1',  
+    textShadow: `2px 2px 1px ${clr.dark}`, 
+    textAlign: 'center',
+  })
+
+  const TopOptionText = styled(Typography)({
+    display: 'flex', 
+    justifyContent: 'center', 
+    fontWeight: '700', 
+    fontSize: '42px', 
+    lineHeight: '1', 
+    textDecoration: 'underline', 
+    textShadow: `2px 2px 1px ${clr.dark}`, 
+    textAlign: 'center',
+  })
+
+  const BottomOptionText = styled(Typography)({
+    display: 'flex', 
+    justifyContent: 'center', 
+    fontWeight: '400', 
+    fontSize: '30px', 
+    lineHeight: '1', 
+    textShadow: `1px 1px 1px ${clr.dark}`, 
+    textAlign: 'center'
+  })
+
+  const BottomText = styled(Typography)({
+    display: 'flex', 
+    justifyContent: 'center',
+    fontWeight: '400', 
+    fontSize: '32px',
+    textShadow: `1px 3px 1px ${clr.dark}`, 
+  })
+
+  const optionsTextsContainerProps = {
+    position: 'relative',
+    background: 'rgb(0, 0, 0, 0.2)',
+    borderRadius: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 1,
+    m: 1,
+    p: 1,
+    width: ['350px', '350px', '350px', '420px'],
+    zIndex: 3,
+  } 
+
   return(
     <Box 
       sx={{ 
@@ -15,94 +71,131 @@ export default function Services() {
         height: '900px',
         width: '100%',
         color: clr.light,
-
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
-
         top: '-45px',
-        zIndex: 10
+        zIndex: 10,
       }}
     >
 
-      <TitleServices />
+      {/* Title */}
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          width: '100%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <TitleText>В нашем центре</TitleText>
+    </Box>
 
-      <Box>
-        <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1',  textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center' }}> 
-          Наш центр предоставляет широкий спектр услуг для собак, начиная от выставочного тренинга и поддержания спортивной формы, заканчивая грумингом. 
-          Отличительной чертой нашего центра является команда профессионалов, готовая помочь в решении вопросов любой сложности.
-        </Typography>
+      {/* Top */}
+      <Box sx={{ mb: 4 }}>
+        <TopText>
+          самый широкий спектр услуг для собак, начиная от выставочного тренинга и 
+          поддержания спортивной формы, заканчивая грумингом
+        </TopText>
       </Box>
 
-      <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'space-around'}}>
+      {/* Optional texts */}
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          display: 'flex', 
+          justifyContent: 'center',
+          width: '100%',
+          top: ['50px', '50px', '50px', '50px']
+        }}
+      >
+
+        {/* Center */}
+        <Box 
+          sx={{ 
+            position: 'absolute',
+            display: 'flex', 
+            alignItems: 'center',
+            width: '100%',
+            height: '100%',
+            justifyContent: 'center',
+            zIndex: 5,
+          }}
+        >
+          <Box 
+            sx={{ 
+              borderRadius: '50%', 
+              width: '250px', 
+              height: '250px', 
+              background: `url('/images/services/testAbout.jpg')`, 
+              backgroundSize: '360px 260px', 
+              border: `8px solid ${clr.secondary1}`,
+              scale: ['1.1', '1.1', '1.1', '1.3']
+            }}
+          />
+        </Box>
         
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%' }}>
-
-          <Box sx={{ }}>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Два больших хендлинг зала
-            </Typography>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Cпециальное спортивное покрытием пола и зеркальные стены по периметру
-            </Typography>
+        {/* Left side */}
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'flex-start',
+            width: '100%',
+          }}
+        >
+          <Box sx={{ ...optionsTextsContainerProps, top: ['-20px', '-20px', '-20px', '-25px'] }}>
+            <TopOptionText>Два хендлинг зала</TopOptionText>
+            <BottomOptionText>Cпециальное спортивное покрытие пола и зеркальные стены по периметру</BottomOptionText>
           </Box>
-
-          <Box>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Фитнес зал
-            </Typography>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}>
-              Cиловые и статические тренажеры профессиональная беговая дорожка для собак 
-            </Typography>
+          
+          <Box sx={{ ...optionsTextsContainerProps, top: ['20px', '20px', '20px', '25px'] }}>
+            <TopOptionText>Фитнес зал</TopOptionText>
+            <BottomOptionText>Cиловые и статические тренажеры, профессиональная беговая дорожка для собак</BottomOptionText>
           </Box>
-
         </Box>
 
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Box sx={{ borderRadius: '50%', width: '300px', height: '300px', background: `url('/images/services/testAbout.jpg')`, backgroundSize: '400px 300px', border: `5px solid ${clr.primary}` }}/>
-        </Box>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%' }}>
-
-          <Box>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Зона отдыха для владельцев
-            </Typography>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак  
-            </Typography>
+        {/* Right side */}
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'flex-end', 
+            width: '100%' 
+          }}
+        >
+          <Box sx={{ ...optionsTextsContainerProps, top: ['-20px', '-20px', '-20px', '-25px'] }}>
+            <TopOptionText>Зона отдыха</TopOptionText>
+            <BottomOptionText>Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак</BottomOptionText>
           </Box>
 
-          <Box>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
-              Груминг комната
-            </Typography>
-            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}>
-              Специальная ванна для собак, профессиональный стол, мощный компрессор, фен и полотенца.
-            </Typography>
+          <Box sx={{ ...optionsTextsContainerProps, top: ['20px', '20px', '20px', '25px']  }}>
+            <TopOptionText>Груминг комната</TopOptionText>
+            <BottomOptionText>Специальная ванна для собак, профессиональный стол, мощный компрессор и фен</BottomOptionText>
           </Box>
-
         </Box>
 
       </Box>
 
-      <Box>
-        <Typography sx={{ display: 'flex', justifyContent: 'center' }}> Делаем Ваших питомцев счастливыми с 2017 года</Typography>
+      {/* Buttom */}
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          top: '140px' 
+        }}
+      >
+        <BottomText>Делаем Ваших питомцев счастливыми с 2017 года</BottomText>
       </Box>
       
     </Box>
   )
 } 
 
-
-
-
-
-
-
-
-
 {/*
+import ServiceLeft from "./services/serviceLeft";
+import ServiceRight from "./services/serviceRight";
+
       <ServiceLeft 
         top={-50}  
         pright={10}
@@ -120,57 +213,4 @@ export default function Services() {
         lineTwo={'вам поможет профессиональный хендлер'}
         image={''}
       />
-
-      <ServiceLeft 
-        top={190}  
-        pright={10}
-        title={'Дрессировка'}
-        lineOne={'Научим спокойно ходить на поводке, приходить по первому зову и носить тапочки,'}
-        lineTwo={'поможем справиться с проблемами и воспитать щенка'}
-        image={''}
-      />
-
-      <ServiceRight 
-        top={310} 
-        pleft={10}
-        title={'Грумминг'}
-        lineOne={'Комплекс по уходу за питомцем'}
-        lineTwo={'(мойка и укладка шерсти, стрижка когтей и другие процедуры в зависимости от породы)'}
-        image={''}
-      />
-
-      <ServiceLeft 
-        top={430}  
-        pright={10}
-        title={'Массаж'}
-        lineOne={'Массаж улучшает состояние связок и суставов, снимает напряжение,'}
-        lineTwo={'улучшает кровообращение и работу пищеварительной системы'}
-        image={''}
-      />
-      <ServiceRight 
-        top={550} 
-        pleft={10}
-        title={'Фото-студия'}
-        lineOne={'Экстерьерная и художественная фотосъемка, '}
-        lineTwo={'фоторепортажи с выставки, фотосъемка щенков'}
-        image={''}
-      />
-
-      <ServiceLeft 
-        top={670}  
-        pright={10}
-        title={'Аренда'}
-        lineOne={'Индивидуальная и групповая аренда,'}
-        lineTwo={'проведение семинаров и мастер классов'}
-        image={''}
-      />
-
-      <ServiceRight 
-        top={790} 
-        pleft={10}
-        title={'Оформление документов'}
-        lineOne={'Помощь в оформлении чемпионских дипломов и родословных'}
-        lineTwo={''}
-        image={''}
-      /> 
       */}

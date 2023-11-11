@@ -26,7 +26,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.light, position: 'relative', zIndex: 10 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head color='forest'/>
+          <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} />
           <Main />
         </Container>
         <MainParallax /> 
@@ -35,7 +35,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head color='forest'/>
+          <Head TextColor={clr.light} HoverColor={clr.secondary3} TextColorOnHover={clr.dark} />
           <TreesParallax/>
           <Services />
         </Container>
@@ -45,7 +45,7 @@ export default function Home() {
       <Box sx={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
       
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden', height: '4000px' }}>
-          <Head color='forest'/>
+          <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} />
         </Container>
       </Box>  
 
