@@ -17,7 +17,7 @@ export default function TreesParallax() {
               display: 'flex', 
               justifyContent: 'center', 
               left: '-20px', 
-              top: `${ -140 + yPos * 30}px`,
+              top: `${ -170 + yPos * 35}px`,
             }}
           >
             <Image src="/images/services/static/forest_layer.png" alt="forest_layer" width={850} height={950} />

@@ -8,7 +8,7 @@ export default function GrassParallax() {
 
   return (
     <>
-      <Box sx={{ position: 'relative' }}>
+      <Box sx={{ position: 'relative', pointerEvents: 'none' }}>
         <Box 
           sx={{ 
             position: 'absolute', 
@@ -17,7 +17,7 @@ export default function GrassParallax() {
             background: `url('/images/forest/1_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 6,
-            bottom: '-150px',
+            bottom: `${(70 - (16 * 18) + 150) - yPos * 5 }px`
           }}
         />
         <Box 
@@ -28,7 +28,7 @@ export default function GrassParallax() {
             background: `url('/images/forest/2_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 5,
-            bottom: `${(150 - (16 * 18) + 150) - yPos * 15 }px`
+            bottom: `${(100 - (16 * 18) + 150) - yPos * 10 }px`
           }}
         />
         <Box 
@@ -39,7 +39,7 @@ export default function GrassParallax() {
             background: `url('/images/forest/3_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 4,
-            bottom: `${(150 - (16 * 18) + 250) - yPos * 20 }px`
+            bottom: `${(120 - (16 * 18) + 200) - yPos * 20 }px`
           }}
         /> 
         <Box 
@@ -50,9 +50,9 @@ export default function GrassParallax() {
             background: `url('/images/forest/4_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 3,
-            bottom: `${(150 - (16 * 17) + 300) - yPos * 25 }px`
+            bottom: `${(140 - (16 * 18) + 250) - yPos * 25 }px`,
           }}
-        /> 
+        />
       </Box>
     </>   
   )

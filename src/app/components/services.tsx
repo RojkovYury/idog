@@ -1,6 +1,8 @@
 
-import { Box } from "@mui/material";
+import { Box,Typography } from "@mui/material";
 import TitleServices from "./services/titleServices";
+import { clr } from "../colors";
+import Image from 'next/image';
 import ServiceLeft from "./services/serviceLeft";
 import ServiceRight from "./services/serviceRight";
 
@@ -10,14 +12,97 @@ export default function Services() {
     <Box 
       sx={{ 
         position: 'relative', 
-        height: '1000px',
+        height: '900px',
         width: '100%',
+        color: clr.light,
+
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+
+        top: '-45px',
+        zIndex: 10
       }}
     >
 
       <TitleServices />
 
-      {/*
+      <Box>
+        <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1',  textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center' }}> 
+          Наш центр предоставляет широкий спектр услуг для собак, начиная от выставочного тренинга и поддержания спортивной формы, заканчивая грумингом. 
+          Отличительной чертой нашего центра является команда профессионалов, готовая помочь в решении вопросов любой сложности.
+        </Typography>
+      </Box>
+
+      <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'space-around'}}>
+        
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%' }}>
+
+          <Box sx={{ }}>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Два больших хендлинг зала
+            </Typography>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Cпециальное спортивное покрытием пола и зеркальные стены по периметру
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Фитнес зал
+            </Typography>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}>
+              Cиловые и статические тренажеры профессиональная беговая дорожка для собак 
+            </Typography>
+          </Box>
+
+        </Box>
+
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ borderRadius: '50%', width: '300px', height: '300px', background: `url('/images/services/testAbout.jpg')`, backgroundSize: '400px 300px', border: `5px solid ${clr.primary}` }}/>
+        </Box>
+
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-around', width: '100%' }}>
+
+          <Box>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Зона отдыха для владельцев
+            </Typography>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак  
+            </Typography>
+          </Box>
+
+          <Box>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '700', fontSize: '48px', lineHeight: '1', textDecoration: 'underline', textShadow: `2px 2px 1px ${clr.dark}`, textAlign: 'center'  }}> 
+              Груминг комната
+            </Typography>
+            <Typography sx={{ display: 'flex', justifyContent: 'center', fontWeight: '400', fontSize: '32px', lineHeight: '1', textShadow: `1px 1px 1px ${clr.dark}`, textAlign: 'center'  }}>
+              Специальная ванна для собак, профессиональный стол, мощный компрессор, фен и полотенца.
+            </Typography>
+          </Box>
+
+        </Box>
+
+      </Box>
+
+      <Box>
+        <Typography sx={{ display: 'flex', justifyContent: 'center' }}> Делаем Ваших питомцев счастливыми с 2017 года</Typography>
+      </Box>
+      
+    </Box>
+  )
+} 
+
+
+
+
+
+
+
+
+
+{/*
       <ServiceLeft 
         top={-50}  
         pright={10}
@@ -89,7 +174,3 @@ export default function Services() {
         image={''}
       /> 
       */}
-
-    </Box>
-  )
-} 

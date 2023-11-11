@@ -9,7 +9,6 @@ export default function TitleServices() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        top: '-45px',
       }}
     >
       <Typography
@@ -18,7 +17,7 @@ export default function TitleServices() {
           fontWeight: '700',
         }}  
       >
-        Наши услуги
+        О нас
       </Typography>
     </Box>
   )
