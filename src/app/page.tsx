@@ -39,10 +39,11 @@ export default function Home() {
           <TreesParallax/>
           <Services />
         </Container>
-        { /*<GrassParallax /> */}
+        <GrassParallax />
       </Box>
 
       <Box sx={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
+      
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden', height: '4000px' }}>
           <Head color='forest'/>
         </Container>
@@ -51,3 +52,4 @@ export default function Home() {
     </ThemeProvider>
   )
 }
+{ /*<GrassParallax /> */}

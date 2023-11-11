@@ -13,7 +13,7 @@ export const clr = {
 }
 /* 
 A1BA89
-8FBB99
+
 C8CC92
 
 #DAB49D 
