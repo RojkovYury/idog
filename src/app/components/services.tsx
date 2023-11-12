@@ -6,7 +6,7 @@ import styled from '@emotion/styled'
 export default function Services() {
 
   const TitleText = styled(Typography)({
-    fontSize: '80px', 
+    // fontSize: '80px', 
     fontWeight: '700',
     textShadow: `2px 2px 1px ${clr.dark}`, 
     textAlign: 'center',
@@ -16,7 +16,7 @@ export default function Services() {
     display: 'flex', 
     justifyContent: 'center', 
     fontWeight: '700', 
-    fontSize: '42px', 
+    // fontSize: ['32px', '32px', '32px', '42px'],
     lineHeight: '1',  
     textShadow: `2px 2px 1px ${clr.dark}`, 
     textAlign: 'center',
@@ -26,7 +26,7 @@ export default function Services() {
     display: 'flex', 
     justifyContent: 'center', 
     fontWeight: '700', 
-    fontSize: '42px', 
+    // fontSize: '42px',
     lineHeight: '1', 
     textDecoration: 'underline', 
     textShadow: `2px 2px 1px ${clr.dark}`, 
@@ -37,7 +37,7 @@ export default function Services() {
     display: 'flex', 
     justifyContent: 'center', 
     fontWeight: '400', 
-    fontSize: '30px', 
+    // fontSize: '30px', 
     lineHeight: '1', 
     textShadow: `1px 1px 1px ${clr.dark}`, 
     textAlign: 'center'
@@ -60,7 +60,8 @@ export default function Services() {
     gap: 1,
     m: 1,
     p: 1,
-    width: ['350px', '350px', '350px', '420px'],
+    width: ['350px', '350px', '75%', '420px'],
+    height: ['100px', '100px', '156px', '100%'],
     zIndex: 3,
   } 
 
@@ -89,12 +90,12 @@ export default function Services() {
           alignItems: 'center',
         }}
       >
-        <TitleText>В нашем центре</TitleText>
+        <TitleText sx={{ fontSize: ['70px', '70px', '70px', '80px'] }}>В нашем центре</TitleText>
     </Box>
 
       {/* Top */}
       <Box sx={{ mb: 4 }}>
-        <TopText>
+        <TopText sx={{ fontSize: ['32px', '32px', '38px', '42px'] }}>
           самый широкий спектр услуг для собак, начиная от выставочного тренинга и 
           поддержания спортивной формы, заканчивая грумингом
         </TopText>
@@ -107,7 +108,9 @@ export default function Services() {
           display: 'flex', 
           justifyContent: 'center',
           width: '100%',
-          top: ['50px', '50px', '50px', '50px']
+          top: ['50px', '50px', '50px', '50px'],
+          // !!
+          visibility: ['hidden', 'hidden', 'visible', 'visible' ]
         }}
       >
 
@@ -121,6 +124,8 @@ export default function Services() {
             height: '100%',
             justifyContent: 'center',
             zIndex: 5,
+            // !!
+            visibility: ['hidden', 'hidden', 'visible', 'visible'],
           }}
         >
           <Box 
@@ -131,7 +136,7 @@ export default function Services() {
               background: `url('/images/services/testAbout.jpg')`, 
               backgroundSize: '360px 260px', 
               border: `8px solid ${clr.secondary1}`,
-              scale: ['1.1', '1.1', '1.1', '1.3']
+              scale: ['1.1', '1.1', '1.2', '1.3']
             }}
           />
         </Box>
@@ -146,13 +151,13 @@ export default function Services() {
           }}
         >
           <Box sx={{ ...optionsTextsContainerProps, top: ['-20px', '-20px', '-20px', '-25px'] }}>
-            <TopOptionText>Два хендлинг зала</TopOptionText>
-            <BottomOptionText>Cпециальное спортивное покрытие пола и зеркальные стены по периметру</BottomOptionText>
+            <TopOptionText sx={{ fontSize: ['42px', '42px', '42px', '42px'] }}>Два хендлинг зала</TopOptionText>
+            <BottomOptionText sx={{ fontSize: ['30px', '30px', '28px', '30px'] }}>Cпециальное спортивное покрытие пола и зеркальные стены по периметру</BottomOptionText>
           </Box>
           
           <Box sx={{ ...optionsTextsContainerProps, top: ['20px', '20px', '20px', '25px'] }}>
-            <TopOptionText>Фитнес зал</TopOptionText>
-            <BottomOptionText>Cиловые и статические тренажеры, профессиональная беговая дорожка для собак</BottomOptionText>
+            <TopOptionText sx={{ fontSize: ['42px', '42px', '42px', '42px'] }}>Фитнес зал</TopOptionText>
+            <BottomOptionText sx={{ fontSize: ['30px', '30px', '28px', '30px'] }}>Cиловые и статические тренажеры, профессиональная беговая дорожка для собак</BottomOptionText>
           </Box>
         </Box>
 
@@ -166,13 +171,13 @@ export default function Services() {
           }}
         >
           <Box sx={{ ...optionsTextsContainerProps, top: ['-20px', '-20px', '-20px', '-25px'] }}>
-            <TopOptionText>Зона отдыха</TopOptionText>
-            <BottomOptionText>Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак</BottomOptionText>
+            <TopOptionText sx={{ fontSize: ['42px', '42px', '42px', '42px'] }}>Зона отдыха</TopOptionText>
+            <BottomOptionText sx={{ fontSize: ['30px', '30px', '28px', '30px'] }}>Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак</BottomOptionText>
           </Box>
 
           <Box sx={{ ...optionsTextsContainerProps, top: ['20px', '20px', '20px', '25px']  }}>
-            <TopOptionText>Груминг комната</TopOptionText>
-            <BottomOptionText>Специальная ванна для собак, профессиональный стол, мощный компрессор и фен</BottomOptionText>
+            <TopOptionText sx={{ fontSize: ['42px', '42px', '42px', '42px'] }}>Груминг комната</TopOptionText>
+            <BottomOptionText sx={{ fontSize: ['30px', '30px', '28px', '30px'] }}>Специальная ванна для собак, профессиональный стол, мощный компрессор и фен</BottomOptionText>
           </Box>
         </Box>
 
