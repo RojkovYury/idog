@@ -1,14 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import { clr } from "@/app/colors";
 
-interface ServiceRightProps {
+interface AboutUsRightRightProps {
   top: number;
   title: string;
   lineOne: string;
   image?: string;
 }
 
-export default function ServiceRight({ top, title, lineOne, image }: ServiceRightProps) {
+export default function AboutUsRightRight({ top, title, lineOne, image }: AboutUsRightRightProps) {
   return(
     <Box 
       sx={{ 

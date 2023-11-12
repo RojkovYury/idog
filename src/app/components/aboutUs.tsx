@@ -2,10 +2,10 @@
 import { Box,Typography } from "@mui/material";
 import { clr } from "../colors";
 import styled from '@emotion/styled'
-import ServiceLeft from "./services/serviceLeft";
-import ServiceRight from "./services/serviceRight";
+import AboutUsLeft from "./aboutUs/aboutUsLeft";
+import AboutUsRight from "./aboutUs/aboutUsRight";
 
-export default function Services() {
+export default function AboutUs() {
 
   const TitleText = styled(Typography)({
     fontWeight: '700',
@@ -238,25 +238,25 @@ export default function Services() {
           flexDirection: 'column',
         }}
       >
-        <ServiceLeft 
+        <AboutUsLeft 
           top={0}  
           title={'Два хендлинг зала'}
           lineOne={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
           image={'/images/services/tempMobileTest/handling.jpg'}
         />
-        <ServiceRight 
+        <AboutUsRight 
           top={30}  
           title={'Фитнес зал'}
           lineOne={'Cиловые и статические тренажеры, профессиональная беговая дорожка для собак'}
           image={'/images/services/tempMobileTest/fitnes.jpg'}
         />
-        <ServiceLeft 
+        <AboutUsLeft 
           top={60}  
           title={'Зона отдыха'}
           lineOne={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
           image={'/images/services/tempMobileTest/relax.jpg'}
         />
-        <ServiceRight 
+        <AboutUsRight 
           top={90}  
           title={'Груминг комната'}
           lineOne={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
@@ -275,9 +275,6 @@ export default function Services() {
           Делаем Ваших питомцев счастливыми с 2017 года
         </BottomText>
       </Box>
-
-
-
 
     </Box>
   )

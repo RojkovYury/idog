@@ -8,8 +8,8 @@ import Head from "../components/head";
 import Main from "./components/main/main";
 import MainParallax from "./components/main/mainParallax";
 import MountansParallax from "./components/main/mountansParallax";
-import Services from "./components/services";
-import TreesParallax from "./components/services/treesParallax";
+import AboutUs from "./components/aboutUs";
+import TreesParallax from "./components/aboutUs/treesParallax";
 import GrassParallax from "./components/grassParallax";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
@@ -37,7 +37,7 @@ export default function Home() {
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary3} TextColorOnHover={clr.dark} />
           <TreesParallax/>
-          <Services />
+          <AboutUs />
         </Container>
         <GrassParallax />
       </Box>
@@ -52,4 +52,3 @@ export default function Home() {
     </ThemeProvider>
   )
 }
-{ /*<GrassParallax /> */}

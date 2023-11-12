@@ -1,14 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import { clr } from "@/app/colors";
 
-interface ServiceLeftProps {
+interface AboutUsLeftProps {
   top: number;
   title: string;
   lineOne: string;
   image?: string;
 }
 
-export default function ServiceLeft({ top, title, lineOne, image }: ServiceLeftProps) {
+export default function AboutUsLeft({ top, title, lineOne, image }: AboutUsLeftProps) {
   return(
     <Box 
       sx={{ 
