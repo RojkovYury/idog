@@ -268,10 +268,16 @@ export default function AboutUs() {
       <Box 
         sx={{ 
           position: 'relative', 
-          top: '120px' 
+          top: '120px',
+          background: ['rgb(0, 0, 0, 0.2)', 'rgb(0, 0, 0, 0.2)', 'none', 'none'],
+          borderRadius: '10px',
         }}
       >
-        <BottomText sx={{ fontSize: ['24px', '28px', '30px', '36px']} }>
+        <BottomText 
+          sx={{ 
+            fontSize: ['24px', '28px', '30px', '36px'],
+          }}
+        >
           Делаем Ваших питомцев счастливыми с 2017 года
         </BottomText>
       </Box>
