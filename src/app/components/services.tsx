@@ -49,20 +49,6 @@ export default function Services() {
     textShadow: `1px 3px 1px ${clr.dark}`, 
   })
 
-  const optionsTextsContainerProps = {
-    position: 'relative',
-    background: 'rgb(0, 0, 0, 0.2)',
-    borderRadius: '10px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 1,
-    m: 1,
-    p: 1,
-    width: ['350px', '350px', '300px', '420px'],
-    height: ['100px', '100px', '116px', '100%'],
-    zIndex: 3,
-  } 
-
   return(
     <Box 
       sx={{ 
@@ -120,7 +106,6 @@ export default function Services() {
             height: '100%',
             justifyContent: 'center',
             zIndex: 5,
-            // !!
             visibility: ['hidden', 'hidden', 'visible', 'visible'],
           }}
         >
@@ -130,16 +115,14 @@ export default function Services() {
               width: '250px', 
               height: '250px', 
               background: `url('/images/services/tempMobileTest/handling.jpg')`, 
-              backgroundSize: '360px 260px', 
+              backgroundSize: '250px 250px',
               border: `8px solid ${clr.secondary1}`,
               scale: ['', '', '1.1', '1.3'],
-              // !!
               display: ['none', 'none', 'flex', 'flex'],
             }}
           />
         </Box>
 
-        
         {/* Left side */}
         <Box 
           sx={{ 
@@ -152,7 +135,17 @@ export default function Services() {
         >
           <Box 
             sx={{ 
-              ...optionsTextsContainerProps, 
+              position: 'relative',
+              background: 'rgb(0, 0, 0, 0.2)',
+              borderRadius: '10px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+              m: 1,
+              p: 1,
+              width: ['350px', '350px', '300px', '420px'],
+              height: ['100px', '100px', '116px', '100%'],
+              zIndex: 3,
               top: ['0px', '0px', '-25px', '-25px'],
               right: ['0px', '0px', '90px', '0px'], 
             }}
@@ -163,7 +156,17 @@ export default function Services() {
           
           <Box 
             sx={{ 
-              ...optionsTextsContainerProps, 
+              position: 'relative',
+              background: 'rgb(0, 0, 0, 0.2)',
+              borderRadius: '10px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+              m: 1,
+              p: 1,
+              width: ['350px', '350px', '300px', '420px'],
+              height: ['100px', '100px', '116px', '100%'],
+              zIndex: 3,
               top: ['0px', '0px', '25px', '25px'],
               right: ['0px', '0px', '90px', '0px'], 
             }}
@@ -184,7 +187,17 @@ export default function Services() {
         >
           <Box 
             sx={{ 
-              ...optionsTextsContainerProps, 
+              position: 'relative',
+              background: 'rgb(0, 0, 0, 0.2)',
+              borderRadius: '10px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+              m: 1,
+              p: 1,
+              width: ['350px', '350px', '300px', '420px'],
+              height: ['100px', '100px', '116px', '100%'],
+              zIndex: 3, 
               top: ['0px', '0px', '-25px', '-25px'],
               left: ['0px', '0px', '90px', '0px'], 
             }}
@@ -195,7 +208,17 @@ export default function Services() {
 
           <Box 
             sx={{ 
-              ...optionsTextsContainerProps, 
+              position: 'relative',
+              background: 'rgb(0, 0, 0, 0.2)',
+              borderRadius: '10px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 1,
+              m: 1,
+              p: 1,
+              width: ['350px', '350px', '300px', '420px'],
+              height: ['100px', '100px', '116px', '100%'],
+              zIndex: 3, 
               top: ['0px', '0px', '25px', '25px'],
               left: ['0px', '0px', '90px', '0px'],   
             }}
