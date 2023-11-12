@@ -6,17 +6,18 @@ import { useState } from "react";
 
 interface ServiceLeftProps {
   top: number;
+  left: number;
 }
 
-export default function ServiceLeft({ top }: ServiceLeftProps) {
-  const [open, setOpen] = useState(true);
+export default function ServiceLeftReact({ top, left }: ServiceLeftProps) {
+  const [open, setOpen] = useState(false);
   return(
     <Box 
       sx={{ 
         // border: '1px solid red',
         position: 'relative',
         top: `${top}px`,
-        left: '0%'
+        left: `${left}px`,
       }}
     >
 
@@ -70,6 +71,7 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
         sx={{
           position: 'absolute',
           left: '150px',
+          left: '50%',
           height: '120px',
           width: open ? '800px' : '400px',
           borderRadius: '60px',
@@ -84,7 +86,8 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
             backgroundColor: clr.light,
             position: 'relative',
             height: '100px',
-            width: '740px',
+            // width: '740px',
+            width: '70%',
             borderRadius: '50px',
             display: 'flex',
             justifyContent: 'space-between',
@@ -118,9 +121,10 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
                 lineHeight: '1',  
                 fontSize: '28px', 
                 fontWeight: '700',
+                color: clr.dark,
               }}
             >
-              Каждой собаке необходимы физические нагрузки,
+              Cпециальное спортивное покрытие пола
             </Typography>
 
             <Typography 
@@ -129,35 +133,23 @@ export default function ServiceLeft({ top }: ServiceLeftProps) {
                 lineHeight: '1',  
                 fontSize: '28px', 
                 fontWeight: '700',
+                color: clr.dark,
               }}
             >
-              чтобы она была здоровой, активной и послушной.
+              и зеркальные стены по периметру
             </Typography>
-
-            <Button
-              variant='contained'
-              sx={{
-                height: '36px',
-                borderRadius: '15px',
-                backgroundColor: clr.primary,
-                color: clr.light,
-                "&:hover": {  
-                  backgroundColor: clr.secondary1,
-                },
-              }}
-            >
-              узнать больше
-            </Button>
           </Box>
 
-          <Typography 
+          <Typography
+            noWrap 
             sx={{ 
               fontSize: '42px',             
               fontWeight: '700',
-              mr: 4, 
+              mr: 4,
+              color: clr.dark
             }}
           >
-            Фитнесс
+            Два хендлинг зала
           </Typography>
         </Box>
       </Box>

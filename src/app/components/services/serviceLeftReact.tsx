@@ -4,11 +4,12 @@ import { Box, Typography, Button } from "@mui/material";
 import { clr } from "@/app/colors";
 import { useState } from "react";
 
-interface ServiceRightProps {
+interface ServiceLeftProps {
   top: number;
+  left: number;
 }
 
-export default function ServiceRight({ top }: ServiceRightProps) {
+export default function ServiceLeftReact({ top, left }: ServiceLeftProps) {
   const [open, setOpen] = useState(true);
   return(
     <Box 
@@ -16,30 +17,30 @@ export default function ServiceRight({ top }: ServiceRightProps) {
         // border: '1px solid red',
         position: 'relative',
         top: `${top}px`,
-        left: '60%'
+        left: `${left}px`,
       }}
     >
 
-      <Box // скрывающая заслонка
+      <Box
         sx={{
           // border: '1px solid green',
           position: 'absolute',
-          zIndex: 3,
+          zIndex: 2,
           backgroundColor: clr.forest,
           top: '0px',
-          left: '200px', //половина аватара + смешение (-600) 
+          left: '-600px', //половина аватара + смешение 
           height: '120px',
           width: '800px',
         }}
       />
 
-      <Box // Круг
+      <Box
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
         sx={{
           backgroundColor: clr.primary,
           position: 'absolute',
-          left: '150px', // !
+          left: '150px',
           height: '120px',
           width: '120px',
           borderRadius: '50%',
@@ -52,7 +53,7 @@ export default function ServiceRight({ top }: ServiceRightProps) {
           // opacity: 0.2
         }} 
       >
-        <Box // Фото в кругу
+        <Box
           sx={{
             position: 'relative',
             height: '110px',
@@ -64,28 +65,28 @@ export default function ServiceRight({ top }: ServiceRightProps) {
         />
       </Box>
 
-      <Box // Слой для ховера
+      <Box
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
         sx={{
-          // border: '1px solid black',
           position: 'absolute',
-          left: open ? '-540px' : '-150px',
+          left: '150px',
           height: '120px',
           width: open ? '800px' : '400px',
           borderRadius: '60px',
           transition: 'all 1s',
           display: 'flex',
-          justifyContent: 'flex-start',
+          justifyContent: 'flex-end',
           alignItems: 'center',
         }} 
       >
-        <Box // Палка
+        <Box 
           sx={{
             backgroundColor: clr.light,
             position: 'relative',
             height: '100px',
-            width: '740px',
+            // width: '740px',
+            width: '70%',
             borderRadius: '50px',
             display: 'flex',
             justifyContent: 'space-between',
@@ -96,15 +97,12 @@ export default function ServiceRight({ top }: ServiceRightProps) {
           }}
         >
 
-          <Typography 
+          <Box 
             sx={{ 
-              fontSize: '42px',             
-              fontWeight: '700',
-              ml: 4, 
+              display: 'flex', 
+              width: '1px' 
             }}
-          >
-            Фитнесс
-          </Typography>
+          />
             
           <Box 
             sx={{
@@ -122,9 +120,10 @@ export default function ServiceRight({ top }: ServiceRightProps) {
                 lineHeight: '1',  
                 fontSize: '28px', 
                 fontWeight: '700',
+                color: clr.dark,
               }}
             >
-              Каждой собаке необходимы физические нагрузки,
+              Cпециальное спортивное покрытие пола
             </Typography>
 
             <Typography 
@@ -133,35 +132,24 @@ export default function ServiceRight({ top }: ServiceRightProps) {
                 lineHeight: '1',  
                 fontSize: '28px', 
                 fontWeight: '700',
+                color: clr.dark,
               }}
             >
-              чтобы она была здоровой, активной и послушной.
+              и зеркальные стены по периметру
             </Typography>
-
-            <Button
-              variant='contained'
-              sx={{
-                height: '36px',
-                borderRadius: '15px',
-                backgroundColor: clr.primary,
-                color: clr.light,
-                "&:hover": {  
-                  backgroundColor: clr.secondary1,
-                },
-              }}
-            >
-              узнать больше
-            </Button>
           </Box>
 
-
-          <Box 
+          <Typography
+            noWrap 
             sx={{ 
-              display: 'flex', 
-              width: '1px'
+              fontSize: '42px',             
+              fontWeight: '700',
+              mr: 4,
+              color: clr.dark
             }}
-          />
-
+          >
+            Два хендлинг зала
+          </Typography>
         </Box>
       </Box>
     </Box>
