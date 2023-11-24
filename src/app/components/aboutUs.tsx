@@ -2,8 +2,8 @@
 import { Box,Typography } from "@mui/material";
 import { clr } from "../colors";
 import styled from '@emotion/styled'
-import AboutUsLeft from "./aboutUs/aboutUsLeft";
-import AboutUsRight from "./aboutUs/aboutUsRight";
+import AboutUsLeft from "./aboutUs-main/aboutUsLeft";
+import AboutUsRight from "./aboutUs-main/aboutUsRight";
 
 export default function AboutUs() {
 
