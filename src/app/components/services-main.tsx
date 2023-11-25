@@ -1,24 +1,40 @@
-import { Box, Typography } from '@mui/material';
-import Image from 'next/image';
-import { clr } from '../colors';
+import { Box } from '@mui/material';
 import ServicesBillboard from './services-main/servicesBillboard';
+import ServicesItems from './services-main/servicesItems';
+import { useState } from 'react';
+import billboardContent from './services-main/billboardContent.js';
 
 export default function ServicesMain() {
 
+  const [currentBillboardContent, setCurrentBillboardContent] = useState(billboardContent.documents);
+  console.log(currentBillboardContent);
 
   return(
-    <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column' }}>
-      <ServicesBillboard />
+    <Box 
+      sx={{ 
+        position: 'relative', 
+        display: 'flex', 
+        flexDirection: 'column' 
+      }}
+    >
 
-      <Box sx={{ position: 'relative', border: '1px solid black', width: '100%', height: '600px', zIndex: 20, transition: 'height 0.3s', "&:hover": { height: '350px' }, }}>
-        
-        <Box sx={{ position: 'absolute', border: '1px solid black', width: '200px', height: '200px', left: '10%', bottom: '20%', transition: 'all 0.3s', "&:hover": { scale: '1.3' },  }}>
-          <Image src="/images/services/dr.png" alt="layoutMain" width={200} height={200}/>
-        </Box>
+      <ServicesBillboard 
+        currentBillboardContent={currentBillboardContent}
+      />
+      
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          // border: '1px solid black', 
+          width: '100%', 
+          height: '600px', 
+          zIndex: 20 
+        }}
+      >
 
-        <Box sx={{ position: 'absolute', border: '1px solid black', width: '200px', height: '200px', left: '50%', bottom: '40%', transition: 'all 0.3s', "&:hover": { scale: '1.3' }, }}>
-          <Image src="/images/services/fitnes.png" alt="layoutMain" width={200} height={200}/>
-        </Box>
+        <ServicesItems 
+          setCurrentBillboardContent={setCurrentBillboardContent}
+        />
 
       </Box>
     </Box>

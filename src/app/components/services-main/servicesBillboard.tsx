@@ -2,7 +2,11 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { clr } from '../../colors';
 
-export default function ServicesBillboard() {
+interface ServicesBillboardProps {
+  currentBillboardContent: any;
+}
+
+export default function ServicesBillboard({ currentBillboardContent }: ServicesBillboardProps) {
 
   return(
     <Box sx={{ position: 'relative', display: 'flex', width: '100%', justifyContent: 'center', height: '300px' }}>
@@ -14,10 +18,10 @@ export default function ServicesBillboard() {
         
         <Box sx={{ width: '65%', textAlign: 'center' }}>
           <Typography sx={{ fontSize: '64px', marginLeft: '20px' }}>
-            SOME TITLE
+            {currentBillboardContent.title}
           </Typography>
           <Typography sx={{ fontSize: '32px', marginLeft: '20px' }}>
-            Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text
+            {currentBillboardContent.text}
           </Typography>
         </Box>
 
