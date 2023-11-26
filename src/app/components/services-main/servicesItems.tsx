@@ -12,8 +12,8 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/documents.png'}
         alt={'documents'}
         left={'40%'}
-        top={'65%'}
-        zIndex={'10'}
+        top={'50%'}
+        zIndex={'12'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
 

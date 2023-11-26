@@ -8,7 +8,9 @@ export const clr = {
   secondary2: '#F5AF41', 
   secondary3: '#F6B856',
   forest: '#8A7968',
-  grass: '#C8CC92'
+  grass: '#C8CC92',
+  water: '#2E5077',
+  waterGradient: 'linear-gradient(#2E5077, #191e27)'
 
 }
 /* 
