@@ -43,7 +43,7 @@ export default function WavesParallax() {
             background: `url('/images/waves/1_layer.png')`,
             backgroundSize: '1278px 293px',
             zIndex: 6,
-            bottom: 0,
+            bottom: '-10px',
             animation: `${waveAnimate} 80s linear infinite`,
             animationDelay: '-5s', 
           }}
@@ -73,7 +73,7 @@ export default function WavesParallax() {
             zIndex: 4,
             animation: `${waveAnimate} 100s linear infinite`,
             animationDelay: '-5s', 
-            bottom: `${250 - yPos * 14 }px`
+            bottom: `${225 - yPos * 14 }px`
           }}
         /> 
         

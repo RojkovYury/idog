@@ -13,7 +13,6 @@ import TreesParallax from "./components/aboutUs-main/treesParallax";
 import GrassParallax from "./components/grassParallax";
 import ServicesMain from "./components/services-main";
 import WavesParallax from "./components/wavesParallax";
-import Waves from "./components/waves";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
 const theme = createTheme({
@@ -53,7 +52,7 @@ export default function Home() {
         <WavesParallax/>
       </Box>  
 
-      <Box sx={{ background: 'linear-gradient(#2E5077, #191e27)', position: 'relative', zIndex: 40, height: '1000px' }}>
+      <Box sx={{ background: 'linear-gradient(#3C6E82, #191e27)', position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary3} TextColorOnHover={clr.dark} />
         </Container>
