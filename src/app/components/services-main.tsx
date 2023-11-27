@@ -15,8 +15,8 @@ export default function ServicesMain() {
         position: 'relative', 
         display: 'flex', 
         flexDirection: 'column', 
-        height: '1200px',
-        border: '1px solid red'
+        // height: '1200px',
+        // border: '1px solid red'
       }}
     >
 
@@ -27,7 +27,7 @@ export default function ServicesMain() {
       <Box 
         sx={{ 
           position: 'relative', 
-          border: '1px solid black', 
+          // border: '1px solid black', 
           width: '100%', 
           height: '600px', 
           zIndex: 20 

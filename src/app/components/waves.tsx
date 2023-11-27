@@ -1,18 +1,37 @@
-import { Box } from "@mui/material";
+import { Box, keyframes } from "@mui/material";
 import { clr } from "../colors";
+import useScroll from "@/hooks/useScroll";
 
-interface WavesProps {
-  yPos: number; 
-}
+const waveAnimate = keyframes`
+    0% {
+    background-position-x: 0px;
+  }
 
-export default function Waves({ yPos }: WavesProps) {
+  100% {
+    background-position-x: 1278px;
+  }
+`;
+
+const waveAnimateReverse = keyframes`
+    0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: -1278px;
+  }
+`;
+
+export default function Waves() {
+
+  const [yPos] = useScroll();
 
   const waveBaseSXProps = { 
     position: 'absolute', 
     left: '0', 
     width: '100%', 
     height: '100px', 
-    background: `url('/images/wave2.png')`, 
+    background: `url('/images/waves/old_wave.png')`, 
     backgroundSize: '1000px 100px' 
   }
  
