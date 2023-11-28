@@ -18,6 +18,7 @@ export default function ServicesItem(props: ServicesItemProps) {
   return(
     <>
       <Box 
+        // @ts-ignore 
         onClick={() => props.setCurrentBillboardContent(billboardContent[props.alt])}
         sx={{ 
           position: 'absolute', 
