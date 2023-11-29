@@ -12,7 +12,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/documents.png'}
         alt={'documents'}
         left={'40%'}
-        top={'50%'}
+        bottom={'20%'}
         zIndex={'12'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
@@ -21,15 +21,15 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/fitnes.png'}
         alt={'fitnes'}
         left={'5%'}
-        top={'0%'}
+        bottom={'60%'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
 
       <ServicesItem 
         src={'/images/services/grooming.png'}
         alt={'grooming'}
-        left={'35%'}
-        top={'5%'}
+        left={'50%'}
+        bottom={'30%'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
 
@@ -37,7 +37,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/handling.png'}
         alt={'handling'}
         left={'10%'}
-        top={'60%'}
+        bottom={'20%'}
         zIndex={'11'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
@@ -46,7 +46,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/massage.png'}
         alt={'massage'}
         left={'50%'}
-        top={'25%'}
+        bottom={'70%'}
         zIndex={'10'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
@@ -55,7 +55,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/photosession.png'}
         alt={'photosession'}
         left={'20%'}
-        top={'35%'}
+        bottom={'50%'}
         zIndex={'10'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
@@ -64,7 +64,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         src={'/images/services/rent.png'}
         alt={'rent'}
         left={'65%'}
-        top={'50%'}
+        bottom={'10%'}
         zIndex={'11'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
@@ -72,8 +72,8 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
       <ServicesItem 
         src={'/images/services/training.png'}
         alt={'training'}
-        left={'70%'}
-        top={'15%'}
+        left={'50%'}
+        bottom={'0%'}
         setCurrentBillboardContent={setCurrentBillboardContent}
       />
     </>

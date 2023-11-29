@@ -4,12 +4,12 @@ import billboardContent from './billboardContent';
 
 interface ServicesItemProps {
   src: string;
-  alt: string;
   left?: string;
   right?: string;
   bottom?: string;
   top?: string;
   zIndex?: string;
+  alt: string;
   setCurrentBillboardContent?: any;
 }
 
@@ -30,11 +30,6 @@ export default function ServicesItem(props: ServicesItemProps) {
           bottom: props.bottom ? props.bottom : '', 
           top: props.top ? props.top : '',
           zIndex: props.zIndex ? props.zIndex : '',
-          transition: 'scale 0.3s',
-          "&:hover": { 
-            scale: '1.3', 
-            zIndex: 20,
-          },  
         }}
       >
         <Image src={props.src} alt={props.alt} width={250} height={250}/>
@@ -42,3 +37,13 @@ export default function ServicesItem(props: ServicesItemProps) {
     </>
   )
 } 
+
+/*
+
+          transition: 'scale 0.3s',
+          "&:hover": { 
+            scale: '1.3', 
+            zIndex: 20,
+          },  
+
+*/

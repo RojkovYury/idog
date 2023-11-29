@@ -1,0 +1,20 @@
+'use client'
+
+import { Box } from "@mui/material";
+
+export default function Ground() {
+  return (
+    <Box 
+        sx={{ 
+        position: 'relative',
+        pointerEvents: 'none',
+        width: '100%', 
+        height: '239px', 
+        background: `url('/images/ground/ground.png')`,
+        backgroundSize: '1935px 239px',
+        zIndex: 2,
+        bottom: '-20px',
+        }}
+      />  
+  )
+}

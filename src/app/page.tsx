@@ -13,6 +13,7 @@ import TreesParallax from "./components/aboutUs-main/treesParallax";
 import GrassParallax from "./components/grassParallax";
 import ServicesMain from "./components/services-main";
 import WavesParallax from "./components/wavesParallax";
+import Ground from "./components/ground";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
 const theme = createTheme({
@@ -44,15 +45,16 @@ export default function Home() {
         <GrassParallax />
       </Box>
 
-      <Box sx={{ background: 'linear-gradient(#C8CC92, #D0D6B5)', position: 'relative', zIndex: 30 }}>
+      <Box sx={{ background: 'linear-gradient(#C8CC92, #C8CC92)', position: 'relative', zIndex: 30 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} />
           <ServicesMain />
         </Container>
-        <WavesParallax/>
+        <Ground />
+        {/* <WavesParallax/> */}
       </Box>  
 
-      <Box sx={{ background: 'linear-gradient(#3C6E82, #191e27)', position: 'relative', zIndex: 40, height: '1000px' }}>
+      <Box sx={{ backgroundColor: '#947D59', position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary3} TextColorOnHover={clr.dark} />
         </Container>
@@ -71,5 +73,11 @@ export default function Home() {
 
 // #6D98BA
 // #9AADBF
+
+// 947D59
+// 412722
+// 423629
+// B07156
+// 513C2C
 
 // <Waves />

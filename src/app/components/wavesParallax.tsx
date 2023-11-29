@@ -31,10 +31,70 @@ export default function WavesParallax() {
         sx={{ 
           position: 'relative', 
           pointerEvents: 'none', 
+          height: `${600 - yPos * 16}px`,
+          zIndex: 50,
+        }} 
+      >
+
+
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '293px', 
+            background: `url('/images/waves/wave_light.png')`,
+            backgroundSize: '96px 293px',
+            zIndex: 6,
+            bottom: '-1px',
+            // animation: `${waveAnimate} 80s linear infinite`,
+            // animationDelay: '-5s', 
+          }}
+        />
+        
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '293px', 
+            background: `url('/images/waves/wave_medium.png')`,
+            backgroundSize: '96px 293px',
+            zIndex: 5,
+            // animation: `${waveAnimateReverse} 90s linear infinite`,
+            // animationDelay: '-25s', 
+            bottom: `${100 - yPos * 6 }px`
+          }}
+        />
+      
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '293px', 
+            background: `url('/images/waves/wave_dark.png')`,
+            backgroundSize: '96px 293px',
+            zIndex: 4,
+            // animation: `${waveAnimate} 100s linear infinite`,
+            // animationDelay: '-5s', 
+            bottom: `${225 - yPos * 14 }px`
+          }}
+          />
+      </Box>
+      
+    </>   
+  )
+}
+
+/*
+
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          pointerEvents: 'none', 
           height: `${600 - yPos * 18}px`,
           zIndex: 50,
-        }}
+        }} 
       >
+
         <Box 
           sx={{ 
             position: 'absolute', 
@@ -90,8 +150,5 @@ export default function WavesParallax() {
             bottom: `${300 - yPos * 18 }px`
           }}
         />
-      </Box>
-      
-    </>   
-  )
-}
+
+*/
