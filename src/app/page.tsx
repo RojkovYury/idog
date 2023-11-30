@@ -50,6 +50,7 @@ export default function Home() {
           <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} />
           <ServicesParallax />
           <ServicesMain />
+          <Box sx={{height: '200px'}}/>
         </Container>
         <Ground />
       </Box>  

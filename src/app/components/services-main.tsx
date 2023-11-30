@@ -14,7 +14,6 @@ export default function ServicesMain() {
         position: 'relative', 
         display: 'flex', 
         flexDirection: 'column',
-        height: '950px',
       }}
     >
       <ServicesContent currentContent={currentContent} />

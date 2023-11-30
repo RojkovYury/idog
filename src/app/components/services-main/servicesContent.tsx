@@ -77,7 +77,7 @@ export default function ServicesContent({ currentContent }: ServicesContentProps
               borderRadius: '50%', 
               width: '100%', 
               height: '100%', 
-              background: `url('/images/aboutUS/tempMobileTest/fitnes.jpg')`, 
+              background: `url('${currentContent.src}')`,
               backgroundSize: '100% 100%',
               border: `4px solid ${clr.primary}`,
             }}

@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import servicesContent from './servicesContent';
+import servicesContentMaim from './servicesContentMain';
 
 interface ServicesItemProps {
   src: string;
@@ -19,7 +19,7 @@ export default function ServicesItem(props: ServicesItemProps) {
     <>
       <Box 
         // @ts-ignore 
-        onClick={() => props.setCurrentContent(servicesContent[props.alt])}
+        onClick={() => props.setCurrentContent(servicesContentMaim[props.alt])}
         sx={{ 
           position: 'absolute', 
           // border: '1px solid black', 
