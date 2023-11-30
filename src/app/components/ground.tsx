@@ -4,9 +4,14 @@ import { Box } from "@mui/material";
 
 export default function Ground() {
   return (
-    <Box 
+    <Box
+      sx={{
+        position: 'relative', 
+      }} 
+    >
+      <Box 
         sx={{ 
-        position: 'relative',
+        position: 'absolute',
         pointerEvents: 'none',
         width: '100%', 
         height: '239px', 
@@ -15,6 +20,7 @@ export default function Ground() {
         zIndex: 2,
         bottom: '-20px',
         }}
-      />  
+      /> 
+    </Box>
   )
 }

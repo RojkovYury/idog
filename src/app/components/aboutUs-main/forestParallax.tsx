@@ -3,7 +3,7 @@
 import { Box } from "@mui/material";
 import useScroll from "@/hooks/useScroll";
 
-export default function GrassParallax() {
+export default function ForestParallax() {
   const [yPos] = useScroll();
 
   return (

@@ -1,11 +1,11 @@
-const billboardContent = {
+const servicesContentMain = {
     documents: {
       title: 'title-documents',
       text: 'text-documents'
     },
     fitnes: {
-      title: 'title-fitnes',
-      text: 'text-fitnes'
+      title: 'Фитнесс',
+      text: 'Каждой собаке необходимы физические нагрузки, чтобы она была здоровой, активной и послушной'
     },
     grooming: {
       title: 'title-grooming',
@@ -33,4 +33,4 @@ const billboardContent = {
     },
   }
 
-export default billboardContent
+export default servicesContentMain

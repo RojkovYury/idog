@@ -1,20 +1,22 @@
 import ServicesItem from "./servicesItem"
+import ServicesBackground from "./servicesParallax";
 
 interface ServicesItemsProps {
-  setCurrentBillboardContent: any;
+  setCurrentContent: any;
 }
 
-export default function ServicesItems({ setCurrentBillboardContent }: ServicesItemsProps) {
+export default function ServicesItems({ setCurrentContent }: ServicesItemsProps) {
 
   return(
     <>
+      {/*
       <ServicesItem 
         src={'/images/services/documents.png'}
         alt={'documents'}
         left={'40%'}
         bottom={'20%'}
         zIndex={'12'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -22,7 +24,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         alt={'fitnes'}
         left={'5%'}
         bottom={'60%'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -30,7 +32,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         alt={'grooming'}
         left={'50%'}
         bottom={'30%'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -39,7 +41,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         left={'10%'}
         bottom={'20%'}
         zIndex={'11'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -48,7 +50,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         left={'50%'}
         bottom={'70%'}
         zIndex={'10'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -57,7 +59,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         left={'20%'}
         bottom={'50%'}
         zIndex={'10'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -66,7 +68,7 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         left={'65%'}
         bottom={'10%'}
         zIndex={'11'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
 
       <ServicesItem 
@@ -74,8 +76,10 @@ export default function ServicesItems({ setCurrentBillboardContent }: ServicesIt
         alt={'training'}
         left={'50%'}
         bottom={'0%'}
-        setCurrentBillboardContent={setCurrentBillboardContent}
+        setCurrentContent={setCurrentContent}
       />
+      */}
     </>
+    
   )
 } 

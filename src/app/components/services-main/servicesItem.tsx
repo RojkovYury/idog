@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import billboardContent from './billboardContent';
+import servicesContent from './servicesContent';
 
 interface ServicesItemProps {
   src: string;
@@ -10,7 +10,7 @@ interface ServicesItemProps {
   top?: string;
   zIndex?: string;
   alt: string;
-  setCurrentBillboardContent?: any;
+  setCurrentContent?: any;
 }
 
 export default function ServicesItem(props: ServicesItemProps) {
@@ -19,7 +19,7 @@ export default function ServicesItem(props: ServicesItemProps) {
     <>
       <Box 
         // @ts-ignore 
-        onClick={() => props.setCurrentBillboardContent(billboardContent[props.alt])}
+        onClick={() => props.setCurrentContent(servicesContent[props.alt])}
         sx={{ 
           position: 'absolute', 
           // border: '1px solid black', 
@@ -32,7 +32,7 @@ export default function ServicesItem(props: ServicesItemProps) {
           zIndex: props.zIndex ? props.zIndex : '',
         }}
       >
-        <Image src={props.src} alt={props.alt} width={250} height={250}/>
+        <Image src={props.src} alt={props.alt} width={200} height={200}/>
       </Box>
     </>
   )

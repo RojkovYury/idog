@@ -114,7 +114,7 @@ export default function AboutUs() {
               borderRadius: '50%', 
               width: '250px', 
               height: '250px', 
-              background: `url('/images/services/tempMobileTest/handling.jpg')`, 
+              background: `url('/images/aboutUS/tempMobileTest/handling.jpg')`, 
               backgroundSize: '250px 250px',
               border: `8px solid ${clr.secondary1}`,
               scale: ['', '', '1.1', '1.3'],
@@ -242,25 +242,25 @@ export default function AboutUs() {
           top={0}  
           title={'Два хендлинг зала'}
           lineOne={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
-          image={'/images/services/tempMobileTest/handling.jpg'}
+          image={'/images/aboutUS/tempMobileTest/handling.jpg'}
         />
         <AboutUsRight 
           top={30}  
           title={'Фитнес зал'}
           lineOne={'Cиловые и статические тренажеры, профессиональная беговая дорожка для собак'}
-          image={'/images/services/tempMobileTest/fitnes.jpg'}
+          image={'/images/aboutUS/tempMobileTest/fitnes.jpg'}
         />
         <AboutUsLeft 
           top={60}  
           title={'Зона отдыха'}
           lineOne={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
-          image={'/images/services/tempMobileTest/relax.jpg'}
+          image={'/images/aboutUS/tempMobileTest/relax.jpg'}
         />
         <AboutUsRight 
           top={90}  
           title={'Груминг комната'}
           lineOne={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
-          image={'/images/services/tempMobileTest/groomer.jpg'}
+          image={'/images/aboutUS/tempMobileTest/groomer.jpg'}
         />
       </Box>
 
