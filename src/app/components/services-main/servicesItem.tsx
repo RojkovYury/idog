@@ -97,13 +97,13 @@ export default function ServicesItem(props: ServicesItemProps) {
         onClick={() => props.setCurrentContent(servicesContentMain[props.alt])}
         sx={{
           position: 'absolute',
+          cursor: 'pointer', 
           top: '20%',
           left: props.buttonRight ? '' : '20%',
           right: props.buttonRight ? '20%' : '',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          // scale: (props.currentContent.id === props.alt) ? '1.2' : '0.7',
           scale: '0.7',
           transition: 'scale 0.25s',
           "&:hover": { 
@@ -121,6 +121,17 @@ export default function ServicesItem(props: ServicesItemProps) {
             backgroundColor: clr.primary,
           }}
         />
+
+        <Box 
+          sx={{ 
+            position: 'absolute',
+            zIndex: 19, 
+            width: '150px', 
+            height: '150px',
+            borderRadius: '50%',
+          }}
+        />
+
         <AnimatedBox />
       </Box>
     </Box>

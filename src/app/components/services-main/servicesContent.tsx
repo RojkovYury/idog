@@ -32,9 +32,9 @@ export default function ServicesContent({ currentContent }: ServicesContentProps
   return(
     <Box sx={{ position: 'relative', display: 'flex', width: '100%', justifyContent: 'center', height: '300px' }}>
 
-      <Box sx={{ position: 'absolute', display: 'flex', width: '800px', height: '300px', backgroundColor: clr.forest,  opacity: 0.7, zIndex: 10, borderRadius: '25px' }}/>
+      <Box sx={{ position: 'absolute', display: 'flex', width: ['800px', '800px', '800px', '800px'], height: '300px', backgroundColor: clr.forest,  opacity: 0.7, zIndex: 10, borderRadius: '25px' }}/>
       
-      <Box sx={{ position: 'absolute', display: 'flex', width: '800px', height: '300px', zIndex: 11 }}>
+      <Box sx={{ position: 'absolute', display: 'flex', width: ['800px', '800px', '800px', '800px'], height: '300px', zIndex: 11 }}>
         
         <Box sx={{ width: '65%', textAlign: 'center', mx: 1 }}>
 
