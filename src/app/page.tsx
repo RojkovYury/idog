@@ -55,7 +55,7 @@ export default function Home() {
         <Ground />
       </Box>  
 
-      <Box sx={{ backgroundColor: '#947D59', position: 'relative', zIndex: 40, height: '1000px' }}>
+      <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary3} TextColorOnHover={clr.dark} />
         </Container>

@@ -6,7 +6,7 @@ import useScroll from "@/hooks/useScroll";
 import servicesContentMain from './services-main/servicesContentMain.js';
 
 export default function ServicesMain() {
-  const [currentContent, setCurrentContent] = useState(servicesContentMain.fitnes);
+  const [currentContent, setCurrentContent] = useState<any>(servicesContentMain.fitnes);
   const [yPos] = useScroll();
   return(
     <Box 
@@ -25,7 +25,10 @@ export default function ServicesMain() {
           zIndex: 20 
         }}
       >
-        <ServicesItems setCurrentContent={setCurrentContent} />
+        <ServicesItems 
+          currentContent={currentContent}
+          setCurrentContent={setCurrentContent} 
+        />
       </Box>
     </Box>
   )

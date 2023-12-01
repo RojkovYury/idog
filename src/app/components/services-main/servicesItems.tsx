@@ -1,20 +1,20 @@
 import ServicesItem from "./servicesItem"
-import ServicesBackground from "./servicesParallax";
 
 interface ServicesItemsProps {
+  currentContent: any;
   setCurrentContent: any;
 }
 
-export default function ServicesItems({ setCurrentContent }: ServicesItemsProps) {
+export default function ServicesItems({ currentContent, setCurrentContent }: ServicesItemsProps) {
 
   return(
     <>
-
       <ServicesItem 
         src={'/images/services/fitnes.png'}
         alt={'fitnes'}
         left={'5%'}
         bottom={'50%'}
+        currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
 
@@ -23,7 +23,9 @@ export default function ServicesItems({ setCurrentContent }: ServicesItemsProps)
         alt={'grooming'}
         left={'40%'}
         bottom={'20%'}
-        setCurrentContent={setCurrentContent}
+        currentContent={currentContent}
+        setCurrentContent={setCurrentContent} 
+        buttonRight
       />
 
       <ServicesItem 
@@ -32,7 +34,9 @@ export default function ServicesItems({ setCurrentContent }: ServicesItemsProps)
         left={'70%'}
         bottom={'-10%'}
         zIndex={'11'}
+        currentContent={currentContent}
         setCurrentContent={setCurrentContent}
+        buttonRight
       />
 
       <ServicesItem 
@@ -41,6 +45,7 @@ export default function ServicesItems({ setCurrentContent }: ServicesItemsProps)
         left={'60%'}
         bottom={'50%'}
         zIndex={'10'}
+        currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
 
