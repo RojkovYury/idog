@@ -1,7 +1,6 @@
 
 import { Box, Tooltip, Typography, Button, Divider, IconButton  } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
-import NextLink from 'next/link';
 
 import DryCleaningIcon from '@mui/icons-material/DryCleaning';
 import RecentActorsIcon from '@mui/icons-material/RecentActors';
@@ -50,7 +49,10 @@ export default function Head({ TextColor, HoverColor, TextColorOnHover }: HeadPr
     <Box sx={{ px:1, py: 3, position: 'relative', display: 'flex',  justifyContent: 'space-between' }}>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'flex-start' }}>
-        <Box component={NextLink} href="/" sx={{ position: 'relative', height: '66px', display: 'flex', color: TextColor, textDecoration: 'none', alignItems: 'center' }}>
+        <Box 
+          onClick={() => window.scrollTo(({ top: 0, behavior: "smooth"}))}  
+          sx={{ cursor: 'pointer', position: 'relative', height: '66px', display: 'flex', color: TextColor, textDecoration: 'none', alignItems: 'center' }}
+        >
           <PetsIcon fontSize='small' sx={{ mx: 2, "&:hover": { color: HoverColor } }}/>
           <Typography noWrap sx={{ fontSize: ['3rem', '3rem', '3.5rem', '3.5rem'], fontWeight: '700' }}>
             iDog
@@ -62,26 +64,55 @@ export default function Head({ TextColor, HoverColor, TextColorOnHover }: HeadPr
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
         <Box sx={{ height: '66px', display: 'flex', color: 'inherit', textDecoration: 'none', alignItems: 'center', justifyContent: 'flex-end' }}>
           
-          <Tooltip title="Услуги" arrow placement="bottom-start">
-            <IconButton size='large' sx={{ ...iconButtonProps }}>
-              <DryCleaningIcon sx={{ fontSize: '2rem' }} />
-            </IconButton>
-          </Tooltip>
-          <Button sx={{ ...buttonProps }}>Услуги</Button>
-
           <Tooltip title="О нас" arrow>
-            <IconButton size='large' sx={{ ...iconButtonProps }}>
+            <IconButton 
+              onClick={() => window.scrollTo(({ top: 742, behavior: "smooth"}))} 
+              size='large' 
+              sx={{ ...iconButtonProps }}
+            >
               <RecentActorsIcon sx={{ fontSize: '2rem' }} />
             </IconButton>
           </Tooltip>
-          <Button sx={{ ...buttonProps }}>О нас</Button>
+          <Button 
+            onClick={() => window.scrollTo(({ top: 742, behavior: "smooth"}))} 
+            sx={{ ...buttonProps }}
+          >
+            О нас
+          </Button>
+          
+          <Tooltip title="Услуги" arrow placement="bottom-start">
+            <IconButton 
+              onClick={() => window.scrollTo(({ top: 1713, behavior: "smooth"}))}
+              size='large' 
+              sx={{ ...iconButtonProps }}
+            >
+              <DryCleaningIcon sx={{ fontSize: '2rem' }} />
+            </IconButton>
+          </Tooltip>
+          <Button 
+            onClick={() => window.scrollTo(({ top: 1713, behavior: "smooth"}))} 
+            sx={{ ...buttonProps }}
+          >
+            Услуги
+          </Button>
+
+
 
           <Tooltip title="Контакты" arrow placement="bottom-end">
-            <IconButton size='large' sx={{ ...iconButtonProps }}>
+            <IconButton 
+              onClick={() => window.scrollTo(({ top: 2600, behavior: "smooth"}))} 
+              size='large' 
+              sx={{ ...iconButtonProps }}
+            >
               <InfoIcon sx={{ fontSize: '2rem' }} />
             </IconButton>
           </Tooltip>
-          <Button sx={{ ...buttonProps }}>Контакты</Button>
+          <Button 
+            onClick={() => window.scrollTo(({ top: 2600, behavior: "smooth"}))} 
+            sx={{ ...buttonProps }}
+          >
+            Контакты
+          </Button>
         </Box>
         <Divider sx={{ ...dividerProps }}/>
       </Box>
