@@ -51,7 +51,7 @@ export default function ServicesContent({ currentContent }: ServicesContentProps
             size='small' 
             sx={{ 
               fontWeight: '700', 
-              backgroundColor: clr.primary, 
+              backgroundColor: clr.grassPrimary, 
               borderRadius: '25px', 
               mt: 3, 
               boxShadow: 'none', 
@@ -60,7 +60,7 @@ export default function ServicesContent({ currentContent }: ServicesContentProps
               height: '40px',
               marginY: '15px',
               "&:hover": { 
-                backgroundColor: clr.secondary3, 
+                backgroundColor: clr.grass, 
                 color: clr.light 
               }
             }}

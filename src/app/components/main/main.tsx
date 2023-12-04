@@ -95,7 +95,7 @@ export default function Main() {
             width: '200px', 
             height: '40px',
             "&:hover": { 
-               backgroundColor: clr.secondary1, 
+               backgroundColor: clr.secondary, 
                color: clr.light 
             }
           }}

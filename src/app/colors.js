@@ -4,19 +4,11 @@ export const clr = {
   dark: '#191e27',  
   light: '#ffebcf',
   primary: '#ff7c3f', 
-  secondary1: '#f4a62c', 
-  secondary2: '#F5AF41', 
-  secondary3: '#F6B856',
+  secondary: '#f4a62c', 
   forest: '#8A7968',
+  forestPrimary: '#F6B856',
   grass: '#C8CC92',
+  grassPrimary: '#D95D39',
   ground: '#947D59'
-
 }
-/* 
-A1BA89
-
-C8CC92
-
-#DAB49D 
-*/
                 

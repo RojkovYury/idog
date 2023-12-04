@@ -25,11 +25,11 @@ const AnimatedBox = styled(Box)({
   height: '30px',
   borderRadius: '50%',
   zIndex: 20, 
-  backgroundColor: clr.secondary3,
+  backgroundColor: clr.secondary,
   "&:after": {
     content: "''",
     position: 'absolute',
-    border: `4px solid ${clr.primary}`,
+    border: `4px solid ${clr.grassPrimary}`,
     left: '-20px',
     opacity: 0,
     right: '-20px',
@@ -118,7 +118,7 @@ export default function ServicesItem(props: ServicesItemProps) {
             width: '50px', 
             height: '50px',
             borderRadius: '50%',
-            backgroundColor: clr.primary,
+            backgroundColor: clr.grassPrimary,
           }}
         />
 
@@ -137,18 +137,3 @@ export default function ServicesItem(props: ServicesItemProps) {
     </Box>
   )
 } 
-
-/*
-
-        <Box 
-          sx={{
-            position: 'absolute',
-            width: '30px', 
-            height: '30px',
-            borderRadius: '50%',
-            zIndex: 20, 
-            backgroundColor: clr.secondary3,
-          }}
-        />
-
-*/
