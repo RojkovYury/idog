@@ -29,7 +29,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.light, position: 'relative', zIndex: 10 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} />
+          <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <Main />
         </Container>
         <MainParallax /> 
@@ -38,7 +38,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} />
+          <Head TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='aboutUs' />
           <TreesParallax/>
           <AboutUs />
         </Container>
@@ -47,7 +47,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.dark} HoverColor='#D95D39' TextColorOnHover={clr.light} />
+          <Head TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
           <ServicesParallax />
           <ServicesMain />
           <Box sx={{height: '200px'}}/>
@@ -57,7 +57,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} />
+          <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
         </Container>
       </Box>
 
