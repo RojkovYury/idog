@@ -2,10 +2,10 @@
 import { Box,Typography } from "@mui/material";
 import { clr } from "../colors";
 import styled from '@emotion/styled'
-import AboutUsLeft from "./aboutUs-main/aboutUsLeft";
-import AboutUsRight from "./aboutUs-main/aboutUsRight";
+import AboutLeft from "./about-main/aboutLeft";
+import AboutRight from "./about-main/aboutRight";
 
-export default function AboutUs() {
+export default function About() {
 
   const TitleText = styled(Typography)({
     fontWeight: '700',
@@ -114,7 +114,7 @@ export default function AboutUs() {
               borderRadius: '50%', 
               width: '250px', 
               height: '250px', 
-              background: `url('/images/aboutUS/tempMobileTest/handling.jpg')`, 
+              background: `url('/images/about/tempMobileTest/handling.jpg')`, 
               backgroundSize: '250px 250px',
               border: `8px solid ${clr.secondary}`,
               scale: ['', '', '1.1', '1.3'],
@@ -238,29 +238,29 @@ export default function AboutUs() {
           flexDirection: 'column',
         }}
       >
-        <AboutUsLeft 
+        <AboutLeft 
           top={0}  
           title={'Два хендлинг зала'}
           lineOne={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
-          image={'/images/aboutUS/tempMobileTest/handling.jpg'}
+          image={'/images/about/tempMobileTest/handling.jpg'}
         />
-        <AboutUsRight 
+        <AboutRight 
           top={30}  
           title={'Фитнес зал'}
           lineOne={'Cиловые и статические тренажеры, профессиональная беговая дорожка для собак'}
-          image={'/images/aboutUS/tempMobileTest/fitnes.jpg'}
+          image={'/images/about/tempMobileTest/fitnes.jpg'}
         />
-        <AboutUsLeft 
+        <AboutLeft 
           top={60}  
           title={'Зона отдыха'}
           lineOne={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
-          image={'/images/aboutUS/tempMobileTest/relax.jpg'}
+          image={'/images/about/tempMobileTest/relax.jpg'}
         />
-        <AboutUsRight 
+        <AboutRight 
           top={90}  
           title={'Груминг комната'}
           lineOne={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
-          image={'/images/aboutUS/tempMobileTest/groomer.jpg'}
+          image={'/images/about/tempMobileTest/groomer.jpg'}
         />
       </Box>
 

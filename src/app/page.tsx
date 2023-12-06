@@ -8,9 +8,9 @@ import Head from "../components/head";
 import Main from "./components/main/main";
 import MainParallax from "./components/main/mainParallax";
 import MountansParallax from "./components/main/mountansParallax";
-import TreesParallax from "./components/aboutUs-main/treesParallax";
-import AboutUs from "./components/aboutUs";
-import ForestParallax from "./components/aboutUs-main/forestParallax";
+import TreesParallax from "./components/about-main/treesParallax";
+import About from "./components/about";
+import ForestParallax from "./components/about-main/forestParallax";
 import ServicesParallax from "./components/services-main/servicesParallax";
 import ServicesMain from "./components/services-main";
 import Ground from "./components/ground";
@@ -39,9 +39,9 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='aboutUs' />
+          <Head TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
           <TreesParallax/>
-          <AboutUs />
+          <About />
         </Container>
         <ForestParallax />
       </Box>

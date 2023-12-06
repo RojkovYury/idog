@@ -1,14 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import { clr } from "@/app/colors";
 
-interface AboutUsRightRightProps {
+interface AboutLeftProps {
   top: number;
   title: string;
   lineOne: string;
   image?: string;
 }
 
-export default function AboutUsRightRight({ top, title, lineOne, image }: AboutUsRightRightProps) {
+export default function AboutLeft({ top, title, lineOne, image }: AboutLeftProps) {
   return(
     <Box 
       sx={{ 
@@ -23,7 +23,7 @@ export default function AboutUsRightRight({ top, title, lineOne, image }: AboutU
           sx={{
             backgroundColor: clr.primary,
             position: 'absolute',
-            right: ['-10px', '0px', '', ''], 
+            left: ['-10px', '0px', '', ''],
             top: '-10px',
             height: '120px',
             width: '120px',
@@ -67,6 +67,15 @@ export default function AboutUsRightRight({ top, title, lineOne, image }: AboutU
             },
           }}
         >
+
+          <Box 
+            sx={{ 
+              display: ['flex', 'none', '', ''], 
+              height: '120px',
+              width: '120px',
+            }}
+          />
+            
           <Box 
             sx={{
               width: '100%',
@@ -81,10 +90,9 @@ export default function AboutUsRightRight({ top, title, lineOne, image }: AboutU
             }}
           >
             <Typography 
-              noWrap
               sx={{ 
                 lineHeight: '1',
-                fontSize: ['32px', '32px', '', '', ],              
+                fontSize: ['32px', '32px', '', '', ],                 
                 fontWeight: '700',
                 cursor: 'default',
                 color: clr.dark,
@@ -97,7 +105,7 @@ export default function AboutUsRightRight({ top, title, lineOne, image }: AboutU
             <Typography 
               sx={{ 
                 lineHeight: '1',  
-                fontSize: ['20px', '22px', '', '', ], 
+                fontSize: ['20px', '22px', '', '', ],
                 fontWeight: '700',
                 cursor: 'default',
                 color: clr.dark,
@@ -106,14 +114,6 @@ export default function AboutUsRightRight({ top, title, lineOne, image }: AboutU
               {lineOne}
             </Typography>
           </Box>
-
-          <Box 
-            sx={{ 
-              display: ['flex', 'none', '', ''],
-              height: '120px',
-              width: '120px',
-            }}
-          />
 
         </Box>
 

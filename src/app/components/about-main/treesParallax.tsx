@@ -20,7 +20,7 @@ export default function TreesParallax() {
               top: `${ -170 + yPos * 35}px`,
             }}
           >
-            <Image src="/images/aboutUS/static/forest_layer.png" alt="forest_layer" width={850} height={950} />
+            <Image src="/images/about/static/forest_layer.png" alt="forest_layer" width={850} height={950} />
           </Box>
         </Box>
       </>
