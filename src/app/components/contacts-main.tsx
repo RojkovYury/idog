@@ -3,6 +3,7 @@ import { Box, IconButton, Typography } from "@mui/material";
 import CallIcon from '@mui/icons-material/Call';
 import { clr } from "../colors";
 import ContactsModal from "./contacts-main/contacts-modal";
+import Image from 'next/image';
 
 export default function ContactsMain() {
   return (
@@ -31,7 +32,7 @@ export default function ContactsMain() {
               }
             }}
           >
-            <CallIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1 }}/>
+            <CallIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1, color: clr.groundPrimary }}/>
             <Typography> +7 (961) 147 03 03</Typography>
           </Box>
         </Box>
@@ -43,27 +44,77 @@ export default function ContactsMain() {
             href='https://t.me/Elizaveta_Rozhkova'
             target='_blank'
             size='small' 
-            sx={{ backgroundColor: 'lightblue', ml: 1 }}
+            sx={{ 
+              ml: 1, 
+              backgroundColor: clr.light, 
+              "&:hover": { 
+                scale: '1.2',
+                transition: 'all 0.3s',
+                zIndex: 50, 
+                backgroundColor: clr.light,
+              } 
+            }}
           >
-            TG
+            <Box 
+              sx={{ 
+                width: '50px', 
+                height: '50px', 
+                background: `url('/images/contacts/static/tg.png')`,
+                backgroundSize: '50px 50px',
+              }}
+            />
           </IconButton>
 
           <IconButton 
             href='https://wa.me/79611470303'
             target='_blank'
             size='small' 
-            sx={{ backgroundColor: 'lightgreen', ml: 1 }}
+            sx={{ 
+              ml: 1, 
+              backgroundColor: clr.light, 
+              "&:hover": { 
+                scale: '1.2',
+                transition: 'all 0.3s',
+                zIndex: 50, 
+                backgroundColor: clr.light,
+              } 
+            }}
           >
-            WA
+            <Box 
+              sx={{ 
+                width: '50px', 
+                height: '50px', 
+                background: `url('/images/contacts/static/wa.png')`,
+                backgroundSize: '40px 40px',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+              }}
+            />
           </IconButton>
 
           <IconButton
             href='viber://chat?number=%2B79611470303'
             target='_blank'
             size='small' 
-            sx={{ backgroundColor: 'purple', ml: 1 }}
+            sx={{ 
+              ml: 1, 
+              backgroundColor: clr.light, 
+              "&:hover": { 
+                scale: '1.2',
+                transition: 'all 0.3s',
+                zIndex: 50, 
+                backgroundColor: clr.light,
+              } 
+            }}
           >
-            VB
+            <Box 
+              sx={{ 
+                width: '50px', 
+                height: '50px', 
+                background: `url('/images/contacts/static/vb.png')`,
+                backgroundSize: '50px 50px',
+              }}
+            />
           </IconButton>
 
         </Box>

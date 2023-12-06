@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Link from 'next/link';
 import { Modal, Box, Button, TextField, Typography } from "@mui/material";
+import EmailIcon from '@mui/icons-material/Email';
 import { clr } from "../../colors";
 
 export default function ContactsModal() {
@@ -12,27 +14,30 @@ export default function ContactsModal() {
       <Box sx={{ display: 'flex' }}>
 
         <Typography>Или письмом на нашу</Typography>
-        <Button 
+        <Box
           onClick={handleOpen}
-          variant="contained" 
-          size='small' 
-          sx={{ 
-            fontWeight: '700', 
-            backgroundColor: clr.secondary, 
-            borderRadius: '25px', 
-            mt: 1,
-            ml: 1, 
-            boxShadow: 'none', 
-            color: clr.light, 
-            height: '40px',
+          sx={{
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            display: 'flex',
+            justifyContent: 'center', 
+            alignItems: 'center', 
+            backgroundColor: 'inherit',
+            color: clr.light,
+            transition: 'all 0.3s',
+            textShadow: `2px 2px 1px ${clr.dark}`,
+            ml: 2,
             "&:hover": { 
-              backgroundColor: clr.primary, 
-              color: clr.light 
+              backgroundColor: 'inherit', 
+              color: clr.groundPrimary,
+              scale: '1.1',
             }
           }}
-        > 
-          электронную почту 
-        </Button>
+        >
+          <EmailIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1, color: clr.groundPrimary }}/>
+          <Typography>электронную почту</Typography> 
+        </Box>
+
       </Box>
 
       <Modal
