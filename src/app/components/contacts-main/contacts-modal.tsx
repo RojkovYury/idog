@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Box, Button, TextField, Input } from "@mui/material";
+import { Modal, Box, Button, TextField, Typography } from "@mui/material";
 import { clr } from "../../colors";
 
 export default function ContactsModal() {
@@ -9,26 +9,31 @@ export default function ContactsModal() {
   const onSubmit = () => setOpen(false);
   return(
     <>
-      <Button 
-        onClick={handleOpen}
-        variant="contained" 
-        size='small' 
-        sx={{ 
-          fontWeight: '700', 
-          backgroundColor: clr.secondary, 
-          borderRadius: '25px', 
-          mt: 1, 
-          boxShadow: 'none', 
-          color: clr.light, 
-          height: '40px',
-          "&:hover": { 
-            backgroundColor: clr.primary, 
-            color: clr.light 
-          }
-        }}
-      > 
-        Написать нам на электронную почту 
-      </Button>
+      <Box sx={{ display: 'flex' }}>
+
+        <Typography>Или письмом на нашу</Typography>
+        <Button 
+          onClick={handleOpen}
+          variant="contained" 
+          size='small' 
+          sx={{ 
+            fontWeight: '700', 
+            backgroundColor: clr.secondary, 
+            borderRadius: '25px', 
+            mt: 1,
+            ml: 1, 
+            boxShadow: 'none', 
+            color: clr.light, 
+            height: '40px',
+            "&:hover": { 
+              backgroundColor: clr.primary, 
+              color: clr.light 
+            }
+          }}
+        > 
+          электронную почту 
+        </Button>
+      </Box>
 
       <Modal
         open={open}

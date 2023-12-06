@@ -9,6 +9,7 @@ export const clr = {
   forestPrimary: '#F6B856',
   grass: '#C8CC92',
   grassPrimary: '#D95D39',
-  ground: '#947D59'
+  ground: '#947D59',
+  groundPrimary: '#f4a62c',
 }
                 
