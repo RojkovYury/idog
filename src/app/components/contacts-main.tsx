@@ -1,11 +1,13 @@
 import { Box, Button, Typography } from "@mui/material";
+import ContactsModal from "./contacts-main/contacts-modal";
 
 export default function ContactsMain() {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <Box sx={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
       <Typography>7 905 123 45 67</Typography>
-      <Button variant='contained'>Написать нам на электронную почту</Button>
+
+      <ContactsModal />
 
       <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', width: '100%' }}>
 
@@ -19,7 +21,6 @@ export default function ContactsMain() {
       </Box>
       
       <Typography>г Тула ул Мориса Тореза 14В</Typography>
-      
 
     </Box>
   )
