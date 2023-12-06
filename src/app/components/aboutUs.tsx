@@ -116,7 +116,7 @@ export default function AboutUs() {
               height: '250px', 
               background: `url('/images/aboutUS/tempMobileTest/handling.jpg')`, 
               backgroundSize: '250px 250px',
-              border: `8px solid ${clr.secondary1}`,
+              border: `8px solid ${clr.secondary}`,
               scale: ['', '', '1.1', '1.3'],
               display: ['none', 'none', 'flex', 'flex'],
             }}

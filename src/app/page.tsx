@@ -14,6 +14,7 @@ import ForestParallax from "./components/aboutUs-main/forestParallax";
 import ServicesParallax from "./components/services-main/servicesParallax";
 import ServicesMain from "./components/services-main";
 import Ground from "./components/ground";
+import ContactsMain from "./components/contacts-main";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
 const theme = createTheme({
@@ -58,6 +59,7 @@ export default function Home() {
       <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
+          <ContactsMain />
         </Container>
       </Box>
 
