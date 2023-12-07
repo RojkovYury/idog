@@ -1,4 +1,5 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import Image from 'next/image';
 import { clr } from "../colors";
 import ContactsPhone from './contacts-main/contacts-phone';
 import ContactsModal from "./contacts-main/contacts-modal";
@@ -21,10 +22,18 @@ export default function ContactsMain() {
         </Box>
       </Box>
 
-      <Box sx={{  display: 'flex', mt: 10, gap: 16 }}>
-        <Box sx={{ backgroundColor: clr.light }}><Typography>Вконтакте</Typography></Box>
-        <Box sx={{ backgroundColor: clr.light }}><Typography>Instagram</Typography></Box>
-        <Box sx={{ backgroundColor: clr.light }}><Typography>Facebook</Typography></Box>
+      <Box sx={{  display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center', mt: 6, gap: 3 }}>
+        <Box sx={{ width: '265px', height: '75px', borderRadius: '25px' }}>
+          <Image src="/images/contacts/static/vk.jpg" alt="layoutMain" width={265} height={75} />
+        </Box>
+
+        <Box sx={{ width: '265px', height: '75px', borderRadius: '25px' }}>
+          <Image src="/images/contacts/static/inst.jpg" alt="layoutMain" width={265} height={75} />
+        </Box>
+        
+        <Box sx={{ width: '265px', height: '75px', borderRadius: '25px' }}>
+          <Image src="/images/contacts/static/fb.jpg" alt="layoutMain" width={265} height={75} />
+        </Box>
       </Box>
 
     </Box>
