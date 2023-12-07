@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from 'next/link';
 import { Modal, Box, Button, TextField, Typography } from "@mui/material";
 import EmailIcon from '@mui/icons-material/Email';
 import { clr } from "../../colors";
@@ -13,7 +12,6 @@ export default function ContactsModal() {
     <>
       <Box sx={{ display: 'flex' }}>
 
-        <Typography>Или письмом на нашу</Typography>
         <Box
           onClick={handleOpen}
           sx={{
@@ -35,7 +33,7 @@ export default function ContactsModal() {
           }}
         >
           <EmailIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1, color: clr.groundPrimary }}/>
-          <Typography>электронную почту</Typography> 
+          <Typography>Электронная почта</Typography> 
         </Box>
 
       </Box>
