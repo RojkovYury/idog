@@ -56,7 +56,7 @@ export default function Home() {
         <Ground />
       </Box>  
 
-      <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
+      <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px', background: `url('/images/contacts/ground-bg1.png')`, backgroundSize: '2000px 1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
           <ContactsMain />
