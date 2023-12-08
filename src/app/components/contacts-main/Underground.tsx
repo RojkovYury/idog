@@ -52,13 +52,11 @@ export default function Underground() {
         }}
       /> 
     </>
-    
   )
 }
 
 /*
-
-<Box 
+      <Box 
         sx={{ 
           position: 'absolute',
           pointerEvents: 'none',
@@ -70,5 +68,4 @@ export default function Underground() {
           zIndex: 6,
         }}
       /> 
-
 */

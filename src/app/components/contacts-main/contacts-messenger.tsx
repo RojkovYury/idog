@@ -2,59 +2,61 @@ import { Box, IconButton } from "@mui/material";
 import { clr } from "../../colors";
 
 const iconButtonStyle = {
-  ml: 1, 
-  backgroundColor: clr.light, 
-  "&:hover": { 
+  ml: 1,
+  backgroundColor: clr.bg,
+  "&:hover": {
     scale: '1.2',
     transition: 'all 0.3s',
-    zIndex: 50, 
-    backgroundColor: clr.light,
+    zIndex: 50,
+    backgroundColor: clr.bg,
   }
 }
 
 const iconButtonBoxStyle = {
-  width: '50px', 
-  height: '50px', 
+  width: '50px',
+  height: '50px',
   backgroundSize: '40px 40px',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
 }
 
-export default function ContactsSocial() {
-  return(
+export default function ContactsMessenger() {
+  return (
     <Box sx={{ display: 'flex' }}>
 
-      <IconButton 
+      <IconButton
         href='https://t.me/Elizaveta_Rozhkova'
         target='_blank'
-        size='small' 
+        size='small'
         sx={iconButtonStyle}
       >
-        <Box 
-          sx={{ 
-            background: `url('/images/contacts/static/tg.png')`, ...iconButtonBoxStyle }}
+        <Box
+          sx={{
+            background: `url('/images/contacts/static/tg.png')`, ...iconButtonBoxStyle
+          }}
         />
       </IconButton>
 
-      <IconButton 
+      <IconButton
         href='https://wa.me/79611470303'
         target='_blank'
-        size='small' 
+        size='small'
         sx={iconButtonStyle}
       >
-        <Box 
+        <Box
           sx={{
-            background: `url('/images/contacts/static/wa.png')`, ...iconButtonBoxStyle }}
+            background: `url('/images/contacts/static/wa.png')`, ...iconButtonBoxStyle
+          }}
         />
       </IconButton>
 
       <IconButton
         href='viber://chat?number=%2B79611470303'
         target='_blank'
-        size='small' 
+        size='small'
         sx={iconButtonStyle}
       >
-        <Box 
+        <Box
           sx={{ background: `url('/images/contacts/static/vb.png')`, ...iconButtonBoxStyle }}
         />
       </IconButton>

@@ -15,7 +15,7 @@ import ServicesParallax from "./components/services-main/servicesParallax";
 import ServicesMain from "./components/services-main";
 import Ground from "./components/services-main/ground";
 import ContactsMain from "./components/contacts-main";
-import Underground from "./components/contacts-main/Underground";
+import Underground from "./components/contacts-main/underground";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
 const theme = createTheme({
