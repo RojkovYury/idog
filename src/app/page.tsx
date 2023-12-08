@@ -13,8 +13,9 @@ import About from "./components/about";
 import ForestParallax from "./components/about-main/forestParallax";
 import ServicesParallax from "./components/services-main/servicesParallax";
 import ServicesMain from "./components/services-main";
-import Ground from "./components/ground";
+import Ground from "./components/services-main/ground";
 import ContactsMain from "./components/contacts-main";
+import Underground from "./components/contacts-main/Underground";
 
 const amatic_SC = Amatic_SC({ subsets: ['cyrillic'], weight: ['400', '700'] })
 const theme = createTheme({
@@ -56,11 +57,12 @@ export default function Home() {
         <Ground />
       </Box>  
 
-      <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px', background: `url('/images/contacts/ground-bg1.png')`, backgroundSize: '2000px 1000px' }}>
-        <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
+      <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
+        <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden', zIndex: 40 }}>
           <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
           <ContactsMain />
         </Container>
+        <Underground />
       </Box>
 
     </ThemeProvider>
