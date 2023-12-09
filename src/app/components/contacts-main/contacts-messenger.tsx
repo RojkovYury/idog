@@ -1,14 +1,14 @@
-import { Box, IconButton } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import { clr } from "../../colors";
 
 const iconButtonStyle = {
-  ml: 1,
-  backgroundColor: clr.bg,
+  mx: 1,
+  backgroundColor: clr.light,
+  transition: 'all 0.3s',
   "&:hover": {
     scale: '1.2',
-    transition: 'all 0.3s',
     zIndex: 50,
-    backgroundColor: clr.bg,
+    backgroundColor: clr.light,
   }
 }
 
@@ -22,45 +22,54 @@ const iconButtonBoxStyle = {
 
 export default function ContactsMessenger() {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <>
+      <Box sx={{ display: 'flex', flexDirection: 'column'  }}>
 
-      <IconButton
-        href='https://t.me/Elizaveta_Rozhkova'
-        target='_blank'
-        size='small'
-        sx={iconButtonStyle}
-      >
-        <Box
-          sx={{
-            background: `url('/images/contacts/static/tg.png')`, ...iconButtonBoxStyle
-          }}
-        />
-      </IconButton>
+        <Typography sx={{ color: clr.light, textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '24px', mb: 1, textAlign: 'center', cursor: 'default' }}>
+          Или другим удобным Вам способом:
+        </Typography>
+      
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
 
-      <IconButton
-        href='https://wa.me/79611470303'
-        target='_blank'
-        size='small'
-        sx={iconButtonStyle}
-      >
-        <Box
-          sx={{
-            background: `url('/images/contacts/static/wa.png')`, ...iconButtonBoxStyle
-          }}
-        />
-      </IconButton>
+          <IconButton
+            href='https://t.me/Elizaveta_Rozhkova'
+            target='_blank'
+            size='small'
+            sx={iconButtonStyle}
+          >
+            <Box
+              sx={{
+                background: `url('/images/contacts/static/tg.png')`, ...iconButtonBoxStyle
+              }}
+            />
+          </IconButton>
 
-      <IconButton
-        href='viber://chat?number=%2B79611470303'
-        target='_blank'
-        size='small'
-        sx={iconButtonStyle}
-      >
-        <Box
-          sx={{ background: `url('/images/contacts/static/vb.png')`, ...iconButtonBoxStyle }}
-        />
-      </IconButton>
+          <IconButton
+            href='https://wa.me/79611470303'
+            target='_blank'
+            size='small'
+            sx={iconButtonStyle}
+          >
+            <Box
+              sx={{
+                background: `url('/images/contacts/static/wa.png')`, ...iconButtonBoxStyle
+              }}
+            />
+          </IconButton>
 
-    </Box>
+          <IconButton
+            href='viber://chat?number=%2B79611470303'
+            target='_blank'
+            size='small'
+            sx={iconButtonStyle}
+          >
+            <Box
+              sx={{ background: `url('/images/contacts/static/vb.png')`, ...iconButtonBoxStyle }}
+            />
+          </IconButton>
+
+        </Box>
+      </Box>
+    </>
   )
 }

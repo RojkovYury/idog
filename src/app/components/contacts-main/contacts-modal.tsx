@@ -10,7 +10,11 @@ export default function ContactsModal() {
   const onSubmit = () => setOpen(false);
   return(
     <>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column'  }}>
+
+        <Typography sx={{ color: clr.light, textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '24px', textAlign: 'center', cursor: 'default' }}>
+          Всегда ответим по нашей
+        </Typography>
 
         <Box
           onClick={handleOpen}
@@ -24,7 +28,6 @@ export default function ContactsModal() {
             color: clr.light,
             transition: 'all 0.3s',
             textShadow: `2px 2px 1px ${clr.dark}`,
-            ml: 2,
             "&:hover": { 
               backgroundColor: 'inherit', 
               color: clr.groundPrimary,
@@ -32,8 +35,8 @@ export default function ContactsModal() {
             }
           }}
         >
-          <EmailIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1, color: clr.groundPrimary }}/>
-          <Typography>Электронная почта</Typography> 
+          <EmailIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1 }}/>
+          <Typography>Электронной почте</Typography> 
         </Box>
 
       </Box>
