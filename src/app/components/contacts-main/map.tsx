@@ -8,7 +8,7 @@ type BoxRefType = RefObject<HTMLDivElement>;
 
 export default function Map() {
 
-  const [positionX, setPositionX] = useState<number>(-230);
+  const [positionX, setPositionX] = useState<number>(-190);
   const [positionY, setPositionY] = useState<number>(100);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [startPos, setStartPos] = useState<{x: number, y: number}>({ x: 0, y: 0 });
