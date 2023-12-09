@@ -4,8 +4,8 @@ import { Box } from "@mui/material";
 import { clr } from "../../colors";
 
 const socialBoxStyle = {
-  width: '93px', 
-  height: '93px', 
+  width: ['70px', '93px', '93px', '93px'], 
+  height: ['70px', '93px', '93px', '93px'], 
   borderRadius: '22px', 
   backgroundColor: clr.light,
   boxShadow: `0px 0px 20px 1px ${clr.light}`,
@@ -18,41 +18,81 @@ const socialBoxStyle = {
 
 export default function ContactsSocial() {
   return (
-    <Box 
-      sx={{  
-        display: 'flex', 
-        flexDirection: 'row', 
-        width: '100%', 
-        justifyContent: 'center',
-        gap: 6,
-        mt: 4,
-        mb: 8, // для boxShadow
-      }}
-    >
-      
+    <>
       <Box 
-        component={Link}
-        href="https://vk.com/idogtula"  
-        sx={socialBoxStyle}
+        sx={{  
+          display: ['none', 'flex', 'flex', 'flex'], 
+          flexDirection: 'row', 
+          width: '100%', 
+          justifyContent: 'center',
+          gap: 6,
+          mt: 4, 
+          mb: 8, // для boxShadow
+        }}
       >
-        <Image src="/images/contacts/static/vk.png" alt="VK" width={93} height={93} />
+        
+        <Box 
+          component={Link}
+          href="https://vk.com/idogtula"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/vk.png" alt="VK" width={93} height={93} />
+        </Box>
+
+        <Box 
+          component={Link}
+          href="https://instagram.com/tulacenter_idog"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/inst.png" alt="Instagramm" width={93} height={93} />
+        </Box>
+        
+        <Box 
+          component={Link}
+          href="https://www.facebook.com/iDogtula"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/fb.png" alt="Facebook" width={93} height={93} />
+        </Box>
       </Box>
 
       <Box 
-        component={Link}
-        href="https://instagram.com/tulacenter_idog"  
-        sx={socialBoxStyle}
+        sx={{  
+          display: ['flex', 'none', 'none', 'none'], 
+          flexDirection: 'row', 
+          width: '100%', 
+          justifyContent: 'center',
+          gap: 6,
+          mt: 4, 
+          mb: 8, // для boxShadow
+        }}
       >
-        <Image src="/images/contacts/static/inst.png" alt="Instagramm" width={93} height={93} />
+        
+        <Box 
+          component={Link}
+          href="https://vk.com/idogtula"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/vk.png" alt="VK" width={70} height={70} />
+        </Box>
+
+        <Box 
+          component={Link}
+          href="https://instagram.com/tulacenter_idog"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/inst.png" alt="Instagramm" width={70} height={70} />
+        </Box>
+        
+        <Box 
+          component={Link}
+          href="https://www.facebook.com/iDogtula"  
+          sx={socialBoxStyle}
+        >
+          <Image src="/images/contacts/static/fb.png" alt="Facebook" width={70} height={70} />
+        </Box>
       </Box>
-      
-      <Box 
-        component={Link}
-        href="https://www.facebook.com/iDogtula"  
-        sx={socialBoxStyle}
-      >
-        <Image src="/images/contacts/static/fb.png" alt="Facebook" width={93} height={93} />
-      </Box>
-    </Box>
+    </>
+
   )
 }

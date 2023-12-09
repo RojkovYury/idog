@@ -13,9 +13,9 @@ const iconButtonStyle = {
 }
 
 const iconButtonBoxStyle = {
-  width: '50px',
-  height: '50px',
-  backgroundSize: '40px 40px',
+  width: ['30px', '35px', '50px', '50px'], 
+  height: ['30px', '35px', '50px', '50px'],
+  backgroundSize: ['25px 25px', '25px 25px', '40px 40px', '40px 40px'], 
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
 }
@@ -25,7 +25,16 @@ export default function ContactsMessenger() {
     <>
       <Box sx={{ display: 'flex', flexDirection: 'column'  }}>
 
-        <Typography sx={{ color: clr.light, textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '24px', mb: 1, textAlign: 'center', cursor: 'default' }}>
+        <Typography 
+          sx={{ 
+            color: clr.light, 
+            textShadow: `2px 2px 1px ${clr.dark}`, 
+            fontSize: ['20px', '20px', '24px', '24px'], 
+            mb: 1, 
+            textAlign: 'center', 
+            cursor: 'default' 
+          }}
+        >
           Или другим удобным Вам способом:
         </Typography>
       

@@ -12,7 +12,15 @@ export default function ContactsModal() {
     <>
       <Box sx={{ display: 'flex', flexDirection: 'column'  }}>
 
-        <Typography sx={{ color: clr.light, textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '24px', textAlign: 'center', cursor: 'default' }}>
+        <Typography 
+          sx={{ 
+            color: clr.light, 
+            textShadow: `2px 2px 1px ${clr.dark}`, 
+            fontSize: ['20px', '20px', '24px', '24px'], 
+            textAlign: 'center', 
+            cursor: 'default' 
+          }}
+        >
           Всегда ответим по нашей
         </Typography>
 
@@ -36,7 +44,7 @@ export default function ContactsModal() {
           }}
         >
           <EmailIcon sx={{ fontSize: ['24px', '24px', '38px', '38px'], mr: 1 }}/>
-          <Typography>Электронной почте</Typography> 
+          <Typography sx={{ fontSize: ['24px', '24px', '38px', '38px'] }}>Электронной почте</Typography> 
         </Box>
 
       </Box>

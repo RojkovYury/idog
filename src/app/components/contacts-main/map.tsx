@@ -52,17 +52,25 @@ export default function Map() {
           zIndex: 2,
           overflow: 'hidden',
           width: '100%',
-          height: '600px',
+          height: '100%',
           border: `3px solid ${clr.light}`,
-          mx: 1,
           borderRadius: '25px',
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-
-        <ContactsPaper />
+      
+        <Box 
+          sx={{ 
+            display: ['none', 'flex', 'flex', 'flex' ],
+            position: 'absolute', 
+            right: 0, 
+            height: '100%' 
+            }}
+          >
+          <ContactsPaper />
+        </Box>
 
         <Box
           sx={{

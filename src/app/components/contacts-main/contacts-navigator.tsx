@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Box, Typography } from "@mui/material";
-import PetsIcon from '@mui/icons-material/Pets';
 import { clr } from "../../colors";
 
 const linkStyle = {
@@ -27,19 +26,29 @@ const logoStyle = {
 export default function ContactsNavigator() {
   return(
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+
       <Typography 
         sx={{ 
+          textAlign: 'center',
           color: clr.light, 
           textDecoration: 'underline',
           textShadow: `2px 2px 1px ${clr.dark}`,
           cursor: 'default',
-          fontSize: '36px',
+          fontSize: ['24px', '24px', '36px', '36px'], 
         }}
       >
         г Тула ул Мориса Тореза 14В
       </Typography>
 
-      <Typography sx={{ color: clr.light, textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '24px', mt: 1, textAlign: 'center'  }}>
+      <Typography 
+        sx={{ 
+          color: clr.light, 
+          textShadow: `2px 2px 1px ${clr.dark}`, 
+          fontSize: ['20px', '20px', '24px', '24px'], 
+          mt: 1, 
+          textAlign: 'center',
+        }}
+      >
         Ждем в гости по маршруту:
       </Typography>
 
@@ -52,12 +61,12 @@ export default function ContactsNavigator() {
           sx={linkStyle}
         >
           <Box sx={{ background: `url('/images/contacts/static/ya.jpg')`, ...logoStyle }} />
-          <Typography sx={{ textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '28px' }}>
+          <Typography sx={{ textShadow: `2px 2px 1px ${clr.dark}`, fontSize: ['20px', '20px', '28px', '28px'] }}>
             Яндекс.карты
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'flex', justifyContent: 'center', ml: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', ml: [2, 2, 4, 4] }}>
         
           <Box
             component={Link}
@@ -66,7 +75,7 @@ export default function ContactsNavigator() {
             sx={linkStyle}
           >
             <Box sx={{ background: `url('/images/contacts/static/2gis.jpg')`, ...logoStyle }} />
-            <Typography sx={{ textShadow: `2px 2px 1px ${clr.dark}`, fontSize: '28px' }}>
+            <Typography sx={{ textShadow: `2px 2px 1px ${clr.dark}`, fontSize: ['20px', '20px', '28px', '28px'] }}>
               2Гис
             </Typography>
           </Box>
