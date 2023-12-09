@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export default function Underground() {
+export default function ContactsUnderground() {
   return (
     <>
       <Box 
