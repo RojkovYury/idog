@@ -4,7 +4,7 @@ import { Box, Container } from "@mui/material";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
-import Head from "../components/head";
+import HeadMain from "./components/head-main";
 import Main from "./components/main/main";
 import MainParallax from "./components/main/mainParallax";
 import MountansParallax from "./components/main/mountansParallax";
@@ -32,7 +32,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.light, position: 'relative', zIndex: 10 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
+          <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <Main />
         </Container>
         <MainParallax /> 
@@ -41,7 +41,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
+          <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
           <TreesParallax/>
           <About />
         </Container>
@@ -50,7 +50,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
-          <Head TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
+          <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
           <ServicesParallax />
           <ServicesMain />
           <Box sx={{height: '200px'}}/>
@@ -60,7 +60,7 @@ export default function Home() {
 
       <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden', zIndex: 40 }}>
-          <Head TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
+          <HeadMain TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
           <ContactsMain />
         </Container>
         <ContactsUnderground />
