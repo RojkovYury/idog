@@ -54,7 +54,7 @@ export default function ContactsMain() {
         <ContactsNavigator />
         <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
         <ContactsPhone />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '80%', mt: 1 }} />
+        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '75%', mt: 1 }} />
         <ContactsModal />
         <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
         <ContactsMessenger />
