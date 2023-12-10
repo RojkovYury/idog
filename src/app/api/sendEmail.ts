@@ -23,10 +23,7 @@ export default async function sendEmailHandler(req: NextApiRequest, res: NextApi
       from: 'idogpost@mail.ru',
       to: 'rojkov.yury@gmail.com',
       subject: 'Заявка с сайта',
-      text: `Заявка с сайта.
-                Почта: ${email};
-                Сообщение: ${message};
-            `
+      text: `Заявка с сайта. Почта: ${email}; Сообщение: ${message}`
     };
 
     await transporter.sendMail(mailOptions);
