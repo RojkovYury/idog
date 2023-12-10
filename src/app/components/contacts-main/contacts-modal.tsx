@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import { Modal, Box, Button, TextField } from "@mui/material";
 import { clr } from "../../colors";
 import ContactsEmail from "./contacts-email";
-// import { sendMail } from "@/hooks/messenger";
-import axios from 'axios';
 
 interface FormData {
   email: string;
@@ -15,6 +14,10 @@ const defaultValues = {
   email: '',
   message: '',
 };
+
+const TOKEN = '6788454938:AAG03quDNgHlf_DBZ5GljH4TmI27Lt3nVFs'
+const CHAT_ID = '-1002067926393'
+const URL_API =`https://api.telegram.org/bot${TOKEN}/sendMessage`
 
 export default function ContactsModal() {
   const [open, setOpen] = useState<boolean>(false);
@@ -32,22 +35,29 @@ export default function ContactsModal() {
     shouldFocusError: false,
   });
 
-  /*
+  
   const onSubmit = (formData: FormData) => {
     console.log(formData);
-    // sendMail({email: formData.email, text: formData.message});
+    let message = `<strong>Сообщение с сайта</strong>\n`
+    message +=`<strong>Отправитель: </strong> ${formData.email}\n`
+    message +=`<strong>Текст сообщения: </strong> ${formData.message}`
+    
+    axios.post(URL_API, {
+      chat_id: CHAT_ID,
+      parse_mode: 'html',
+      text: message
+    })
+    .then((res) => {
+      console.log(res)
+    })
+    .catch((err) => {
+      console.warn(err)
+    })
+    .finally(() => {
+      setOpen(false)
+    })
   };
-  */
-
-  const onSubmit = async (formData: FormData) => {
-    try {
-      await axios.post('/api/sendEmail', formData);
-      console.log('Сообщение успешно отправлено');
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
+  
   return(
     <>
       <ContactsEmail handleOpen={handleOpen}/>
@@ -136,8 +146,8 @@ export default function ContactsModal() {
               variant='outlined'
               color="warning"
               sx={{ 
-                width: ['100px', '140px', '140px', '140px'], 
-                height: ['50px', '70px', '70px', '70px'],
+                width: ['100px', '160px', '160px', '160px'],  
+                height: ['50px', '60px', '60px', '60px'],
                 fontSize: ['20px', '32px', '32px', '32px'], 
               }}
             >
@@ -149,8 +159,8 @@ export default function ContactsModal() {
               variant='contained'
               color="error"
               sx={{ 
-                width: ['100px', '140px', '140px', '140px'], 
-                height: ['50px', '70px', '70px', '70px'],
+                width: ['100px', '160px', '160px', '160px'], 
+                height: ['50px', '60px', '60px', '60px'],
                 fontSize: ['20px', '32px', '32px', '32px'], 
                 color: clr.light 
               }}
