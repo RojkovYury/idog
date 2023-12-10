@@ -4,6 +4,7 @@ import { Modal, Box, Button, TextField } from "@mui/material";
 import { clr } from "../../colors";
 import ContactsEmail from "./contacts-email";
 // import { sendMail } from "@/hooks/messenger";
+import axios from 'axios';
 
 interface FormData {
   email: string;
@@ -31,9 +32,20 @@ export default function ContactsModal() {
     shouldFocusError: false,
   });
 
+  /*
   const onSubmit = (formData: FormData) => {
     console.log(formData);
     // sendMail({email: formData.email, text: formData.message});
+  };
+  */
+
+  const onSubmit = async (formData: FormData) => {
+    try {
+      await axios.post('/api/sendEmail', formData);
+      console.log('Сообщение успешно отправлено');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return(
