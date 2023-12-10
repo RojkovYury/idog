@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Modal, Box, Button, TextField } from "@mui/material";
 import { clr } from "../../colors";
+import ContactsSnackbar from "./contacts-snackbar";
 import ContactsEmail from "./contacts-email";
 
 interface FormData {
@@ -24,10 +25,14 @@ export default function ContactsModal() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
+  const handleCloseSnackbar = () => { setOpenSnackbar(false); };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     defaultValues,
     mode: 'onBlur',
@@ -35,7 +40,6 @@ export default function ContactsModal() {
     shouldFocusError: false,
   });
 
-  
   const onSubmit = (formData: FormData) => {
     console.log(formData);
     let message = `<strong>Сообщение с сайта</strong>\n`
@@ -55,11 +59,15 @@ export default function ContactsModal() {
     })
     .finally(() => {
       setOpen(false)
+      reset()
+      setOpenSnackbar(true)
     })
   };
   
   return(
     <>
+      <ContactsSnackbar open={openSnackbar} onClose={handleCloseSnackbar} />
+
       <ContactsEmail handleOpen={handleOpen}/>
 
       <Modal
