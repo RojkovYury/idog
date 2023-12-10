@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 
-export default function Ground() {
+export default function ServicesGround() {
   return (
     <Box
       sx={{

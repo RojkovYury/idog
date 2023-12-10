@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled'
 import { clr } from "../../colors";
 import Image from 'next/image';
-import servicesContentMain from './servicesContentMain';
+import servicesContentMain from './services-content-texts';
 
 const pulse = keyframes`
   0% {
@@ -21,10 +21,10 @@ const pulse = keyframes`
 
 const AnimatedBox = styled(Box)({
   position: 'absolute',
-  width: '30px', 
+  width: '30px',
   height: '30px',
   borderRadius: '50%',
-  zIndex: 20, 
+  zIndex: 20,
   backgroundColor: clr.secondary,
   "&:after": {
     content: "''",
@@ -57,16 +57,16 @@ interface ServicesItemProps {
 }
 
 export default function ServicesItem(props: ServicesItemProps) {
-  return(
-    <Box 
-      sx={{ 
-        position: 'absolute', 
+  return (
+    <Box
+      sx={{
+        position: 'absolute',
         // border: '1px solid black', 
-        width: '200px', 
-        height: '200px', 
-        left: props.left ? props.left : '', 
+        width: '200px',
+        height: '200px',
+        left: props.left ? props.left : '',
         right: props.right ? props.right : '',
-        bottom: props.bottom ? props.bottom : '', 
+        bottom: props.bottom ? props.bottom : '',
         top: props.top ? props.top : '',
         zIndex: props.zIndex ? props.zIndex : '',
 
@@ -75,13 +75,13 @@ export default function ServicesItem(props: ServicesItemProps) {
         alignItems: 'center',
       }}
     >
-      <Image src={props.src} alt={props.alt} width={200} height={200}/>
+      <Image src={props.src} alt={props.alt} width={200} height={200} />
 
       {(props.currentContent.id === props.alt) &&
-        <Box 
+        <Box
           sx={{
             position: 'absolute',
-            width: '100px', 
+            width: '100px',
             height: '100px',
             backgroundColor: '#947D59',
             borderRadius: '50%',
@@ -97,7 +97,7 @@ export default function ServicesItem(props: ServicesItemProps) {
         onClick={() => props.setCurrentContent(servicesContentMain[props.alt])}
         sx={{
           position: 'absolute',
-          cursor: 'pointer', 
+          cursor: 'pointer',
           top: '20%',
           left: props.buttonRight ? '' : '20%',
           right: props.buttonRight ? '20%' : '',
@@ -106,27 +106,27 @@ export default function ServicesItem(props: ServicesItemProps) {
           alignItems: 'center',
           scale: '0.7',
           transition: 'scale 0.25s',
-          "&:hover": { 
-            scale: '1.2', 
+          "&:hover": {
+            scale: '1.2',
           },
         }}
       >
-        <Box 
-          sx={{ 
+        <Box
+          sx={{
             position: 'absolute',
-            zIndex: 19, 
-            width: '50px', 
+            zIndex: 19,
+            width: '50px',
             height: '50px',
             borderRadius: '50%',
             backgroundColor: clr.grassPrimary,
           }}
         />
 
-        <Box 
-          sx={{ 
+        <Box
+          sx={{
             position: 'absolute',
-            zIndex: 19, 
-            width: '150px', 
+            zIndex: 19,
+            width: '150px',
             height: '150px',
             borderRadius: '50%',
           }}

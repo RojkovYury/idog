@@ -5,7 +5,7 @@ import Image from 'next/image';
 import useScroll from "@/hooks/useScroll";
 
 
-export default function TreesParallax() {
+export default function AboutBackgroundParallax() {
   const [yPos] = useScroll();
 
   return(

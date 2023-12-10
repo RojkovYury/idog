@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import { clr } from "../../colors";
 import useScroll from "@/hooks/useScroll";
 
-export default function MainParallax() {
+export default function MasterBackgroundParallax() {
   const [yPos] = useScroll();
   
   return(

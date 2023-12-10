@@ -1,4 +1,4 @@
-const servicesContentMain = {
+const servicesContentText = {
     documents: {
       id:'documents',
       title: 'title-documents',
@@ -49,4 +49,4 @@ const servicesContentMain = {
     },
   }
 
-export default servicesContentMain
+export default servicesContentText

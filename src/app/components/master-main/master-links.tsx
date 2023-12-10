@@ -5,7 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import { clr } from "../../colors";
 import Image from 'next/image';
 
-export default function Links() {
+export default function MasterLinks() {
   return(
     <>
       <Box

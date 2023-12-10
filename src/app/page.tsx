@@ -5,15 +5,15 @@ import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
 import HeadMain from "./components/head-main";
-import Main from "./components/main/main";
-import MainParallax from "./components/main/mainParallax";
-import MountansParallax from "./components/main/mountansParallax";
-import TreesParallax from "./components/about-main/treesParallax";
-import About from "./components/about";
-import ForestParallax from "./components/about-main/forestParallax";
-import ServicesParallax from "./components/services-main/servicesParallax";
+import MasterMain from "./components/master-main";
+import MasterBackgroundParallax from "./components/master-main/master-background-parallax";
+import MasterMountansParallax from "./components/master-main/master-mountans-parallax";
+import AboutBackgroundParallax from "./components/about-main/about-background-parallax";
+import AboutMain from "./components/about-main";
+import AboutForestParallax from "./components/about-main/about-forest-parallax";
+import ServicesBackgroundParallax from "./components/services-main/services-background-parallax";
 import ServicesMain from "./components/services-main";
-import Ground from "./components/services-main/ground";
+import ServicesGround from "./components/services-main/services-ground";
 import ContactsMain from "./components/contacts-main";
 import ContactsUnderground from "./components/contacts-main/contacts-underground";
 
@@ -26,36 +26,35 @@ const theme = createTheme({
   },
 });
 
-export default function Home() {
+export default function Main() {
   return (
     <ThemeProvider theme={theme}>
 
       <Box sx={{ backgroundColor: clr.light, position: 'relative', zIndex: 10 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
-          <Main />
+          <MasterMain />
         </Container>
-        <MainParallax /> 
-        <MountansParallax />
+        <MasterBackgroundParallax /> 
+        <MasterMountansParallax />
       </Box>
 
       <Box sx={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
-          <TreesParallax/>
-          <About />
+          <AboutBackgroundParallax/>
+          <AboutMain />
         </Container>
-        <ForestParallax />
+        <AboutForestParallax />
       </Box>
 
       <Box sx={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
-          <ServicesParallax />
+          <ServicesBackgroundParallax />
           <ServicesMain />
-          <Box sx={{height: '200px'}}/>
         </Container>
-        <Ground />
+        <ServicesGround />
       </Box>  
 
       <Box sx={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>

@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
-import { clr } from "../../colors";
-import Links from "./links";
+import { clr } from "../colors";
+import MasterLinks from "./master-main/master-links";
 
-export default function Main() {
+export default function MasterMain() {
   return(
     <Box 
       sx={{ 
@@ -116,7 +116,7 @@ export default function Main() {
           alignItems: ['center', 'center', 'flex-end', 'flex-end'],
         }}
       >
-        <Links/> 
+        <MasterLinks/> 
       </Box>
 
     </Box>

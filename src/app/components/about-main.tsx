@@ -2,10 +2,10 @@
 import { Box,Typography } from "@mui/material";
 import { clr } from "../colors";
 import styled from '@emotion/styled'
-import AboutLeft from "./about-main/aboutLeft";
-import AboutRight from "./about-main/aboutRight";
+import AboutLeft from "./about-main/about-left";
+import AboutRight from "./about-main/about-right";
 
-export default function About() {
+export default function AboutMain() {
 
   const TitleText = styled(Typography)({
     fontWeight: '700',

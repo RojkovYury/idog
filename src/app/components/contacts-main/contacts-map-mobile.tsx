@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Box } from "@mui/material";
 import { clr } from "../../colors";
 
-export default function MapMobile() {
+export default function ContactsMapMobile() {
   return (
     <>
       <Box

@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { clr } from "../colors";
-import Map from "./contacts-main/map";
-import MapMobile from "./contacts-main/map-mobile";
+import ContactsMap from "./contacts-main/contacts-map";
+import ContactsMapMobile from "./contacts-main/contacts-map-mobile";
 import ContactsNavigator from "./contacts-main/contacts-navigator";
 import ContactsPhone from './contacts-main/contacts-phone';
 import ContactsModal from "./contacts-main/contacts-modal";
@@ -27,7 +27,7 @@ export default function ContactsMain() {
           display: ['none', 'flex', 'flex', 'flex'], 
         }}
       >
-        <Map />
+        <ContactsMap />
       </Box>
 
       <Box 
@@ -38,7 +38,7 @@ export default function ContactsMain() {
           flexDirection: 'column'
         }}
       >
-        <MapMobile />
+        <ContactsMapMobile />
       </Box>
 
       <Box 

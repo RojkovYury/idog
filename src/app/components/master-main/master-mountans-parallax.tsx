@@ -1,11 +1,10 @@
 'use client'
 
 import { Box } from "@mui/material";
-import { clr } from "../../colors";
 import useScroll from "@/hooks/useScroll";
 
 
-export default function MountansParallax() {
+export default function MasterMountansParallax() {
   const [yPos] = useScroll();
 
   return (

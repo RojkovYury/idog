@@ -6,7 +6,7 @@ import ContactsPaper from './contacts-paper';
 
 type BoxRefType = RefObject<HTMLDivElement>;
 
-export default function Map() {
+export default function ContactsMap() {
 
   const [positionX, setPositionX] = useState<number>(-190);
   const [positionY, setPositionY] = useState<number>(100);

@@ -1,4 +1,4 @@
-import ServicesItem from "./servicesItem"
+import ServicesItem from "./services-item"
 
 interface ServicesItemsProps {
   currentContent: any;

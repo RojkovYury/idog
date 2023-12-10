@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import Image from 'next/image';
 import useScroll from "@/hooks/useScroll";
 
-export default function ServicesParallax() {
+export default function ServicesBackgroundParallax() {
   const [yPos] = useScroll();
 
   return(
