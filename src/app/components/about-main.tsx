@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import { clr } from "../colors";
 import AboutTop from "./about-main/about-top";
 import AboutContentDecktop from "./about-main/about-content-decktop";
@@ -8,8 +7,8 @@ import AboutBottom from "./about-main/about-bottom";
 export default function AboutMain() {
 
   return(
-    <Box 
-      sx={{ 
+    <div 
+      style={{ 
         position: 'relative', 
         height: '900px',
         width: '100%',
@@ -19,6 +18,7 @@ export default function AboutMain() {
         justifyContent: 'flex-start',
         top: '-45px',
         zIndex: 10,
+        // border: '1px solid black',
       }}
     >
 
@@ -27,7 +27,7 @@ export default function AboutMain() {
       <AboutContentMobile />
       <AboutBottom />
 
-    </Box>
+    </div>
   )
 } 
 

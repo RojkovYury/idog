@@ -15,7 +15,7 @@ export default function AboutTop() {
       >
         <Typography 
           sx={{ 
-            fontSize: ['50px', '60px', '70px', '80px'],
+            fontSize: ['40px', '60px', '70px', '80px'],
             fontWeight: '700',
             textShadow: `2px 2px 1px ${clr.dark}`, 
             textAlign: 'center',
@@ -25,10 +25,10 @@ export default function AboutTop() {
         </Typography>
       </Box>
 
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: [2, 4, 4, 4] }}>
         <Typography 
           sx={{ 
-            fontSize: ['28px', '32px', '38px', '42px'],
+            fontSize: ['22px', '32px', '38px', '42px'],
             display: 'flex', 
             justifyContent: 'center', 
             fontWeight: '700', 

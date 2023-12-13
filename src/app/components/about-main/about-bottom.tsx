@@ -6,7 +6,7 @@ export default function AboutBottom() {
     <Box 
       sx={{ 
         position: 'relative', 
-        top: '120px',
+        top: ['10px', '10px', '120px', '120px'], 
         background: ['rgb(0, 0, 0, 0.2)', 'rgb(0, 0, 0, 0.2)', 'none', 'none'],
         borderRadius: '10px',
         p: 1,

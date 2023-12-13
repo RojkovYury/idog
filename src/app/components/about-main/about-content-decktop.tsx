@@ -51,7 +51,7 @@ export default function AboutContentDecktop() {
             borderRadius: '50%', 
             width: '250px', 
             height: '250px', 
-            background: `url('/images/about/tempMobileTest/handling.jpg')`, 
+            background: `url('/images/about/mobile/handling.jpg')`, 
             backgroundSize: '250px 250px',
             border: `8px solid ${clr.secondary}`,
             scale: ['', '', '1.1', '1.3'],

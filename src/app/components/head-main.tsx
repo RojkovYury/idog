@@ -17,7 +17,7 @@ export default function HeadMain({ TextColor, HoverColor, TextColorOnHover, sele
     my: 3, 
     border: 'none', 
     borderTop: `1px solid ${TextColor}`,
-    width: ['140px', '200px', '320px', '420px'],
+    width: ['130px', '200px', '320px', '420px'],
   }
 
   const buttonProps = {

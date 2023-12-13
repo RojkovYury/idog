@@ -1,40 +1,50 @@
 import { Box } from "@mui/material";
-import AboutLeft from './about-left';
-import AboutRight from './about-right';
+import AboutContentMobileCard from "./about-content-mobile-card";
 
 export default function AboutContentMobile() {
   return(
-    <Box 
+    <>
+      <Box 
         sx={{
           position: 'relative',
           display: ['flex', 'flex', 'none', 'none'],
-          flexDirection: 'column',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          gap: 1,
         }}
       >
-        <AboutLeft 
-          top={0}  
+        <AboutContentMobileCard 
           title={'Два хендлинг зала'}
-          lineOne={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
-          image={'/images/about/tempMobileTest/handling.jpg'}
+          img={'/images/about/mobile/handling.jpg'}
+          description={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
         />
-        <AboutRight 
-          top={30}  
+        <AboutContentMobileCard 
           title={'Фитнес зал'}
-          lineOne={'Cиловые и статические тренажеры, профессиональная беговая дорожка для собак'}
-          image={'/images/about/tempMobileTest/fitnes.jpg'}
-        />
-        <AboutLeft 
-          top={60}  
-          title={'Зона отдыха'}
-          lineOne={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
-          image={'/images/about/tempMobileTest/relax.jpg'}
-        />
-        <AboutRight 
-          top={90}  
-          title={'Груминг комната'}
-          lineOne={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
-          image={'/images/about/tempMobileTest/groomer.jpg'}
+          img={'/images/about/mobile/fitnes.jpg'}
+          description={'Cиловые и статические тренажеры, профессиональная беговая дорожка'}
         />
       </Box>
-    )
-  } 
+
+      <Box 
+        sx={{
+          position: 'relative',
+          display: ['flex', 'flex', 'none', 'none'],
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          gap: 1,
+        }}
+      >
+        <AboutContentMobileCard 
+          title={'Зона отдыха'}
+          img={'/images/about/mobile/relax.jpg'}
+          description={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
+        />
+        <AboutContentMobileCard 
+          title={'Груминг комната'}
+          img={'/images/about/mobile/groomer.jpg'}
+          description={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
+        />
+      </Box>
+    </>
+  )
+}         
