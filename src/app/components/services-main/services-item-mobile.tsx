@@ -18,10 +18,10 @@ const pulse = keyframes`
   }
 `
 
-const AnimatedBox = styled(Box)({
+const AnimatedBoxMobile = styled(Box)({
   position: 'absolute',
-  width: '30px',
-  height: '30px',
+  width: '18px',
+  height: '18px',
   borderRadius: '50%',
   zIndex: 20,
   backgroundColor: clr.secondary,
@@ -42,7 +42,7 @@ const AnimatedBox = styled(Box)({
 })
 
 
-interface ServicesItemProps {
+interface ServicesItemMobileProps {
   src: string;
   left?: string;
   right?: string;
@@ -55,14 +55,14 @@ interface ServicesItemProps {
   buttonRight?: boolean;
 }
 
-export default function ServicesItem(props: ServicesItemProps) {
+export default function ServicesItemMobile(props: ServicesItemMobileProps) {
   return (
     <Box
       sx={{
         position: 'absolute',
         // border: '1px solid black', 
-        width: '200px',
-        height: '200px',
+        width: '120px',
+        height: '120px',
         left: props.left ? props.left : '',
         right: props.right ? props.right : '',
         bottom: props.bottom ? props.bottom : '',
@@ -85,20 +85,18 @@ export default function ServicesItem(props: ServicesItemProps) {
         }}
       />
 
-      {(props.currentContent.id === props.alt) &&
-        <div
-          style={{
-            position: 'absolute',
-            width: '100px',
-            height: '100px',
-            backgroundColor: clr.ground,
-            borderRadius: '50%',
-            zIndex: -1,
-            opacity: '0.25',
-            boxShadow: '0 0 0 50px #947D59'
-          }}
-        />
-      }
+      <div
+        style={{
+          position: 'absolute',
+          width: '50px',
+          height: '50px',
+          backgroundColor: clr.ground,
+          borderRadius: '50%',
+          zIndex: -1,
+          opacity: (props.currentContent.id === props.alt) ? '0.45' : '0.15',
+          boxShadow: `0 0 0 50px ${clr.ground}`
+        }}
+      />
 
       <Box
         // @ts-ignore 
@@ -123,8 +121,8 @@ export default function ServicesItem(props: ServicesItemProps) {
           style={{
             position: 'absolute',
             zIndex: 19,
-            width: '50px',
-            height: '50px',
+            width: '30px',
+            height: '30px',
             borderRadius: '50%',
             backgroundColor: clr.grassPrimary,
           }}
@@ -134,13 +132,13 @@ export default function ServicesItem(props: ServicesItemProps) {
           style={{
             position: 'absolute',
             zIndex: 19,
-            width: '150px',
-            height: '150px',
+            width: '120px',
+            height: '120px',
             borderRadius: '50%',
           }}
         />
 
-        <AnimatedBox />
+        <AnimatedBoxMobile />
       </Box>
     </Box>
   )

@@ -1,9 +1,11 @@
 import { Box } from '@mui/material';
-import ServicesItems from './services-main/services-items';
 import { useState } from 'react';
-import ServicesContent from './services-main/services-content';
 import useScroll from "@/hooks/useScroll";
+import ServicesContent from './services-main/services-content';
+import ServicesContentMobile from './services-main/services-content-mobile';
 import servicesContentText from './services-main/services-content-texts.js';
+import ServicesItems from './services-main/services-items';
+import ServicesItemsMobile from './services-main/services-items-mobile';
 
 export default function ServicesMain() {
   const [currentContent, setCurrentContent] = useState<any>(servicesContentText.fitnes);
@@ -18,19 +20,20 @@ export default function ServicesMain() {
         }}
       >
         <ServicesContent currentContent={currentContent} />
-        <Box 
-          sx={{ 
-            position: 'relative', 
-            width: '100%', 
-            height: `${850 - (yPos * 24)}px`, 
-            zIndex: 20 
-          }}
-        >
-          <ServicesItems 
-            currentContent={currentContent}
-            setCurrentContent={setCurrentContent} 
-          />
-        </Box>
+        <ServicesContentMobile currentContent={currentContent} />
+
+        <ServicesItems
+          currentContent={currentContent}
+          setCurrentContent={setCurrentContent} 
+        />
+
+
+        <ServicesItemsMobile 
+          currentContent={currentContent}
+          setCurrentContent={setCurrentContent} 
+        />
+        
+
       </Box>
       <Box sx={{height: '200px'}}/>
      </>

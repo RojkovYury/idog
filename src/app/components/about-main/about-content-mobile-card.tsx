@@ -22,7 +22,7 @@ export default function AboutContentMobileCard(props: AboutContentMobileCardProp
         overflow: 'hidden',
       }}
     >
-      <Box sx={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: clr.light, opacity: 0.4, zIndex: 5}} />
+      <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: clr.light, opacity: 0.4, zIndex: 5}} />
 
       <Typography 
         sx={{ 
@@ -43,15 +43,11 @@ export default function AboutContentMobileCard(props: AboutContentMobileCardProp
         {props.title}
       </Typography>
 
-      <Box 
-        sx={{
-          display: 'flex',
+      <div 
+        style={{
           height: '100%',
           width: '100%',
-          minWidth: '136px',
-          borderRadius: '4px',
           backgroundImage: `url(${props.img})`,
-          backgroundColor: 'red',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: 10,
@@ -61,10 +57,9 @@ export default function AboutContentMobileCard(props: AboutContentMobileCardProp
       <Typography 
         sx={{ 
           m: 1, 
-          lineHeight: '1',  
+          lineHeight: '0.9',  
           fontSize: ['20px', '24px', '', '', ],
           fontWeight: '700',
-          // textShadow: `1px 1px 1px ${clr.secondary}`,
           cursor: 'default',
           color: clr.dark,
           textAlign: 'center',

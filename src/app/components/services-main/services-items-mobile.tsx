@@ -1,66 +1,66 @@
 import { Box } from '@mui/material';
 import useScroll from "@/hooks/useScroll";
-import ServicesItem from "./services-item"
+import ServicesItemMobile from './services-item-mobile';
 
-interface ServicesItemsProps {
+interface ServicesItemsMobileProps {
   currentContent: any;
   setCurrentContent: any;
 }
 
-export default function ServicesItems({ currentContent, setCurrentContent }: ServicesItemsProps) {
+export default function ServicesItemsMobile({ currentContent, setCurrentContent }: ServicesItemsMobileProps) {
   const [yPos] = useScroll();
   return(
     <Box 
       sx={{ 
         position: 'relative',
-        display: ['none', 'none', 'flex', 'flex'], 
+        display: ['flex', 'flex', 'none', 'none'], 
         width: '100%', 
         height: `${850 - (yPos * 24)}px`, 
         zIndex: 20 
       }}
     >
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/fitnes.png'}
         alt={'fitnes'}
         left={'5%'}
-        bottom={'50%'}
+        top={'0%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/grooming.png'}
         alt={'grooming'}
         left={'40%'}
-        bottom={'20%'}
+        top={'15%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent} 
         buttonRight
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/handling.png'}
         alt={'handling'}
-        left={'70%'}
-        bottom={'-10%'}
+        left={'60%'}
+        top={'30%'}
         zIndex={'11'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
         buttonRight
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/massage.png'}
         alt={'massage'}
-        left={'60%'}
-        bottom={'50%'}
+        left={'30%'}
+        top={'45%'}
         zIndex={'10'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
 
       {/*
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/documents.png'}
         alt={'documents'}
         left={'40%'}
@@ -69,7 +69,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
         setCurrentContent={setCurrentContent}
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/photosession.png'}
         alt={'photosession'}
         left={'20%'}
@@ -78,7 +78,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
         setCurrentContent={setCurrentContent}
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/rent.png'}
         alt={'rent'}
         left={'65%'}
@@ -87,7 +87,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
         setCurrentContent={setCurrentContent}
       />
 
-      <ServicesItem 
+      <ServicesItemMobile 
         src={'/images/services/training.png'}
         alt={'training'}
         left={'50%'}
@@ -96,6 +96,5 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
       */}
     </Box>
-    
   )
 } 
