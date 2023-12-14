@@ -1,8 +1,8 @@
 const servicesContentText = {
     documents: {
       id:'documents',
-      title: 'title-documents',
-      text: 'text-documents',
+      title: 'Оформление документов',
+      text: 'Помощь в оформлении чемпионских дипломов и родословных',
       src: '',
     },
     fitnes: {
@@ -31,20 +31,20 @@ const servicesContentText = {
     },
     photosession: {
       id:'photosession',
-      title: 'title-photosession',
-      text: 'text-photosession',
+      title: 'Фото-студия',
+      text: 'Экстерьерная и художественная фотосъемка, фоторепортажи с выставки, фотосъемка щенков',
       src: '',
     },
     rent: {
       id:'rent',
-      title: 'title-rent',
-      text: 'text-rent',
+      title: 'Аренда',
+      text: 'Индивидуальная и групповая аренда, проведение семинаров и мастер классов',
       src: '',
     },
     training: {
       id:'training',
-      title: 'title-training',
-      text: 'text-training',
+      title: 'Дрессировка',
+      text: 'Научим спокойно ходить на поводке, приходить по первому зову и носить тапочки, поможем справиться с проблемами и воспитать щенка',
       src: '',
     },
   }

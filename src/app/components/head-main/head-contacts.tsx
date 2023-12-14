@@ -15,7 +15,7 @@ export default function HeadContacts({ TextColor, HoverColor, TextColorOnHover, 
     <>
       <Tooltip title="Контакты" arrow placement="bottom-end">
         <IconButton 
-          onClick={() => window.scrollTo(({ top: 2600, behavior: "smooth"}))} 
+          onClick={() => window.scrollTo(({ top: 2400, behavior: "smooth"}))} 
           size='small'
           sx={{ 
             ...iconButtonProps,

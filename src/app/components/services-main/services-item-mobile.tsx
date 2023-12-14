@@ -45,8 +45,6 @@ const AnimatedBoxMobile = styled(Box)({
 interface ServicesItemMobileProps {
   src: string;
   left?: string;
-  right?: string;
-  bottom?: string;
   top?: string;
   zIndex?: string;
   alt: string;
@@ -60,15 +58,11 @@ export default function ServicesItemMobile(props: ServicesItemMobileProps) {
     <Box
       sx={{
         position: 'absolute',
-        // border: '1px solid black', 
-        width: '120px',
-        height: '120px',
+        width: ['100px', '120px', '', ''], 
+        height: ['100px', '120px', '', ''], 
         left: props.left ? props.left : '',
-        right: props.right ? props.right : '',
-        bottom: props.bottom ? props.bottom : '',
         top: props.top ? props.top : '',
         zIndex: props.zIndex ? props.zIndex : '',
-
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -85,18 +79,20 @@ export default function ServicesItemMobile(props: ServicesItemMobileProps) {
         }}
       />
 
-      <div
-        style={{
-          position: 'absolute',
-          width: '50px',
-          height: '50px',
-          backgroundColor: clr.ground,
-          borderRadius: '50%',
-          zIndex: -1,
-          opacity: (props.currentContent.id === props.alt) ? '0.45' : '0.15',
-          boxShadow: `0 0 0 50px ${clr.ground}`
-        }}
-      />
+      {(props.currentContent.id === props.alt) && 
+        <div
+          style={{
+            position: 'absolute',
+            width: '50px',
+            height: '50px',
+            backgroundColor: clr.ground,
+            borderRadius: '50%',
+            zIndex: -1,
+            opacity: '0.45',
+            boxShadow: `0 0 0 30px ${clr.ground}`
+          }}
+        />
+      }
 
       <Box
         // @ts-ignore 
