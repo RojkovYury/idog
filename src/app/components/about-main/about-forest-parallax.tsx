@@ -8,7 +8,13 @@ export default function AboutForestParallax() {
 
   return (
     <>
-      <Box sx={{ position: 'relative', pointerEvents: 'none' }}>
+      <Box 
+        sx={{ 
+          display: ['none', 'none', 'flex', 'flex'], 
+          position: 'relative', 
+          pointerEvents: 'none', 
+        }}
+      >
         <Box 
           sx={{ 
             position: 'absolute', 
@@ -51,6 +57,61 @@ export default function AboutForestParallax() {
             backgroundSize: '1920px 1080px',
             zIndex: 3,
             bottom: `${(140 - (16 * 18) + 250) - yPos * 25 }px`,
+          }}
+        />
+      </Box>
+
+      <Box 
+        sx={{ 
+          display: ['flex', 'flex', 'none', 'none'], 
+          position: 'relative', 
+          pointerEvents: 'none', 
+        }}
+      >
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '430px', 
+            background: `url('/images/forest/mobile/1_layer.png')`,
+            backgroundSize: '900px 430px',
+            zIndex: 6,
+            bottom: `${(70 - (16 * 18) + 260) - yPos * 5 }px`
+          }}
+        />
+ {/*        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '430px',  
+            background: `url('/images/forest/mobile/2_layer.png')`,
+            backgroundSize: '900px 430px',
+            zIndex: 5,
+            bottom: `${(100 - (16 * 18) + 270) - yPos * 10 }px`
+          }}
+        />
+*/}
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '430px', 
+            background: `url('/images/forest/mobile/3_layer.png')`,
+            backgroundSize: '900px 430px',
+            zIndex: 4,
+            bottom: `${(120 - (16 * 18) + 260) - yPos * 20 }px`
+          }}
+        /> 
+
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '430px', 
+            background: `url('/images/forest/mobile/4_layer.png')`,
+            backgroundSize: '900px 430px',
+            zIndex: 3,
+            bottom: `${(140 - (16 * 18) + 350) - yPos * 25 }px`,
           }}
         />
       </Box>
