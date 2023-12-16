@@ -36,7 +36,7 @@ export default function ServicesGround() {
             pointerEvents: 'none',
             width: '100%', 
             height: '120px', 
-            background: `url('/images/ground/mobile/ground.png')`,
+            background: `url('/images/ground/mobile/ground.webp')`,
             backgroundSize: '968px 120px',
             zIndex: 2,
             bottom: '-20px',

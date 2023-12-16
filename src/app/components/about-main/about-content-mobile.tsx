@@ -15,12 +15,12 @@ export default function AboutContentMobile() {
       >
         <AboutContentMobileCard 
           title={'Два хендлинг зала'}
-          img={'/images/about/mobile/handling.jpg'}
+          img={'/images/about/mobile/handling.webp'}
           description={'Cпециальное спортивное покрытие пола и зеркальные стены по периметру'}
         />
         <AboutContentMobileCard 
           title={'Фитнес зал'}
-          img={'/images/about/mobile/fitnes.jpg'}
+          img={'/images/about/mobile/fitnes.webp'}
           description={'Cиловые и статические тренажеры, профессиональная беговая дорожка'}
         />
       </Box>
@@ -36,12 +36,12 @@ export default function AboutContentMobile() {
       >
         <AboutContentMobileCard 
           title={'Зона отдыха'}
-          img={'/images/about/mobile/relax.jpg'}
+          img={'/images/about/mobile/relax.webp'}
           description={'Уютная зона ожидания, чай и кофе для вас. Просторные клетки для собак'}
         />
         <AboutContentMobileCard 
           title={'Груминг комната'}
-          img={'/images/about/mobile/groomer.jpg'}
+          img={'/images/about/mobile/groomer.webp'}
           description={'Специальная ванна для собак, профессиональный стол, мощный компрессор и фен'}
         />
       </Box>

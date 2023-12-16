@@ -21,7 +21,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
     >
       <ServicesItemMobile
         zIndex={'1'} 
-        src={'/images/services/fitnes.png'}
+        src={'/images/services/fitnes.webp'}
         alt={'fitnes'}
         left={'0%'}
         top={'0%'}
@@ -30,7 +30,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'2'}
-        src={'/images/services/grooming.png'}
+        src={'/images/services/grooming.webp'}
         alt={'grooming'}
         left={'35%'}
         top={'18%'}
@@ -40,7 +40,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'3'}
-        src={'/images/services/handling.png'}
+        src={'/images/services/handling.webp'}
         alt={'handling'}
         left={'70%'}
         top={'0%'}
@@ -50,7 +50,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'4'}
-        src={'/images/services/massage.png'}
+        src={'/images/services/massage.webp'}
         alt={'massage'}
         left={'0%'}
         top={'36%'}
@@ -59,7 +59,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'5'}
-        src={'/images/services/documents.png'}
+        src={'/images/services/documents.webp'}
         alt={'documents'}
         left={'35%'}
         top={'54%'}
@@ -68,7 +68,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'6'}
-        src={'/images/services/photosession.png'}
+        src={'/images/services/photosession.webp'}
         alt={'photosession'}
         left={'70%'}
         top={'36%'}
@@ -77,7 +77,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'7'}
-        src={'/images/services/rent.png'}
+        src={'/images/services/rent.webp'}
         alt={'rent'}
         left={'0%'}
         top={'72%'}
@@ -86,7 +86,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
       />
       <ServicesItemMobile 
         zIndex={'8'}
-        src={'/images/services/training.png'}
+        src={'/images/services/training.webp'}
         alt={'training'}
         left={'70%'}
         top={'72%'}

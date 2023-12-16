@@ -10,7 +10,7 @@ export default function MasterBackgroundParallax() {
   
   return(
     <>
-    <Box
+      <Box
         sx={{
           position: 'relative',
           height: `${350 - yPos * 35}px`,
@@ -18,38 +18,38 @@ export default function MasterBackgroundParallax() {
           backgroundColor: clr.light, 
         }}
       />
-    <Box>
-      <Box 
-        sx={{ 
-          zIndex: 1,
-          width: '100%', 
-          position: 'absolute', 
-          top: `${150 + yPos * 45}px`, 
-          display: 'flex', 
-          justifyContent: 'center', 
-          overflow: 'hidden' 
-        }}
-      >
-        <Image src="/images/main/layoutMain.png" alt="layoutMain" width={650} height={450} />
-      </Box>
-      
-      <Box 
-        sx={{ 
-          zIndex: 3, 
-          width: '100%', 
-          position: 'absolute', 
-          pointerEvents: 'none', 
-          display: 'flex', 
-          justifyContent: 'center', 
-          top: `${100 + yPos * 20}px`, 
-          overflow: 'hidden' 
-        }}
-      >
-        <Image src="/images/main/mainBull.png" alt="main1" width={432} height={476} />
-      </Box>
 
-      
-    </Box>
+      <Box>
+        <Box 
+          sx={{ 
+            zIndex: 1,
+            width: '100%', 
+            position: 'absolute', 
+            top: `${150 + yPos * 45}px`, 
+            display: 'flex', 
+            justifyContent: 'center', 
+            overflow: 'hidden' 
+          }}
+        >
+          <Image src="/images/main/layoutMain.png" alt="layoutMain" width={650} height={450} />
+        </Box>
+        
+        <Box 
+          sx={{ 
+            zIndex: 3, 
+            width: '100%', 
+            position: 'absolute', 
+            pointerEvents: 'none', 
+            display: 'flex', 
+            justifyContent: 'center', 
+            top: `${100 + yPos * 20}px`, 
+            overflow: 'hidden' 
+          }}
+        >
+          <Image src="/images/main/masterBull.webp" alt="main1" width={432} height={476} />
+        </Box>
+
+      </Box>
     </>
   )
 }

@@ -20,7 +20,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       }}
     >
       <ServicesItem 
-        src={'/images/services/fitnes.png'}
+        src={'/images/services/fitnes.webp'}
         alt={'fitnes'}
         left={'5%'}
         bottom={'50%'}
@@ -29,7 +29,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/grooming.png'}
+        src={'/images/services/grooming.webp'}
         alt={'grooming'}
         left={'40%'}
         bottom={'20%'}
@@ -39,7 +39,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/handling.png'}
+        src={'/images/services/handling.webp'}
         alt={'handling'}
         left={'70%'}
         bottom={'-10%'}
@@ -50,7 +50,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/massage.png'}
+        src={'/images/services/massage.webp'}
         alt={'massage'}
         left={'60%'}
         bottom={'50%'}
@@ -61,7 +61,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
 
       {/*
       <ServicesItem 
-        src={'/images/services/documents.png'}
+        src={'/images/services/documents.webp'}
         alt={'documents'}
         left={'40%'}
         bottom={'20%'}
@@ -70,7 +70,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/photosession.png'}
+        src={'/images/services/photosession.webp'}
         alt={'photosession'}
         left={'20%'}
         bottom={'50%'}
@@ -79,7 +79,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/rent.png'}
+        src={'/images/services/rent.webp'}
         alt={'rent'}
         left={'65%'}
         bottom={'10%'}
@@ -88,7 +88,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
       />
 
       <ServicesItem 
-        src={'/images/services/training.png'}
+        src={'/images/services/training.webp'}
         alt={'training'}
         left={'50%'}
         bottom={'0%'}

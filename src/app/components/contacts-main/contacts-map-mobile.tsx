@@ -29,7 +29,7 @@ export default function ContactsMapMobile() {
           }}
         >
           <Image
-            src="/images/contacts/map.jpg"
+            src="/images/contacts/map.webp"
             alt="map"
             width={2442}
             height={1075}
