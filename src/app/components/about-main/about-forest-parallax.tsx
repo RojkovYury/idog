@@ -23,7 +23,7 @@ export default function AboutForestParallax() {
             background: `url('/images/forest/1_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 6,
-            bottom: `${(70 - (16 * 18) + 150) - yPos * 5 }px`
+            bottom: `${(-68) - (yPos * 5) }px`
           }}
         />
         <Box 
@@ -34,7 +34,7 @@ export default function AboutForestParallax() {
             background: `url('/images/forest/2_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 5,
-            bottom: `${(100 - (16 * 18) + 150) - yPos * 10 }px`
+            bottom: `${(-38) - (yPos * 10) }px`
           }}
         />
         <Box 
@@ -45,7 +45,7 @@ export default function AboutForestParallax() {
             background: `url('/images/forest/3_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 4,
-            bottom: `${(120 - (16 * 18) + 200) - yPos * 20 }px`
+            bottom: `${(32) - (yPos * 20) }px`
           }}
         /> 
         <Box 
@@ -56,11 +56,12 @@ export default function AboutForestParallax() {
             background: `url('/images/forest/4_layer.png')`,
             backgroundSize: '1920px 1080px',
             zIndex: 3,
-            bottom: `${(140 - (16 * 18) + 250) - yPos * 25 }px`,
+            bottom: `${(102) - (yPos * 25) }px`,
           }}
         />
       </Box>
 
+      {/* mobile */} 
       <Box 
         sx={{ 
           display: ['flex', 'flex', 'none', 'none'], 
@@ -72,34 +73,35 @@ export default function AboutForestParallax() {
           sx={{ 
             position: 'absolute', 
             width: '100%', 
-            height: '430px', 
+            height: '600px', 
             background: `url('/images/forest/mobile/1_layer.png')`,
-            backgroundSize: '900px 430px',
+            backgroundSize: '900px 600px',
             zIndex: 6,
-            bottom: `${(70 - (16 * 18) + 260) - yPos * 5 }px`
+            bottom: `${(-60) - (yPos * 5) }px`
           }}
         />
- {/*        <Box 
-          sx={{ 
-            position: 'absolute', 
-            width: '100%', 
-            height: '430px',  
-            background: `url('/images/forest/mobile/2_layer.png')`,
-            backgroundSize: '900px 430px',
-            zIndex: 5,
-            bottom: `${(100 - (16 * 18) + 270) - yPos * 10 }px`
-          }}
-        />
-*/}
+             
         <Box 
           sx={{ 
             position: 'absolute', 
             width: '100%', 
-            height: '430px', 
+            height: '600px', 
+            background: `url('/images/forest/mobile/2_layer.png')`,
+            backgroundSize: '900px 430px',
+            zIndex: 5,
+            bottom: `${(-140) - (yPos * 10) }px`
+          }}
+        />
+
+        <Box 
+          sx={{ 
+            position: 'absolute', 
+            width: '100%', 
+            height: '600px', 
             background: `url('/images/forest/mobile/3_layer.png')`,
             backgroundSize: '900px 430px',
             zIndex: 4,
-            bottom: `${(120 - (16 * 18) + 260) - yPos * 20 }px`
+            bottom: `${(0) - (yPos * 20) }px`
           }}
         /> 
 
@@ -107,11 +109,11 @@ export default function AboutForestParallax() {
           sx={{ 
             position: 'absolute', 
             width: '100%', 
-            height: '430px', 
+            height: '600px',
             background: `url('/images/forest/mobile/4_layer.png')`,
             backgroundSize: '900px 430px',
             zIndex: 3,
-            bottom: `${(140 - (16 * 18) + 350) - yPos * 25 }px`,
+            bottom: `${(70) - (yPos * 25) }px`,
           }}
         />
       </Box>
