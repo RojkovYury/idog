@@ -4,53 +4,41 @@ export default function ContactsUnderground() {
   return (
     <>
       <Box 
-        sx={{ 
-          position: 'absolute',
-          pointerEvents: 'none',
-          width: '100%', 
-          height: '1000px', 
-          background: `url('/images/underground/1_layer.png')`,
-          backgroundSize: '2000px 1000px',
-          bottom: '0',
-          zIndex: 5,
+        sx={{
+          display: ['none', 'none', 'flex', 'flex'],
         }}
-      />
+      >
+        <Box 
+          sx={{ 
+            position: 'absolute',
+            pointerEvents: 'none',
+            width: '100%', 
+            height: '500px', 
+            background: `url('/images/underground/layer.png')`,
+            backgroundSize: '2000px 500px',
+            bottom: '0',
+          }}
+        />
+      </Box>
+
+      {/* mobile */}
       <Box 
-        sx={{ 
-          position: 'absolute',
-          pointerEvents: 'none',
-          width: '100%', 
-          height: '1000px', 
-          background: `url('/images/underground/2_layer.png')`,
-          backgroundSize: '2000px 1000px',
-          bottom: '0',
-          zIndex: 4,
+        sx={{
+          display: ['flex', 'flex', 'none', 'none'],
         }}
-      /> 
-      <Box 
-        sx={{ 
-          position: 'absolute',
-          pointerEvents: 'none',
-          width: '100%', 
-          height: '1000px', 
-          background: `url('/images/underground/3_layer.png')`,
-          backgroundSize: '2000px 1000px',
-          bottom: '0',
-          zIndex: 3,
-        }}
-      /> 
-      <Box 
-        sx={{ 
-          position: 'absolute',
-          pointerEvents: 'none',
-          width: '100%', 
-          height: '1000px', 
-          background: `url('/images/underground/4_layer.png')`,
-          backgroundSize: '2000px 1000px',
-          bottom: '0',
-          zIndex: 7,
-        }}
-      /> 
+      >
+        <Box 
+          sx={{ 
+            position: 'absolute',
+            pointerEvents: 'none',
+            width: '100%', 
+            height: '450px', 
+            background: `url('/images/underground/mobile/layer.png')`,
+            backgroundSize: '900px 450px',
+            bottom: '0',
+          }}
+        />
+      </Box>
     </>
   )
 }
