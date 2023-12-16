@@ -5,7 +5,6 @@ import useScroll from "@/hooks/useScroll";
 
 export default function AboutForestParallax() {
   const [yPos] = useScroll();
-
   return (
     <>
       <Box 
@@ -15,8 +14,8 @@ export default function AboutForestParallax() {
           pointerEvents: 'none', 
         }}
       >
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '1080px', 
@@ -26,8 +25,8 @@ export default function AboutForestParallax() {
             bottom: `${(-68) - (yPos * 5) }px`
           }}
         />
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '1080px', 
@@ -37,8 +36,8 @@ export default function AboutForestParallax() {
             bottom: `${(-38) - (yPos * 10) }px`
           }}
         />
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '1080px', 
@@ -48,8 +47,8 @@ export default function AboutForestParallax() {
             bottom: `${(32) - (yPos * 20) }px`
           }}
         /> 
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '1080px', 
@@ -69,8 +68,8 @@ export default function AboutForestParallax() {
           pointerEvents: 'none', 
         }}
       >
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '600px', 
@@ -80,9 +79,8 @@ export default function AboutForestParallax() {
             bottom: `${(-60) - (yPos * 5) }px`
           }}
         />
-             
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '600px', 
@@ -92,9 +90,8 @@ export default function AboutForestParallax() {
             bottom: `${(-140) - (yPos * 10) }px`
           }}
         />
-
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '600px', 
@@ -104,9 +101,8 @@ export default function AboutForestParallax() {
             bottom: `${(0) - (yPos * 20) }px`
           }}
         /> 
-
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             position: 'absolute', 
             width: '100%', 
             height: '600px',

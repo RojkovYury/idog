@@ -21,7 +21,7 @@ export default function ServicesBackgroundParallax() {
           minWidth: '800px', 
           minHeight: '750px', 
           zIndex: 1, 
-          top: `${ -200 + yPos * 12}px`, 
+          top: `${ -200 + yPos * 12}px`,
         }}
       >
         <Image 
