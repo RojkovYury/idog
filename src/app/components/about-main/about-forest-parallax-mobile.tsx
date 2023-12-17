@@ -2,7 +2,7 @@
 
 import useScroll from "@/hooks/useScroll";
 
-export default function AboutForestParallax() {
+export default function AboutForestParallaxMobile() {
   const [yPos] = useScroll();
   return (
     <div 

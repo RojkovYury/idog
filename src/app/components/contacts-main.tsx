@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useState } from 'react'
 import { Box } from "@mui/material";
 import { clr } from "../colors";
 import ContactsMap from "./contacts-main/contacts-map";
@@ -9,6 +12,14 @@ import ContactsMessenger from "./contacts-main/contacts-messenger";
 import ContactsSocial from './contacts-main/contacts-social';
 
 export default function ContactsMain() {
+
+  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(true)
+  useEffect(() => {
+    const handleResize = () => { setIsTinyMobile(window.innerWidth < 600) }
+    window.addEventListener('resize', handleResize)
+    return () => { window.removeEventListener('resize', handleResize) }
+  }, [])
+
   return (
     <Box 
       sx={{ 
@@ -19,46 +30,52 @@ export default function ContactsMain() {
         mx: 1,
       }}
     >
-      <Box 
-        sx={{ 
-          width: '100%', 
-          height: '600px', 
-          mx: 1,
-          display: ['none', 'flex', 'flex', 'flex'], 
-        }}
-      >
-        <ContactsMap />
-      </Box>
+      {!isTinyMobile && (
+        <Box 
+          sx={{ 
+            width: '100%', 
+            height: '600px', 
+            mx: 1,
+            display: 'flex', 
+          }}
+        >
+          <ContactsMap />
+        </Box>
+      )}
 
-      <Box 
-        sx={{ 
-          width: '100%', 
-          height: '300px', 
-          display: ['flex', 'none', 'none', 'none'],
-          flexDirection: 'column'
-        }}
-      >
-        <ContactsMapMobile />
-      </Box>
-
-      <Box 
-        sx={{ 
-          width: '100%', 
-          height: '355px',
-          display: ['flex', 'none', 'none', 'none'],
-          flexDirection: 'column',
-          justifyContent: 'space-around',
-          alignItems: 'center',
-        }}
-      >
-        <ContactsNavigator />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
-        <ContactsPhone />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '75%', mt: 1 }} />
-        <ContactsModal />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
-        <ContactsMessenger />
-      </Box>
+      {isTinyMobile && (
+        <>
+          <div 
+            style={{ 
+              width: '100%', 
+              height: '300px', 
+              display: 'flex', 
+              flexDirection: 'column'
+            }}
+          >
+            <ContactsMapMobile />
+          </div>
+        
+          <div 
+            style={{ 
+              width: '100%', 
+              height: '355px',
+              display: 'flex', 
+              flexDirection: 'column',
+              justifyContent: 'space-around',
+              alignItems: 'center',
+            }}
+          >
+            <ContactsNavigator />
+            <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
+            <ContactsPhone />
+            <Box sx={{ height: '1px', backgroundColor: clr.light, width: '75%', mt: 1 }} />
+            <ContactsModal />
+            <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
+            <ContactsMessenger />
+          </div>
+        </>
+      )}
 
       <ContactsSocial />
     </Box>

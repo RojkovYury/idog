@@ -45,9 +45,9 @@ export default function ContactsMap() {
 
   return (
     <>
-      <Box
+      <div
         ref={boxRef}
-        sx={{
+        style={{
           position: 'relative',
           zIndex: 2,
           overflow: 'hidden',
@@ -61,19 +61,19 @@ export default function ContactsMap() {
         }}
       >
       
-        <Box 
-          sx={{ 
-            display: ['none', 'flex', 'flex', 'flex' ],
+        <div 
+          style={{ 
+            display: 'flex',
             position: 'absolute', 
             right: 0, 
             height: '100%' 
             }}
           >
           <ContactsPaper />
-        </Box>
+        </div>
 
-        <Box
-          sx={{
+        <div
+          style={{
             position: 'absolute',
             transform: `matrix(1, 0, 0, 1, ${positionX}, ${positionY})`,
             backfaceVisibility: 'hidden',
@@ -93,8 +93,8 @@ export default function ContactsMap() {
             width={2442}
             height={1075}
           />
-        </Box>
-      </Box>
+        </div>
+      </div>
     </>
   )
 }
