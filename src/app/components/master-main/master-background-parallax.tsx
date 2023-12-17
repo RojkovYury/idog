@@ -13,7 +13,10 @@ export default function MasterBackgroundParallax() {
       <Box
         sx={{
           position: 'relative',
-          height: `${350 - yPos * 35}px`,
+
+          // height: `${350 - yPos * 35}px`,
+          height: '250px',
+          
           width: '100%', 
           backgroundColor: clr.light, 
         }}

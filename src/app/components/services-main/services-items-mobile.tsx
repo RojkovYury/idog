@@ -15,7 +15,10 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         position: 'relative',
         display: ['flex', 'flex', 'none', 'none'], 
         width: '100%', 
-        height: `${680 - (yPos * 24)}px`, 
+
+        // height: `${680 - (yPos * 24)}px`, 
+        height: '150px',
+        
         zIndex: 9 
       }}
     >
