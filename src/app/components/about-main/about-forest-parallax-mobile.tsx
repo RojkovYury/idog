@@ -16,9 +16,9 @@ export default function AboutForestParallaxMobile() {
         style={{ 
           position: 'absolute', 
           width: '100%', 
-          height: '1080px', 
-          background: `url('/images/forest/1_layer.png')`,
-          backgroundSize: '1920px 1080px',
+          height: '600px', 
+          background: `url('/images/forest/mobile/1_layer.png')`,
+          backgroundSize: '900px 600px',
           zIndex: 6,
           bottom: `${(-68) - (yPos * 5) }px`
         }}
@@ -27,31 +27,31 @@ export default function AboutForestParallaxMobile() {
         style={{ 
           position: 'absolute', 
           width: '100%', 
-          height: '1080px', 
-          background: `url('/images/forest/2_layer.png')`,
-          backgroundSize: '1920px 1080px',
+          height: '600px', 
+          background: `url('/images/forest/mobile/2_layer.png')`,
+          backgroundSize: '900px 600px',
           zIndex: 5,
-          bottom: `${(-38) - (yPos * 10) }px`
+          bottom: `${(-55) - (yPos * 10) }px`
         }}
       />
       <div 
         style={{ 
           position: 'absolute', 
           width: '100%', 
-          height: '1080px', 
-          background: `url('/images/forest/3_layer.png')`,
-          backgroundSize: '1920px 1080px',
+          height: '600px', 
+          background: `url('/images/forest/mobile/3_layer.png')`,
+          backgroundSize: '900px 600px',
           zIndex: 4,
-          bottom: `${(32) - (yPos * 20) }px`
+          bottom: `${(50) - (yPos * 20) }px`
         }}
       /> 
       <div 
         style={{ 
           position: 'absolute', 
           width: '100%', 
-          height: '1080px', 
-          background: `url('/images/forest/4_layer.png')`,
-          backgroundSize: '1920px 1080px',
+          height: '600px', 
+          background: `url('/images/forest/mobile/4_layer.png')`,
+          backgroundSize: '900px 600px',
           zIndex: 3,
           bottom: `${(102) - (yPos * 25) }px`,
         }}

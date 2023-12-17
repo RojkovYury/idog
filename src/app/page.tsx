@@ -53,7 +53,7 @@ export default function Main() {
           <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <MasterMain />
         </Container>
-        <MasterBackgroundParallax isMobile={isMobile}  isTinyMobile={isTinyMobile}/>
+        <MasterBackgroundParallax isMobile={isMobile} isTinyMobile={isTinyMobile}/>
         { (!isMobile) && <MasterMountansParallax /> }
         { (isMobile) && <MasterMountansParallaxMobile /> }
       </div>
@@ -61,7 +61,7 @@ export default function Main() {
       <div style={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
-          <AboutBackgroundParallax />
+          <AboutBackgroundParallax isTinyMobile={isTinyMobile}/>
           <AboutMain />
         </Container>
         { (!isMobile) && <AboutForestParallax /> }
