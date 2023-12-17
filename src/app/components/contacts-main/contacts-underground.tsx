@@ -32,9 +32,9 @@ export default function ContactsUnderground() {
             position: 'absolute',
             pointerEvents: 'none',
             width: '100%', 
-            height: '450px', 
-            background: `url('/images/underground/mobile/layer.png')`,
-            backgroundSize: '900px 450px',
+            height: '535px', 
+            background: `url('/images/underground/mobile/layer.webp')`,
+            backgroundSize: '900px 535px',
             bottom: '0',
           }}
         />
