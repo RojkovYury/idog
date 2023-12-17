@@ -84,7 +84,8 @@ export default function MasterMountansParallax() {
             background: `url('/images/mountans/mobile/1_layer.png')`,
             backgroundSize: '960px 540px',
             zIndex: 6,
-            top: `${(520 - yPos * 35)}px`
+            // top: `${(520 - yPos * 35)}px`
+            bottom: '-60px',
           }}
         />
         <div 
@@ -95,7 +96,7 @@ export default function MasterMountansParallax() {
             background: `url('/images/mountans/mobile/2_layer.png')`,
             backgroundSize: '1280px 720px',
             zIndex: 5,
-            bottom: `${(-50) - (yPos * 20) }px`
+            bottom: `${(-50) - (yPos * 20) }px`,
           }}
         />
         <div 
@@ -106,7 +107,7 @@ export default function MasterMountansParallax() {
             background: `url('/images/mountans/mobile/3_layer.png')`,
             backgroundSize: '1280px 720px',
             zIndex: 4,
-            bottom: `${(-50) - (yPos * 30) }px`
+            bottom: `${(-50) - (yPos * 30) }px`,
           }}
         /> 
         <div 
@@ -117,7 +118,7 @@ export default function MasterMountansParallax() {
             background: `url('/images/mountans/mobile/4_layer.png')`,
             backgroundSize: '1280px 720px',
             zIndex: 3,
-            bottom: `${(-75) - (yPos * 40) }px`
+            bottom: `${(-75) - (yPos * 40) }px`,
           }}
         /> 
         <div  
@@ -128,7 +129,7 @@ export default function MasterMountansParallax() {
             background: `url('/images/mountans/mobile/5_layer.png')`,
             backgroundSize: '1280px 720px',
             zIndex: 2,
-            bottom: `${(-25) - (yPos * 55) }px`
+            bottom: `${(-25) - (yPos * 55) }px`,
           }}
         /> 
       </Box> 

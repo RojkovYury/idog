@@ -95,8 +95,8 @@ export default function MasterMain() {
             width: '200px', 
             height: '40px',
             "&:hover": { 
-               backgroundColor: clr.secondary, 
-               color: clr.light 
+              backgroundColor: clr.secondary, 
+              color: clr.light 
             }
           }}
         >
