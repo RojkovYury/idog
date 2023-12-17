@@ -17,10 +17,10 @@ export default function AboutForestParallax() {
           position: 'absolute', 
           width: '100%', 
           height: '1080px', 
-          background: `url('/images/forest/1_layer.png')`,
+          background: `url('/images/forest/1_layer.webp')`,
           backgroundSize: '1920px 1080px',
           zIndex: 6,
-          bottom: `${(-68) - (yPos * 5) }px`
+          bottom: `${(-70) - (yPos * 5) }px`
         }}
       />
       <div 
@@ -28,10 +28,10 @@ export default function AboutForestParallax() {
           position: 'absolute', 
           width: '100%', 
           height: '1080px', 
-          background: `url('/images/forest/2_layer.png')`,
+          background: `url('/images/forest/2_layer.webp')`,
           backgroundSize: '1920px 1080px',
           zIndex: 5,
-          bottom: `${(-38) - (yPos * 10) }px`
+          bottom: `${(0) - (yPos * 15) }px`
         }}
       />
       <div 
@@ -39,10 +39,10 @@ export default function AboutForestParallax() {
           position: 'absolute', 
           width: '100%', 
           height: '1080px', 
-          background: `url('/images/forest/3_layer.png')`,
+          background: `url('/images/forest/3_layer.webp')`,
           backgroundSize: '1920px 1080px',
           zIndex: 4,
-          bottom: `${(32) - (yPos * 20) }px`
+          bottom: `${(60) - (yPos * 20) }px`
         }}
       /> 
       <div 
@@ -50,10 +50,10 @@ export default function AboutForestParallax() {
           position: 'absolute', 
           width: '100%', 
           height: '1080px', 
-          background: `url('/images/forest/4_layer.png')`,
+          background: `url('/images/forest/4_layer.webp')`,
           backgroundSize: '1920px 1080px',
           zIndex: 3,
-          bottom: `${(102) - (yPos * 25) }px`,
+          bottom: `${(120) - (yPos * 25) }px`,
         }}
       />
     </div>
