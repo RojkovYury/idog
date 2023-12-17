@@ -30,7 +30,8 @@ export default function MasterMain() {
           alignItems: 'center',
         }}
       >
-        <Typography 
+        <Typography
+          component={'h1'}
           noWrap 
           sx={{ 
             fontSize: [45, 45, 65, 65], 
@@ -43,7 +44,8 @@ export default function MasterMain() {
           Центр услуг для собак
         </Typography>
 
-        <Typography 
+        <Typography
+          component={'h1'}
           noWrap 
           sx={{ 
             fontSize: [65, 65, 80, 80], 
@@ -56,7 +58,8 @@ export default function MasterMain() {
           iDog
         </Typography>
 
-        <Typography 
+        <Typography
+          component={'h2'}
           noWrap 
           sx={{ 
             fontSize: [28, 28, 36, 36], 
@@ -69,7 +72,8 @@ export default function MasterMain() {
           Самый широкий спектр услуг
         </Typography>
 
-        <Typography 
+        <Typography
+          component={'h2'}
           noWrap 
           sx={{ 
             fontSize: [28, 28, 36, 36], 
@@ -91,7 +95,8 @@ export default function MasterMain() {
             borderRadius: '25px', 
             mt: 3, 
             boxShadow: 'none', 
-            color: clr.light, 
+            color: clr.light,
+            textShadow: `1px 1px 1px ${clr.dark}`,
             width: '200px', 
             height: '40px',
             "&:hover": { 
@@ -105,17 +110,32 @@ export default function MasterMain() {
       </Box>
 
       <Box
-        sx={{  
-          display: ['flex', 'flex', 'flex', 'flex'],
+        sx={{ 
+          position: 'relative',
+          display: 'flex',
           zIndex: '20', 
           mx: [0, 0, 3, 6],
           height: ['100px', '100px', '470px', '470px'],
-          width: ['320px', '420px', '420px', '420px'],
+          width: ['auto', 'auto', '420px', '420px'],
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: ['center', 'center', 'flex-end', 'flex-end'],
+          pb: 2,
         }}
       >
+        <Box
+          sx={{
+            display: ['flex', 'flex', 'none', 'none'],
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            backgroundColor: clr.light,
+            opacity: 0.3,
+            zIndex: 18,
+            px: 2,
+            borderRadius: '10px'
+          }}
+        />
         <MasterLinks/> 
       </Box>
 

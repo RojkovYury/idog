@@ -5,11 +5,7 @@ import useScroll from "@/hooks/useScroll";
 export default function MasterMountansParallaxMobile() {
   const [yPos] = useScroll();
   return (
-    <div 
-      style={{
-        display: 'flex', 
-      }}
-    >
+    <>
       <div 
         style={{
           position: 'absolute', 
@@ -29,7 +25,7 @@ export default function MasterMountansParallaxMobile() {
           background: `url('/images/mountans/mobile/2_layer.webp')`,
           backgroundSize: '960px 540px',
           zIndex: 5,
-          bottom: `${(-50) - (yPos * 20) }px`,
+          bottom: `${(-70) - (yPos * 12) }px`,
         }}
       />
       <div 
@@ -40,7 +36,7 @@ export default function MasterMountansParallaxMobile() {
           background: `url('/images/mountans/mobile/3_layer.webp')`,
           backgroundSize: '960px 540px',
           zIndex: 4,
-          bottom: `${(-50) - (yPos * 30) }px`,
+          bottom: `${(-50) - (yPos * 20) }px`,
         }}
       /> 
       <div 
@@ -51,7 +47,7 @@ export default function MasterMountansParallaxMobile() {
           background: `url('/images/mountans/mobile/4_layer.webp')`,
           backgroundSize: '960px 540px',
           zIndex: 3,
-          bottom: `${(-75) - (yPos * 40) }px`,
+          bottom: `${(-75) - (yPos * 30) }px`,
         }}
       /> 
       <div  
@@ -62,9 +58,9 @@ export default function MasterMountansParallaxMobile() {
           background: `url('/images/mountans/mobile/5_layer.webp')`,
           backgroundSize: '960px 540px',
           zIndex: 2,
-          bottom: `${(-25) - (yPos * 55) }px`,
+          bottom: `${(-25) - (yPos * 40) }px`,
         }}
       /> 
-    </div> 
+    </> 
   )
 }

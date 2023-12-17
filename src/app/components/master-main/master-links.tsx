@@ -1,9 +1,9 @@
+import Image from 'next/image';
 import { Box, Typography } from "@mui/material";
 import Link from 'next/link';
 import CallIcon from '@mui/icons-material/Call';
 import HomeIcon from '@mui/icons-material/Home';
 import { clr } from "../../colors";
-import Image from 'next/image';
 
 export default function MasterLinks() {
   return(
@@ -12,6 +12,7 @@ export default function MasterLinks() {
         component={Link}
         href={'tel:+79611470303'}
         sx={{
+          zIndex: 19,
           display: 'flex',
           justifyContent: 'center', 
           alignItems: 'center', 
@@ -42,6 +43,7 @@ export default function MasterLinks() {
         component={Link}
         href={''}
         sx={{ 
+          zIndex: 19,
           pointerEvents: 'none',
           cursor: 'default',
           display: 'flex',
@@ -74,6 +76,7 @@ export default function MasterLinks() {
         component={Link}
         href={'https://vk.com/idogtula'}
         sx={{ 
+          zIndex: 19,
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

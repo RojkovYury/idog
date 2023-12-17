@@ -1,30 +1,30 @@
 'use client';
 
 import Image from 'next/image';
-import { Box } from "@mui/material";
 import { clr } from "../../colors";
 import useScroll from "@/hooks/useScroll";
 
-export default function MasterBackgroundParallax() {
+interface MasterBackgroundParallaxProps {
+  isMobile: boolean;
+  isTinyMobile: boolean;
+}
+
+export default function MasterBackgroundParallax({ isMobile, isTinyMobile }: MasterBackgroundParallaxProps) {
   const [yPos] = useScroll();
-  
   return(
     <>
-      <Box
-        sx={{
+      <div
+        style={{
           position: 'relative',
-
-          // height: `${350 - yPos * 35}px`,
-          height: '250px',
-          
+          height: isMobile ? '100px' : `${350 - yPos * 35}px`,
           width: '100%', 
           backgroundColor: clr.light, 
         }}
       />
 
-      <Box>
-        <Box 
-          sx={{ 
+      <div>
+        <div 
+          style={{ 
             zIndex: 1,
             width: '100%', 
             position: 'absolute', 
@@ -35,24 +35,44 @@ export default function MasterBackgroundParallax() {
           }}
         >
           <Image src="/images/main/layoutMain.png" alt="layoutMain" width={650} height={450} />
-        </Box>
+        </div>
         
-        <Box 
-          sx={{ 
-            zIndex: 3, 
-            width: '100%', 
-            position: 'absolute', 
-            pointerEvents: 'none', 
-            display: 'flex', 
-            justifyContent: 'center', 
-            top: `${100 + yPos * 20}px`, 
-            overflow: 'hidden' 
-          }}
-        >
-          <Image src="/images/main/masterBull.webp" alt="main1" width={432} height={476} />
-        </Box>
+        {!isTinyMobile && (
+          <div 
+            style={{ 
+              zIndex: 3, 
+              width: '100%', 
+              position: 'absolute', 
+              pointerEvents: 'none', 
+              display: 'flex', 
+              justifyContent: 'center', 
+              top: `${100 + yPos * 20}px`, 
+              overflow: 'hidden' 
+            }}
+          >
+            <Image loading='eager' src="/images/main/masterBull.webp" alt="main1" width={432} height={476} />
+          </div>
+        )}
 
-      </Box>
+        {isTinyMobile && (
+          <div 
+            style={{ 
+              zIndex: 3, 
+              width: '100%', 
+              position: 'absolute', 
+              pointerEvents: 'none', 
+              display: 'flex', 
+              justifyContent: 'center', 
+              top: `${140 + yPos * 20}px`, 
+              overflow: 'hidden' 
+            }}
+          >
+            <Image loading='eager' src="/images/main/mobile/masterBull.webp" alt="main1" width={324} height={357} />
+          </div>
+        )}
+
+
+      </div>
     </>
   )
 }

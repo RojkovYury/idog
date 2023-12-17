@@ -1,6 +1,3 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import { Box } from "@mui/material";
 import { clr } from "../colors";
 import ContactsMap from "./contacts-main/contacts-map";
@@ -11,15 +8,11 @@ import ContactsModal from "./contacts-main/contacts-modal";
 import ContactsMessenger from "./contacts-main/contacts-messenger";
 import ContactsSocial from './contacts-main/contacts-social';
 
-export default function ContactsMain() {
+interface ContactsMainProps {
+  isTinyMobile: boolean;
+}
 
-  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(true)
-  useEffect(() => {
-    const handleResize = () => { setIsTinyMobile(window.innerWidth < 600) }
-    window.addEventListener('resize', handleResize)
-    return () => { window.removeEventListener('resize', handleResize) }
-  }, [])
-
+export default function ContactsMain({isTinyMobile}: ContactsMainProps) {
   return (
     <Box 
       sx={{ 
