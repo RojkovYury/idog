@@ -27,7 +27,7 @@ const theme = createTheme({
 });
 
 export default function Main() {
-  const [yPos] = useScroll();
+  const [yPos] = useScroll(); 
   return (
     <ThemeProvider theme={theme}>
 
