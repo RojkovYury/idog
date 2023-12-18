@@ -15,7 +15,6 @@ import MasterMountansParallax from "./components/master-main/master-mountans-par
 import AboutMain from "./components/about-main";
 import AboutBackgroundParallax from "./components/about-main/about-background-parallax";
 import AboutForestParallax from "./components/about-main/about-forest-parallax";
-import AboutForestParallaxMobile from './components/about-main/about-forest-parallax-mobile';
 
 import ServicesBackgroundParallax from "./components/services-main/services-background-parallax";
 import ServicesMain from "./components/services-main";
@@ -61,11 +60,10 @@ export default function Main() {
       <div style={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
-          <AboutBackgroundParallax isTinyMobile={isTinyMobile}/>
+          <AboutBackgroundParallax />
           <AboutMain />
         </Container>
-        { (!isMobile) && <AboutForestParallax /> }
-        { (isMobile) && <AboutForestParallaxMobile /> }
+        <AboutForestParallax />
       </div>
 
       <div style={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>

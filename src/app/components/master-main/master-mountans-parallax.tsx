@@ -6,11 +6,7 @@ import useScroll from "@/hooks/useScroll";
 export default function MasterMountansParallax() {
   const [yPos] = useScroll();
   return (
-    <div 
-      style={{
-        display: 'flex',
-      }}
-    >
+    <>
       <Box 
         sx={{
           position: 'absolute', 
@@ -97,6 +93,6 @@ export default function MasterMountansParallax() {
           bottom: [`${(-25) - (yPos * 40) }px`, `${(-25) - (yPos * 40) }px`, '', ''],
         }}
       /> 
-    </div>
+    </>
   )
 }
