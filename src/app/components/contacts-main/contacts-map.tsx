@@ -7,7 +7,6 @@ import ContactsPaper from './contacts-paper';
 type BoxRefType = RefObject<HTMLDivElement>;
 
 export default function ContactsMap() {
-
   const [positionX, setPositionX] = useState<number>(-190);
   const [positionY, setPositionY] = useState<number>(100);
   const [isDragging, setIsDragging] = useState<boolean>(false);
@@ -44,7 +43,14 @@ export default function ContactsMap() {
   };
 
   return (
-    <>
+    <Box 
+      sx={{ 
+        width: '100%', 
+        height: '600px', 
+        display: 'flex', 
+        mx: 1,
+      }}
+    >
       <div
         ref={boxRef}
         style={{
@@ -95,6 +101,6 @@ export default function ContactsMap() {
           />
         </div>
       </div>
-    </>
+    </Box>
   )
 }
