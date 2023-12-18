@@ -1,13 +1,11 @@
 'use client';
 
+import useScroll from "@/hooks/useScroll";
 import { Box } from '@mui/material';
 import Image from 'next/image';
 
-interface AboutBackgroundParallaxProps {
-  yPos: number;
-}
-
-export default function AboutBackgroundParallax({ yPos }: AboutBackgroundParallaxProps) {
+export default function AboutBackgroundParallax() {
+  const [ yPos ] = useScroll();
   return(
       <div 
         style={{ 

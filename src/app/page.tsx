@@ -4,7 +4,6 @@ import { Container } from "@mui/material";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
-import useScroll from "@/hooks/useScroll";
 import HeadMain from "./components/head-main";
 import MasterMain from "./components/master-main";
 import MasterBackgroundParallax from "./components/master-main/master-background-parallax";
@@ -27,7 +26,6 @@ const theme = createTheme({
 });
 
 export default function Main() {
-  const [yPos] = useScroll(); 
   return (
     <ThemeProvider theme={theme}>
 
@@ -36,24 +34,24 @@ export default function Main() {
           <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <MasterMain />
         </Container>
-        <MasterBackgroundParallax yPos={yPos}/>
-        <MasterMountansParallax yPos={yPos} />
+        <MasterBackgroundParallax />
+        <MasterMountansParallax />
       </div>
 
       <div style={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
-          <AboutBackgroundParallax yPos={yPos} />
+          <AboutBackgroundParallax />
           <AboutMain />
         </Container>
-        <AboutForestParallax yPos={yPos} />
+        <AboutForestParallax />
       </div>
 
       <div style={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
-          <ServicesBackgroundParallax yPos={yPos}/>
-          <ServicesMain yPos={yPos}/>
+          <ServicesBackgroundParallax />
+          <ServicesMain />
         </Container>
         <ServicesGround />
       </div>  

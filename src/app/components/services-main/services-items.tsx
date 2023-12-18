@@ -1,13 +1,16 @@
+'use client'
+
+import useScroll from "@/hooks/useScroll";
 import { Box } from "@mui/material";
 import ServicesItem from "./services-item"
 
 interface ServicesItemsProps {
   currentContent: any;
   setCurrentContent: any;
-  yPos: number;
 }
 
-export default function ServicesItems({ currentContent, setCurrentContent, yPos }: ServicesItemsProps) {
+export default function ServicesItems({ currentContent, setCurrentContent }: ServicesItemsProps) {
+  const [ yPos ] = useScroll();
   return(
     <Box 
       sx={{ 

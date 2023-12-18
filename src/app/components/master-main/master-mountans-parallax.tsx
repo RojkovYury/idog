@@ -1,12 +1,10 @@
 'use client'
 
+import useScroll from "@/hooks/useScroll";
 import { Box } from "@mui/material";
 
-interface MasterMountansParallaxProps {
-  yPos: number;
-}
-
-export default function MasterMountansParallax({ yPos }: MasterMountansParallaxProps) {
+export default function MasterMountansParallax() {
+  const [ yPos ] = useScroll();
   return (
     <div style={{ display: 'flex' }}>
       <Box 

@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { Box } from "@mui/material";
 
 // import ContactsMap from "./contacts-main/contacts-map";
