@@ -30,7 +30,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/grooming.webp'}
         alt={'grooming'}
         left={'35%'}
-        top={'18%'}
+        top={'20%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent} 
         buttonRight
@@ -50,7 +50,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/massage.webp'}
         alt={'massage'}
         left={'0%'}
-        top={'36%'}
+        top={'60%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
@@ -59,7 +59,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/documents.webp'}
         alt={'documents'}
         left={'35%'}
-        top={'54%'}
+        top={'90%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
@@ -68,7 +68,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/photosession.webp'}
         alt={'photosession'}
         left={'70%'}
-        top={'36%'}
+        top={'60%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
@@ -77,7 +77,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/rent.webp'}
         alt={'rent'}
         left={'0%'}
-        top={'72%'}
+        top={'120%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />
@@ -86,7 +86,7 @@ export default function ServicesItemsMobile({ currentContent, setCurrentContent 
         src={'/images/services/training.webp'}
         alt={'training'}
         left={'70%'}
-        top={'72%'}
+        top={'120%'}
         currentContent={currentContent}
         setCurrentContent={setCurrentContent}
       />

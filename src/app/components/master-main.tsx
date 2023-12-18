@@ -86,7 +86,8 @@ export default function MasterMain() {
           для Вашей собаки
         </Typography>
 
-        <Button 
+        <Button
+          onClick={() => window.scrollTo(({ top: 1830, behavior: "smooth"}))}
           variant="contained" 
           size='small' 
           sx={{ 

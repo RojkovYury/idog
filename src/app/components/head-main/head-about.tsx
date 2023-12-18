@@ -15,7 +15,7 @@ export default function HeadAbout({ TextColor, HoverColor, TextColorOnHover, sel
     <>
       <Tooltip title="О нас" arrow>
         <IconButton 
-          onClick={() => window.scrollTo(({ top: 742, behavior: "smooth"}))} 
+          onClick={() => window.scrollTo(({ top: 760, behavior: "smooth"}))} 
           size='small' 
           sx={{ 
             ...iconButtonProps, 

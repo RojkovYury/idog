@@ -1,4 +1,3 @@
-import { Box } from '@mui/material';
 import useScroll from "@/hooks/useScroll";
 import ServicesItem from "./services-item"
 
@@ -10,10 +9,10 @@ interface ServicesItemsProps {
 export default function ServicesItems({ currentContent, setCurrentContent }: ServicesItemsProps) {
   const [yPos] = useScroll();
   return(
-    <Box 
-      sx={{ 
+    <div 
+      style={{ 
         position: 'relative',
-        display: ['none', 'none', 'flex', 'flex'], 
+        display: 'flex', 
         width: '100%', 
         height: `${850 - (yPos * 24)}px`, 
         zIndex: 20 
@@ -95,7 +94,7 @@ export default function ServicesItems({ currentContent, setCurrentContent }: Ser
         setCurrentContent={setCurrentContent}
       />
       */}
-    </Box>
+    </div>
     
   )
 } 

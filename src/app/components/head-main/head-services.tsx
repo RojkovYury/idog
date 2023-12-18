@@ -15,7 +15,7 @@ export default function HeadServices({ TextColor, HoverColor, TextColorOnHover, 
     <>
       <Tooltip title="Услуги" arrow placement="bottom-start">
         <IconButton 
-          onClick={() => window.scrollTo(({ top: 1713, behavior: "smooth"}))}
+          onClick={() => window.scrollTo(({ top: 1830, behavior: "smooth"}))}
           size='small' 
           sx={{ 
             ...iconButtonProps,

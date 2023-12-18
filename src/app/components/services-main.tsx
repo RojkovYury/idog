@@ -5,7 +5,12 @@ import servicesContentText from './services-main/services-content-texts.js';
 import ServicesItems from './services-main/services-items';
 import ServicesItemsMobile from './services-main/services-items-mobile';
 
-export default function ServicesMain() {
+interface ServicesMainProps {
+  isMobile: boolean;
+  isTinyMobile: boolean;
+}
+
+export default function ServicesMain({ isMobile, isTinyMobile }: ServicesMainProps) {
   const [currentContent, setCurrentContent] = useState<any>(servicesContentText.fitnes);
   return(
     <>
@@ -19,19 +24,25 @@ export default function ServicesMain() {
         <ServicesContent currentContent={currentContent} />
         <ServicesContentMobile currentContent={currentContent} />
 
-        <ServicesItems
-          currentContent={currentContent}
-          setCurrentContent={setCurrentContent} 
-        />
+        { (!isMobile) && (
+          <ServicesItems
+            currentContent={currentContent}
+            setCurrentContent={setCurrentContent} 
+          />
+        )}
 
-        <ServicesItemsMobile 
-          currentContent={currentContent}
-          setCurrentContent={setCurrentContent} 
-        />
+        { (isMobile) && (
+          <ServicesItemsMobile 
+            currentContent={currentContent}
+            setCurrentContent={setCurrentContent} 
+          />
+        )}
         
 
       </div>
-      <div style={{height: '200px'}}/>
+      <div 
+        style={{height: '200px'}}
+      />
      </>
   )
 

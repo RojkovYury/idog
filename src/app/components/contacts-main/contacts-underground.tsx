@@ -1,34 +1,27 @@
-import { Box } from "@mui/material";
+interface ContactsUndergroundProps {
+  isMobile: boolean;
+}
 
-export default function ContactsUnderground() {
+export default function ContactsUnderground({ isMobile }:ContactsUndergroundProps) {
   return (
     <>
-      <Box 
-        sx={{
-          display: ['none', 'none', 'flex', 'flex'],
-        }}
-      >
-        <Box 
-          sx={{ 
+      {!isMobile && (
+        <div 
+        style={{ 
             position: 'absolute',
             pointerEvents: 'none',
             width: '100%', 
             height: '500px', 
-            background: `url('/images/underground/layer.png')`,
+            background: `url('/images/underground/layer.webp')`,
             backgroundSize: '2000px 500px',
             bottom: '0',
           }}
         />
-      </Box>
+      )}
 
-      {/* mobile */}
-      <Box 
-        sx={{
-          display: ['flex', 'flex', 'none', 'none'],
-        }}
-      >
-        <Box 
-          sx={{ 
+      {isMobile && (
+        <div 
+          style={{ 
             position: 'absolute',
             pointerEvents: 'none',
             width: '100%', 
@@ -38,7 +31,7 @@ export default function ContactsUnderground() {
             bottom: '0',
           }}
         />
-      </Box>
+      )}
     </>
   )
 }

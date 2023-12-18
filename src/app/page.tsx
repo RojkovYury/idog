@@ -41,6 +41,7 @@ export default function Main() {
       setIsTinyMobile(window.innerWidth < 600)
       setIsMobile(window.innerWidth < 900) 
     }
+    handleResize()
     window.addEventListener('resize', handleResize)
     return () => { window.removeEventListener('resize', handleResize) }
   }, [])
@@ -71,8 +72,8 @@ export default function Main() {
       <div style={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
-          <ServicesBackgroundParallax />
-          <ServicesMain />
+          <ServicesBackgroundParallax isMobile={isMobile}/>
+          <ServicesMain isMobile={isMobile} isTinyMobile={isTinyMobile}/>
         </Container>
         <ServicesGround />
       </div>  
@@ -82,7 +83,7 @@ export default function Main() {
           <HeadMain TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
           <ContactsMain isTinyMobile={isTinyMobile} />
         </Container>
-        <ContactsUnderground />
+        <ContactsUnderground isMobile={isMobile} />
       </div>
 
     </ThemeProvider>

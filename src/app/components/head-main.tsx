@@ -46,52 +46,51 @@ export default function HeadMain({ TextColor, HoverColor, TextColorOnHover, sele
   return (  
     <Box 
       sx={{ 
-        px:1, 
+        px: 1, 
         py: 3, 
         position: 'relative', 
         display: 'flex', 
         justifyContent: 'space-between', 
-        zIndex: 25 
+        zIndex: 25,
       }}
     >
-      <Box 
-        sx={{ 
+      <div 
+        style={{ 
           display: 'flex', 
           flexDirection: 'column', 
           width: '100%', 
-          alignItems: 'flex-start' 
+          alignItems: 'flex-start',
         }}
       >
         <HeadIdog TextColor={TextColor} HoverColor={HoverColor} selected={selected} />
         <Divider sx={{ ...dividerProps }}/>
 
-      </Box>
+      </div>
       
-      <Box 
-        sx={{ 
+      <div 
+        style={{ 
           display: 'flex', 
           flexDirection: 'column', 
-          alignItems: 'flex-end' 
+          alignItems: 'flex-end',
         }}
       >
-
-        <Box 
-          sx={{ 
+        <div 
+          style={{ 
             height: '66px', 
             display: 'flex', 
             color: 'inherit', 
             textDecoration: 'none', 
             alignItems: 'center', 
-            justifyContent: 'flex-end' 
+            justifyContent: 'flex-end',
           }}
         >
           <HeadAbout TextColor={TextColor} HoverColor={HoverColor} TextColorOnHover={TextColorOnHover} selected={selected} buttonProps={buttonProps} iconButtonProps={iconButtonProps}/>
           <HeadServices TextColor={TextColor} HoverColor={HoverColor} TextColorOnHover={TextColorOnHover} selected={selected} buttonProps={buttonProps} iconButtonProps={iconButtonProps}/>
           <HeadContacts TextColor={TextColor} HoverColor={HoverColor} TextColorOnHover={TextColorOnHover} selected={selected} buttonProps={buttonProps} iconButtonProps={iconButtonProps}/>
-        </Box>
+        </div>
 
         <Divider sx={{ ...dividerProps }}/>
-      </Box>
+      </div>
 
     </Box>
   )
