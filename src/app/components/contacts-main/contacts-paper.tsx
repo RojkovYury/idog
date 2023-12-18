@@ -11,8 +11,8 @@ export default function ContactsPaper() {
       <Box 
         sx={{ 
           position: 'absolute',
-          width: ['200px', '200px', '320px', '420px'],
-          minWidth: ['200px', '200px', '320px', '420px'],
+          width: ['', '200px', '320px', '420px'],
+          minWidth: ['', '200px', '320px', '420px'],
           height: '100%',
           right: 0,
           backgroundColor: clr.ground,  
@@ -25,15 +25,15 @@ export default function ContactsPaper() {
       <Box 
         sx={{ 
           position: 'absolute',
-          width: ['200px', '200px', '320px', '420px'],
-          minWidth: ['200px', '200px', '320px', '420px'],
+          width: ['', '200px', '320px', '420px'],
+          minWidth: ['', '200px', '320px', '420px'],
           height: '100%',
           right: 0,
           zIndex: 10,
           display: 'flex',
           flexDirection: 'column', 
           alignItems: 'center', 
-          justifyContent: 'space-around', 
+          justifyContent: ['', 'space-evenly', 'space-around', 'space-around'], 
         }}
       >
         <ContactsNavigator />
