@@ -7,12 +7,10 @@ import ContactsPhone from './contacts-main/contacts-phone';
 import ContactsModal from "./contacts-main/contacts-modal";
 import ContactsMessenger from "./contacts-main/contacts-messenger";
 import ContactsSocial from './contacts-main/contacts-social';
+import useInnerWidth from "@/hooks/useInnerWidth";
 
-interface ContactsMainProps {
-  isTinyMobile: boolean;
-}
-
-export default function ContactsMain({isTinyMobile}: ContactsMainProps) {
+export default function ContactsMain() {
+  const [isTinyMobile] = useInnerWidth();
   return (
     <Box 
       sx={{ 

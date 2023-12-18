@@ -137,7 +137,9 @@ export default function MasterMain() {
             borderRadius: '10px'
           }}
         />
+        
         <MasterLinks/> 
+      
       </Box>
 
     </Box>

@@ -32,15 +32,15 @@ export default function MasterBackgroundParallax() {
           <Image src="/images/main/layoutMain.png" alt="layoutMain" width={650} height={450} />
         </div>
         
-        <div 
-          style={{ 
+        <Box 
+          sx={{ 
             display: 'flex', 
             zIndex: 3, 
             width: '100%', 
             position: 'absolute', 
             pointerEvents: 'none', 
             justifyContent: 'center', 
-            top: `${100 + yPos * 20}px`, 
+            top: [`${140 + yPos * 20}px`, `${100 + yPos * 20}px`, `${100 + yPos * 20}px`, `${100 + yPos * 20}px`], 
             overflow: 'hidden' 
           }}
         >
@@ -52,7 +52,7 @@ export default function MasterBackgroundParallax() {
             <Image loading='eager' src="/images/main/mobile/masterBull.webp" alt="main1" width={324} height={357} />
           </Box>
 
-        </div>
+        </Box>
 
       </div>
     </>

@@ -44,10 +44,8 @@ const AnimatedBox = styled(Box)({
 
 interface ServicesItemProps {
   src: string;
-  left?: string;
-  right?: string;
-  bottom?: string;
-  top?: string;
+  left: [string, string, string, string];
+  top: [string, string, string, string];
   zIndex?: string;
   alt: string;
   currentContent: any;
@@ -60,15 +58,11 @@ export default function ServicesItem(props: ServicesItemProps) {
     <Box
       sx={{
         position: 'absolute',
-        // border: '1px solid black', 
-        width: '200px',
-        height: '200px',
-        left: props.left ? props.left : '',
-        right: props.right ? props.right : '',
-        bottom: props.bottom ? props.bottom : '',
+        width: ['100px', '120px', '200px', '200px'], 
+        height: ['100px', '120px', '200px', '200px'], 
+        left: props.left,
         top: props.top ? props.top : '',
         zIndex: props.zIndex ? props.zIndex : '',
-
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -86,16 +80,21 @@ export default function ServicesItem(props: ServicesItemProps) {
       />
 
       {(props.currentContent.id === props.alt) &&
-        <div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
-            width: '100px',
-            height: '100px',
+            width: ['50px', '50px', '100px', '100px'], 
+            height: ['50px', '50px', '100px', '100px'],
             backgroundColor: clr.ground,
             borderRadius: '50%',
             zIndex: -1,
-            opacity: '0.25',
-            boxShadow: '0 0 0 50px #947D59'
+            opacity: ['0.45', '0.45', '0.25', '0.25'], 
+            boxShadow: [
+              `0 0 0 30px ${clr.ground}`, 
+              `0 0 0 30px ${clr.ground}`, 
+              `0 0 0 50px ${clr.ground}`, 
+              `0 0 0 50px ${clr.ground}`, 
+            ]
           }}
         />
       }
@@ -119,23 +118,23 @@ export default function ServicesItem(props: ServicesItemProps) {
           },
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
             zIndex: 19,
-            width: '50px',
-            height: '50px',
+            width: ['30px', '30px', '50px', '50px'], 
+            height: ['30px', '30px', '50px', '50px'], 
             borderRadius: '50%',
             backgroundColor: clr.grassPrimary,
           }}
         />
 
-        <div
-          style={{
+        <Box
+          sx={{
             position: 'absolute',
             zIndex: 19,
-            width: '150px',
-            height: '150px',
+            width: ['120px', '120px', '150px', '150px'], 
+            height: ['120px', '120px', '150px', '150px'], 
             borderRadius: '50%',
           }}
         />

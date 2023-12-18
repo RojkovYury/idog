@@ -1,25 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { Container } from "@mui/material";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
-
 import HeadMain from "./components/head-main";
-
 import MasterMain from "./components/master-main";
 import MasterBackgroundParallax from "./components/master-main/master-background-parallax";
 import MasterMountansParallax from "./components/master-main/master-mountans-parallax";
-
 import AboutMain from "./components/about-main";
 import AboutBackgroundParallax from "./components/about-main/about-background-parallax";
 import AboutForestParallax from "./components/about-main/about-forest-parallax";
-
 import ServicesBackgroundParallax from "./components/services-main/services-background-parallax";
 import ServicesMain from "./components/services-main";
 import ServicesGround from "./components/services-main/services-ground";
-
 import ContactsMain from "./components/contacts-main";
 import ContactsUnderground from "./components/contacts-main/contacts-underground";
 
@@ -32,19 +26,6 @@ const theme = createTheme({
 });
 
 export default function Main() {
-  const [isMobile, setIsMobile] = useState<boolean>(true)
-  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(true) 
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsTinyMobile(window.innerWidth < 600)
-      setIsMobile(window.innerWidth < 900) 
-    }
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => { window.removeEventListener('resize', handleResize) }
-  }, [])
-
   return (
     <ThemeProvider theme={theme}>
 
@@ -70,9 +51,7 @@ export default function Main() {
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
           <ServicesBackgroundParallax />
-
-          <ServicesMain isMobile={isMobile} />
-
+          <ServicesMain />
         </Container>
         <ServicesGround />
       </div>  
@@ -80,7 +59,7 @@ export default function Main() {
       <div style={{ backgroundColor: clr.ground, position: 'relative', zIndex: 40, height: '1000px' }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden', zIndex: 40 }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
-          <ContactsMain isTinyMobile={isTinyMobile} />
+          <ContactsMain />
         </Container>
         <ContactsUnderground />
       </div>
