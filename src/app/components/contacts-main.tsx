@@ -4,14 +4,14 @@ import { Box } from "@mui/material";
 // import ContactsMap from "./contacts-main/contacts-map";
 // import ContactsMapMobile from "./contacts-main/contacts-map-mobile";
 
-const ContactsMap = dynamic(() => import('./contacts-main/contacts-map'), { ssr: false });
-const ContactsMapMobile = dynamic(() => import('./contacts-main/contacts-map-mobile'), { ssr: false });
+// const ContactsMap = dynamic(() => import('./contacts-main/contacts-map'), { ssr: false });
+// const ContactsMapMobile = dynamic(() => import('./contacts-main/contacts-map-mobile'), { ssr: false });
 
 import ContactsSocial from './contacts-main/contacts-social';
-import useInnerWidth from "@/hooks/useInnerWidth";
+// import useInnerWidth from "@/hooks/useInnerWidth";
 
 export default function ContactsMain() {
-  const [isTinyMobile] = useInnerWidth();
+  // const [isTinyMobile] = useInnerWidth();
   return (
     <Box 
       sx={{ 
@@ -22,8 +22,8 @@ export default function ContactsMain() {
         mx: 1,
       }}
     >
-      { /*!isTinyMobile && <ContactsMap />*/ }
-      { isTinyMobile && <ContactsMapMobile /> }
+      { /*!isTinyMobile && <ContactsMap /> }
+      { isTinyMobile && <ContactsMapMobile /> */}
 
       <ContactsSocial />
     </Box>
