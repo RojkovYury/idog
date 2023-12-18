@@ -7,10 +7,9 @@ import ServicesItemsMobile from './services-main/services-items-mobile';
 
 interface ServicesMainProps {
   isMobile: boolean;
-  isTinyMobile: boolean;
 }
 
-export default function ServicesMain({ isMobile, isTinyMobile }: ServicesMainProps) {
+export default function ServicesMain({ isMobile }: ServicesMainProps) {
   const [currentContent, setCurrentContent] = useState<any>(servicesContentText.fitnes);
   return(
     <>

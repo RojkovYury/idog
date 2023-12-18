@@ -28,8 +28,8 @@ export default function ContactsMain({isTinyMobile}: ContactsMainProps) {
           sx={{ 
             width: '100%', 
             height: '600px', 
-            mx: 1,
             display: 'flex', 
+            mx: 1,
           }}
         >
           <ContactsMap />

@@ -32,8 +32,8 @@ const theme = createTheme({
 });
 
 export default function Main() {
-  const [isMobile, setIsMobile] = useState<boolean>(false)
-  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(false) 
+  const [isMobile, setIsMobile] = useState<boolean>(true)
+  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(true) 
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,8 +69,10 @@ export default function Main() {
       <div style={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
-          <ServicesBackgroundParallax isMobile={isMobile}/>
-          <ServicesMain isMobile={isMobile} isTinyMobile={isTinyMobile}/>
+          <ServicesBackgroundParallax />
+
+          <ServicesMain isMobile={isMobile} />
+
         </Container>
         <ServicesGround />
       </div>  
@@ -80,7 +82,7 @@ export default function Main() {
           <HeadMain TextColor={clr.light} HoverColor={clr.secondary} TextColorOnHover={clr.dark} selected='contacts' />
           <ContactsMain isTinyMobile={isTinyMobile} />
         </Container>
-        <ContactsUnderground isMobile={isMobile} />
+        <ContactsUnderground />
       </div>
 
     </ThemeProvider>
