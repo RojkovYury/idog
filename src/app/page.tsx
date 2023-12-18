@@ -11,7 +11,6 @@ import HeadMain from "./components/head-main";
 import MasterMain from "./components/master-main";
 import MasterBackgroundParallax from "./components/master-main/master-background-parallax";
 import MasterMountansParallax from "./components/master-main/master-mountans-parallax";
-import MasterMountansParallaxMobile from "./components/master-main/master-mountans-parallax-mobile";
 
 import AboutMain from "./components/about-main";
 import AboutBackgroundParallax from "./components/about-main/about-background-parallax";
@@ -55,9 +54,8 @@ export default function Main() {
           <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <MasterMain />
         </Container>
-        <MasterBackgroundParallax isMobile={isMobile} isTinyMobile={isTinyMobile}/>
-        { (!isMobile) && <MasterMountansParallax /> }
-        { (isMobile) && <MasterMountansParallaxMobile /> }
+        <MasterBackgroundParallax/>
+        <MasterMountansParallax />
       </div>
 
       <div style={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
