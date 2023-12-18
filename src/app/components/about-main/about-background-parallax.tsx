@@ -2,10 +2,12 @@
 
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import useScroll from "@/hooks/useScroll";
 
-export default function AboutBackgroundParallax() {
-  const [yPos] = useScroll();
+interface AboutBackgroundParallaxProps {
+  yPos: number;
+}
+
+export default function AboutBackgroundParallax({ yPos }: AboutBackgroundParallaxProps) {
   return(
       <div 
         style={{ 

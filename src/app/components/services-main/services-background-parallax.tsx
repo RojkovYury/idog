@@ -1,9 +1,11 @@
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import useScroll from "@/hooks/useScroll";
 
-export default function ServicesBackgroundParallax() {
-  const [yPos] = useScroll();
+interface ServicesBackgroundParallaxProps {
+  yPos: number;
+}
+
+export default function ServicesBackgroundParallax({ yPos }: ServicesBackgroundParallaxProps) {
   return(
     <div 
       style={{ 
@@ -27,7 +29,6 @@ export default function ServicesBackgroundParallax() {
             `${ -200 + yPos * 12}px`
           ],
           left: ['20px', '20px', '', ''], 
-
         }}
       >
         <Image 

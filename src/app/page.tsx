@@ -4,6 +4,7 @@ import { Container } from "@mui/material";
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import { Amatic_SC } from 'next/font/google'
 import { clr } from "./colors";
+import useScroll from "@/hooks/useScroll";
 import HeadMain from "./components/head-main";
 import MasterMain from "./components/master-main";
 import MasterBackgroundParallax from "./components/master-main/master-background-parallax";
@@ -26,6 +27,7 @@ const theme = createTheme({
 });
 
 export default function Main() {
+  const [yPos] = useScroll();
   return (
     <ThemeProvider theme={theme}>
 
@@ -34,24 +36,24 @@ export default function Main() {
           <HeadMain TextColor={clr.dark} HoverColor={clr.primary} TextColorOnHover={clr.light} selected='main'/>
           <MasterMain />
         </Container>
-        <MasterBackgroundParallax/>
-        <MasterMountansParallax />
+        <MasterBackgroundParallax yPos={yPos}/>
+        <MasterMountansParallax yPos={yPos} />
       </div>
 
       <div style={{ backgroundColor: clr.forest, position: 'relative', zIndex: 20 }}>
         <Container maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.light} HoverColor={clr.forestPrimary} TextColorOnHover={clr.dark} selected='about' />
-          <AboutBackgroundParallax />
+          <AboutBackgroundParallax yPos={yPos} />
           <AboutMain />
         </Container>
-        <AboutForestParallax />
+        <AboutForestParallax yPos={yPos} />
       </div>
 
       <div style={{ backgroundColor: clr.grass, position: 'relative', zIndex: 30 }}>
         <Container id='box' maxWidth='lg' sx={{ position: 'relative', overflow: 'hidden' }}>
           <HeadMain TextColor={clr.dark} HoverColor={clr.grassPrimary} TextColorOnHover={clr.light} selected='services' />
-          <ServicesBackgroundParallax />
-          <ServicesMain />
+          <ServicesBackgroundParallax yPos={yPos}/>
+          <ServicesMain yPos={yPos}/>
         </Container>
         <ServicesGround />
       </div>  
