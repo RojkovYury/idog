@@ -3,10 +3,12 @@
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import { clr } from "../../colors";
-import useScroll from "@/hooks/useScroll";
 
-export default function MasterBackgroundParallax() {
-  const [yPos] = useScroll();
+interface MasterBackgroundParallaxProps {
+  yPos: number;
+}
+
+export default function MasterBackgroundParallax({ yPos }: MasterBackgroundParallaxProps) {
   return(
     <>
       <Box 

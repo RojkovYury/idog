@@ -22,7 +22,7 @@ export default function ContactsMain() {
         mx: 1,
       }}
     >
-      { /*!isTinyMobile && <ContactsMap />*/ }
+      { !isTinyMobile && <ContactsMap /> }
       { isTinyMobile && <ContactsMapMobile /> }
 
       <ContactsSocial />

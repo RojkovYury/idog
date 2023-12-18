@@ -7,7 +7,7 @@ export default function useScroll() {
   const handleScroll = () => {
     setYPos(window.scrollY / 100);
     // console.log(window.scrollY / 100);
-    // console.log('use');
+    console.log('use');
   };
 
   useEffect(() => {

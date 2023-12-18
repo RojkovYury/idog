@@ -1,10 +1,12 @@
 'use client'
 
 import { Box } from "@mui/material";
-import useScroll from "@/hooks/useScroll";
 
-export default function AboutForestParallax() {
-  const [yPos] = useScroll();
+interface AboutForestParallaxProps {
+  yPos: number;
+}
+
+export default function AboutForestParallax({ yPos }: AboutForestParallaxProps) {
   return (
     <>
       <Box 

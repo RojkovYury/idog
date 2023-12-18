@@ -4,7 +4,11 @@ import ServicesContentMobile from './services-main/services-content-mobile';
 import servicesContentText from './services-main/services-content-texts.js';
 import ServicesItems from './services-main/services-items';
 
-export default function ServicesMain() {
+interface ServicesMainProps {
+  yPos: number;
+}
+
+export default function ServicesMain({ yPos }: ServicesMainProps) {
   const [currentContent, setCurrentContent] = useState<any>(servicesContentText.fitnes);
   return(
     <>
@@ -18,8 +22,7 @@ export default function ServicesMain() {
         <ServicesContent currentContent={currentContent} />
         <ServicesContentMobile currentContent={currentContent} />
 
-        <ServicesItems currentContent={currentContent} setCurrentContent={setCurrentContent} 
-        />
+        <ServicesItems currentContent={currentContent} setCurrentContent={setCurrentContent} yPos={yPos} />
 
       </div>
       <div 
