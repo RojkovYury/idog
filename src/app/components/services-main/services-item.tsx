@@ -58,8 +58,8 @@ export default function ServicesItem(props: ServicesItemProps) {
     <Box
       sx={{
         position: 'absolute',
-        width: ['100px', '120px', '200px', '200px'], 
-        height: ['100px', '120px', '200px', '200px'], 
+        width: ['100px', '120px', '150px', '150px'], 
+        height: ['100px', '120px', '150px', '150px'], 
         left: props.left,
         top: props.top ? props.top : '',
         zIndex: props.zIndex ? props.zIndex : '',
