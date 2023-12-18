@@ -10,6 +10,7 @@ export default function ContactsPaper() {
     <>
       <Box 
         sx={{ 
+          display: ['none', 'flex', 'flex', 'flex'],
           position: 'absolute',
           width: ['', '200px', '320px', '420px'],
           minWidth: ['', '200px', '320px', '420px'],
@@ -17,20 +18,19 @@ export default function ContactsPaper() {
           right: 0,
           backgroundColor: clr.ground,  
           zIndex: 9,
-          display: 'flex',
           opacity: 0.75,
         }}
       />
 
       <Box 
-        sx={{ 
+        sx={{
+          display: 'flex',
           position: 'absolute',
           width: ['', '200px', '320px', '420px'],
           minWidth: ['', '200px', '320px', '420px'],
-          height: '100%',
+          height: ['', '100%', '100%', '100%'], 
           right: 0,
           zIndex: 10,
-          display: 'flex',
           flexDirection: 'column', 
           alignItems: 'center', 
           justifyContent: ['', 'space-evenly', 'space-around', 'space-around'], 

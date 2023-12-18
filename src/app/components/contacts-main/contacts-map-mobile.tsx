@@ -1,10 +1,7 @@
 import Image from 'next/image';
 import { Box } from "@mui/material";
 import { clr } from "../../colors";
-import ContactsNavigator from "../contacts-main/contacts-navigator";
-import ContactsPhone from '../contacts-main/contacts-phone';
-import ContactsModal from "../contacts-main/contacts-modal";
-import ContactsMessenger from "../contacts-main/contacts-messenger";
+import ContactsPaper from './contacts-paper';
 
 export default function ContactsMapMobile() {
   return (
@@ -60,13 +57,7 @@ export default function ContactsMapMobile() {
           alignItems: 'center',
         }}
       >
-        <ContactsNavigator />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
-        <ContactsPhone />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '75%', mt: 1 }} />
-        <ContactsModal />
-        <Box sx={{ height: '1px', backgroundColor: clr.light, width: '60%', mt: 1 }} />
-        <ContactsMessenger />
+        <ContactsPaper/>
       </div>
     </>
   )
