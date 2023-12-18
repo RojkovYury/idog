@@ -34,10 +34,9 @@ const theme = createTheme({
 });
 
 export default function Main() {
-  const isMobileStart = (window.innerWidth < 900) ? true : false
-  const isTinyMobileStart = (window.innerWidth < 600) ? true : false
-  const [isMobile, setIsMobile] = useState<boolean>(isMobileStart)
-  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(isTinyMobileStart)
+  const [isMobile, setIsMobile] = useState<boolean>(true)
+  const [isTinyMobile, setIsTinyMobile] = useState<boolean>(true) 
+
   useEffect(() => {
     const handleResize = () => {
       setIsTinyMobile(window.innerWidth < 600)
