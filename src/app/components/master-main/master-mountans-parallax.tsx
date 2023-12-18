@@ -6,7 +6,7 @@ import useScroll from "@/hooks/useScroll";
 export default function MasterMountansParallax() {
   const [yPos] = useScroll();
   return (
-    <>
+    <div style={{ display: 'flex' }}>
       <Box 
         sx={{
           position: 'absolute', 
@@ -20,8 +20,7 @@ export default function MasterMountansParallax() {
           ], 
           backgroundSize: ['960px 540px', '960px 540px', '1280px 720px', '1280px 720px'], 
           zIndex: 6,
-          top: [``, ``, `${(350 - yPos * 35)}px`, `${(350 - yPos * 35)}px`],
-          bottom: ['-60px', '-60px', '', ''],
+          bottom: '-60px',
         }}
       />
 
@@ -38,8 +37,7 @@ export default function MasterMountansParallax() {
           ], 
           backgroundSize: ['960px 540px', '960px 540px', '1280px 720px', '1280px 720px'], 
           zIndex: 5,
-          top: [``, ``, `${(350 - yPos * 35)}px`, `${(350 - yPos * 35)}px`],
-          bottom: [`${(-70) - (yPos * 12) }px`, `${(-70) - (yPos * 12) }px`, '', ''],
+          bottom: `${(-70) - (yPos * 12) }px`,
         }}
       />
       <Box 
@@ -55,8 +53,7 @@ export default function MasterMountansParallax() {
           ], 
           backgroundSize: ['960px 540px', '960px 540px', '1280px 720px', '1280px 720px'], 
           zIndex: 4,
-          top: [``, ``, `${(350 - yPos * 35)}px`, `${(350 - yPos * 35)}px`],
-          bottom: [`${(-50) - (yPos * 20) }px`, `${(-50) - (yPos * 20) }px`, '', ''],
+          bottom: `${(-50) - (yPos * 20) }px`,
         }}
       /> 
       <Box 
@@ -72,8 +69,7 @@ export default function MasterMountansParallax() {
           ], 
           backgroundSize: ['960px 540px', '960px 540px', '1280px 720px', '1280px 720px'], 
           zIndex: 3,
-          top: [``, ``, `${(350 - yPos * 35)}px`, `${(350 - yPos * 35)}px`],
-          bottom: [`${(-75) - (yPos * 30) }px`, `${(-75) - (yPos * 30) }px`, '', ''],
+          bottom: `${(-75) - (yPos * 30) }px`,
         }}
       /> 
       <Box 
@@ -89,10 +85,9 @@ export default function MasterMountansParallax() {
           ], 
           backgroundSize: ['960px 540px', '960px 540px', '1280px 720px', '1280px 720px'], 
           zIndex: 2,
-          top: [``, ``, `${(350 - yPos * 35)}px`, `${(350 - yPos * 35)}px`],
-          bottom: [`${(-25) - (yPos * 40) }px`, `${(-25) - (yPos * 40) }px`, '', ''],
+          bottom: `${(-25) - (yPos * 40) }px`,
         }}
       /> 
-    </>
+    </div>
   )
 }
