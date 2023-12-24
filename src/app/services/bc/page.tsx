@@ -70,7 +70,8 @@ export default function Bc() {
               style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'  }}
             >
               <div>{x[index] ? '1' : '0'}</div>
-              <Switch 
+              <Switch
+                size="small"
                 checked={ x[index] }
                 onChange={() => setX((prevState => {
                   const updatedX = [...prevState];
@@ -92,6 +93,7 @@ export default function Bc() {
             >
               <div>{ y[index] ? '1' : '0' }</div>
               <Switch 
+                size="small"
                 checked={y[index]}
                 onChange={() => setY((prevState => {
                   const updatedY = [...prevState];
@@ -115,6 +117,7 @@ export default function Bc() {
             >
               <div>{ z[index] ? '1' : '0' }</div>
               <Switch 
+                size="small"
                 checked={z[index]}
                 disabled
               />
