@@ -1,8 +1,6 @@
 import { Box } from "@mui/material";
 
 import ContactsMap from "./contacts-main/contacts-map";
-import ContactsMapMobile from "./contacts-main/contacts-map-mobile";
-import ContactsPaper from "./contacts-main/contacts-paper";
 import ContactsPaperMobile from "./contacts-main/contacts-paper-mobile";
 import ContactsSocial from './contacts-main/contacts-social';
 
